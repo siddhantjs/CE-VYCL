@@ -35,7 +35,7 @@ export function About() {
 
         <FadeIn delay={0.1}>
           <p className="text-sm font-semibold uppercase tracking-widest text-vycl-text-muted">
-            Founder & Industry Expert
+            Meet the Founder
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-vycl-dark sm:text-4xl">
             Ryan Yamauchi

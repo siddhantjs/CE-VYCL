@@ -3,7 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { NumberTicker } from "@/components/ui/number-ticker";
 import { FadeIn, Stagger, staggerItem } from "./motion";
+
+const partnerStats = [
+  { value: 8, suffix: "+", label: "Industry sectors" },
+  { value: 50, suffix: "+", label: "Clients & partners" },
+];
 
 const partners = [
   {
@@ -22,7 +28,7 @@ const partners = [
     name: "Fleet Operators",
     icon: "◎",
     image:
-      "https://images.unsplash.com/photo-1449965404469-wa8f5b8cb546?auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80",
   },
   {
     name: "Lenders",
@@ -88,7 +94,10 @@ function PartnerCard({
 
 export function Partners() {
   return (
-    <section className="relative overflow-hidden bg-vycl-cream px-5 py-20 sm:px-8 sm:py-24">
+    <section
+      id="partners"
+      className="relative overflow-hidden bg-vycl-cream px-5 py-20 sm:px-8 sm:py-24"
+    >
       <div
         className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-vycl-lime/25 blur-3xl"
         aria-hidden
@@ -102,10 +111,10 @@ export function Partners() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn>
             <p className="text-sm font-semibold uppercase tracking-widest text-vycl-text-muted">
-              Partner Ecosystem
+              Who We Work With
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-vycl-dark sm:text-4xl">
-              Empowering Leaders Across the Mobility Ecosystem
+              Partner Ecosystem
             </h2>
             <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
               VYCL bridges automotive retail, finance, insurance, technology,
@@ -114,18 +123,21 @@ export function Partners() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-8 border-t border-vycl-border pt-8">
-              <div>
-                <p className="text-3xl font-extrabold text-vycl-dark">8+</p>
-                <p className="mt-1 text-sm text-vycl-text-muted">
-                  Industry sectors
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-extrabold text-vycl-dark">50+</p>
-                <p className="mt-1 text-sm text-vycl-text-muted">
-                  Clients &amp; partners
-                </p>
-              </div>
+              {partnerStats.map((stat, index) => (
+                <div key={stat.label}>
+                  <p className="text-3xl font-extrabold text-vycl-dark">
+                    <NumberTicker
+                      value={stat.value}
+                      delay={index * 0.15}
+                      className="text-vycl-dark dark:text-vycl-dark"
+                    />
+                    {stat.suffix}
+                  </p>
+                  <p className="mt-1 text-sm text-vycl-text-muted">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <motion.div
