@@ -51,11 +51,11 @@ export function Services() {
       <div className="mx-auto max-w-6xl">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Integrated Consulting Across the Subscription Ecosystem
+            The Six Pillars of Vehicle Subscription
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70">
-            Six foundational pillars that connect lending, dealers, inventory,
-            technology, insurance, and marketing into one scalable program.
+            Ryan&apos;s proprietary framework — proven across 800+ vehicle
+            deployments.
           </p>
         </FadeIn>
 

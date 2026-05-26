@@ -12,9 +12,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VYCL | Vehicle Subscription Consulting & Mobility Strategy",
+  title: "VYCL — Vehicle Subscription Consultancy | Ryan Yamauchi",
   description:
-    "VYCL helps OEMs, dealerships, lenders, insurers, and technology providers launch and scale successful vehicle subscription businesses through expert consulting across lending, technology, marketing, insurance, and operations.",
+    "VYCL is the only consultancy purpose-built for the vehicle subscription economy. Serving dealer groups, lenders, OEMs, and SaaS platforms across the US.",
 };
 
 export default function RootLayout({

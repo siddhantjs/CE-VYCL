@@ -11,39 +11,44 @@ const floatingIcons = ["↗", "⚙", "◈", "◎"];
 
 const chartHeights = [40, 65, 45, 80, 55, 90];
 
+const statCardShell =
+  "relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl sm:min-h-[240px]";
+const statCardBase = `${statCardShell} p-6`;
+
+const statCardLabel = "text-sm leading-snug";
+const statCardValue = "text-3xl font-extrabold leading-none";
+const statCardEyebrow =
+  "text-xs font-semibold uppercase tracking-widest text-vycl-text-muted";
+
 const statCards = [
   {
     type: "image" as const,
-    className:
-      "relative min-h-[220px] overflow-hidden rounded-3xl sm:col-span-1 lg:row-span-2 lg:min-h-[280px]",
+    className: statCardShell,
   },
   {
     type: "dark" as const,
     stat: 50,
     label: "Esteemed clients and partners across mobility",
-    className:
-      "relative flex flex-col justify-center overflow-hidden rounded-3xl bg-vycl-dark p-6 text-white sm:col-span-1",
+    className: `${statCardBase} bg-vycl-dark text-white`,
   },
   {
     type: "chart" as const,
     stat: 10,
+    eyebrow: "Programs Launched",
     label: "Decade of subscription expertise",
-    className:
-      "rounded-3xl border border-vycl-border bg-white p-6 transition-colors group-hover:border-vycl-lime/50 sm:col-span-1",
+    className: `${statCardBase} border border-vycl-border bg-white transition-colors group-hover:border-vycl-lime/50`,
   },
   {
     type: "lime" as const,
     stat: 10,
     label: "Years of dedicated service in vehicle subscription",
-    className:
-      "relative flex flex-col justify-center overflow-hidden rounded-3xl bg-vycl-lime p-6 text-vycl-dark sm:col-span-1",
+    className: `${statCardBase} bg-vycl-lime text-vycl-dark`,
   },
   {
     type: "cta" as const,
     label: "Achieve optimal efficiency and scale recurring mobility revenue",
     href: "#services",
-    className:
-      "relative flex flex-col justify-between overflow-hidden rounded-3xl bg-vycl-dark p-6 text-white sm:col-span-2 lg:col-span-1",
+    className: `${statCardBase} bg-vycl-dark text-white`,
   },
 ];
 
@@ -85,7 +90,7 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
   return (
     <>
       <motion.div
-        className="relative h-full min-h-[220px] w-full lg:min-h-[280px]"
+        className="absolute inset-0"
         animate={reduce ? undefined : { scale: [1, 1.06, 1] }}
         transition={{
           duration: 14,
@@ -103,13 +108,13 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
         />
       </motion.div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/50 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/70 via-vycl-dark/20 to-transparent"
         initial={{ opacity: 0.5 }}
         whileHover={{ opacity: 0.85 }}
         transition={{ duration: 0.35 }}
       />
       <motion.p
-        className="absolute bottom-4 left-4 right-4 text-xs font-semibold uppercase tracking-widest text-white/90"
+        className={`relative z-10 mt-auto px-6 pb-6 ${statCardEyebrow} text-white/90`}
         initial={reduce ? false : { opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -141,10 +146,15 @@ function DarkStatCard({
         }
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
-      <p className="relative text-3xl font-extrabold leading-none">
-        <AnimatedCounter target={stat} />
-      </p>
-      <p className="relative mt-2 text-sm leading-snug text-white/80 transition-colors group-hover:text-white">
+      <div className="relative min-h-[1.25rem]" aria-hidden />
+      <div className="relative flex flex-1 flex-col justify-center">
+        <p className={statCardValue}>
+          <AnimatedCounter target={stat} />
+        </p>
+      </div>
+      <p
+        className={`relative ${statCardLabel} text-white/80 transition-colors group-hover:text-white`}
+      >
         {label}
       </p>
     </>
@@ -153,48 +163,54 @@ function DarkStatCard({
 
 function ChartStatCard({
   stat,
+  eyebrow,
   label,
   reduce,
 }: {
   stat: number;
+  eyebrow: string;
   label: string;
   reduce: boolean | null;
 }) {
   return (
     <>
-      <p className="text-xs font-medium uppercase tracking-wide text-vycl-text-muted">
-        Programs Launched
-      </p>
-      <p className="mt-2 text-3xl font-extrabold text-vycl-dark">
-        <AnimatedCounter target={stat} />
-      </p>
-      <div className="mt-4 flex h-10 items-end gap-1">
-        {chartHeights.map((h, j) => (
-          <motion.span
-            key={j}
-            className="w-2 rounded-sm bg-vycl-lime"
-            initial={{ height: 0 }}
-            animate={
-              reduce
-                ? { height: h * 0.35 }
-                : { height: [0, h * 0.35, h * 0.48, h * 0.35] }
-            }
-            transition={
-              reduce
-                ? { delay: 0.3 + j * 0.06, duration: 0.45, ease: [0.22, 1, 0.36, 1] }
-                : {
-                    duration: 2.8 + j * 0.15,
-                    times: [0, 0.28, 0.62, 1],
-                    repeat: Infinity,
-                    repeatDelay: 0.6,
-                    delay: 0.35 + j * 0.08,
-                    ease: "easeInOut",
-                  }
-            }
-          />
-        ))}
+      <p className={statCardEyebrow}>{eyebrow}</p>
+      <div className="flex flex-1 flex-col justify-center">
+        <p className={`${statCardValue} text-vycl-dark`}>
+          <AnimatedCounter target={stat} />
+        </p>
+        <div className="mt-3 flex h-8 items-end gap-1">
+          {chartHeights.map((h, j) => (
+            <motion.span
+              key={j}
+              className="w-2 rounded-sm bg-vycl-lime"
+              initial={{ height: 0 }}
+              animate={
+                reduce
+                  ? { height: h * 0.28 }
+                  : { height: [0, h * 0.28, h * 0.38, h * 0.28] }
+              }
+              transition={
+                reduce
+                  ? {
+                      delay: 0.3 + j * 0.06,
+                      duration: 0.45,
+                      ease: [0.22, 1, 0.36, 1],
+                    }
+                  : {
+                      duration: 2.8 + j * 0.15,
+                      times: [0, 0.28, 0.62, 1],
+                      repeat: Infinity,
+                      repeatDelay: 0.6,
+                      delay: 0.35 + j * 0.08,
+                      ease: "easeInOut",
+                    }
+              }
+            />
+          ))}
+        </div>
       </div>
-      <p className="mt-2 text-xs text-vycl-text-muted">{label}</p>
+      <p className={`${statCardLabel} text-vycl-text-muted`}>{label}</p>
     </>
   );
 }
@@ -219,40 +235,33 @@ function LimeStatCard({
         }
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
-      <p className="relative text-3xl font-extrabold leading-none">
-        <AnimatedCounter target={stat} />
-      </p>
-      <p className="relative mt-2 text-sm font-medium leading-snug transition-transform duration-300 group-hover:translate-x-0.5">
+      <div className="relative min-h-[1.25rem]" aria-hidden />
+      <div className="relative flex flex-1 flex-col justify-center">
+        <p className={statCardValue}>
+          <AnimatedCounter target={stat} />
+        </p>
+      </div>
+      <p
+        className={`relative ${statCardLabel} font-medium transition-transform duration-300 group-hover:translate-x-0.5`}
+      >
         {label}
       </p>
     </>
   );
 }
 
-function CtaStatCard({
-  label,
-  href,
-  reduce,
-}: {
-  label: string;
-  href: string;
-  reduce: boolean | null;
-}) {
+function CtaStatCard({ label, href }: { label: string; href: string }) {
   return (
-    <Link href={href} className="relative flex h-full flex-col justify-between">
-      <motion.div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-vycl-lime/0 to-vycl-lime/0 transition-colors duration-500 group-hover:from-vycl-lime/10 group-hover:to-transparent"
-        aria-hidden
-      />
-      <motion.span
-        className="relative inline-flex"
-        animate={reduce ? undefined : { y: [0, -3, 0] }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        whileHover={{ x: 4, y: -4, scale: 1.15 }}
+    <Link
+      href={href}
+      className="relative flex h-full min-h-[inherit] flex-col justify-between outline-none focus-visible:ring-2 focus-visible:ring-vycl-lime focus-visible:ring-offset-2 focus-visible:ring-offset-vycl-dark"
+    >
+      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-vycl-lime">
+        <ArrowUpRight className="h-5 w-5 text-vycl-lime transition-colors duration-300 group-hover:text-vycl-dark" />
+      </span>
+      <p
+        className={`relative ${statCardLabel} font-semibold text-white/90 transition-colors duration-300 group-hover:text-white`}
       >
-        <ArrowUpRight className="h-5 w-5 text-vycl-lime" />
-      </motion.span>
-      <p className="relative mt-4 text-sm font-semibold leading-snug transition-colors group-hover:text-vycl-lime-muted">
         {label}
       </p>
     </Link>
@@ -362,14 +371,20 @@ export function Hero() {
         </motion.div>
       </FadeIn>
 
-      <Stagger className="mx-auto mt-14 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {statCards.map((card, i) => (
+      <Stagger className="mx-auto mt-14 grid max-w-6xl auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        {statCards.map((card, i) => {
+          const isCta = card.type === "cta";
+          return (
           <motion.div
             key={i}
             variants={staggerItem}
-            className={`group shadow-[0_8px_30px_rgba(15,36,25,0.06)] transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(15,36,25,0.12)] ${card.className}`}
+            className={`group flex shadow-[0_8px_30px_rgba(15,36,25,0.06)] transition-[box-shadow,background-color] duration-300 ${
+              isCta
+                ? "hover:bg-vycl-dark-elevated hover:shadow-[0_12px_32px_rgba(15,36,25,0.14)]"
+                : "hover:shadow-[0_16px_40px_rgba(15,36,25,0.12)]"
+            } ${card.className}`}
             whileHover={
-              reduce
+              reduce || isCta
                 ? undefined
                 : { y: -6, transition: { type: "spring", stiffness: 420, damping: 22 } }
             }
@@ -379,16 +394,22 @@ export function Hero() {
               <DarkStatCard stat={card.stat} label={card.label} reduce={reduce} />
             )}
             {card.type === "chart" && (
-              <ChartStatCard stat={card.stat} label={card.label} reduce={reduce} />
+              <ChartStatCard
+                stat={card.stat}
+                eyebrow={card.eyebrow}
+                label={card.label}
+                reduce={reduce}
+              />
             )}
             {card.type === "lime" && (
               <LimeStatCard stat={card.stat} label={card.label} reduce={reduce} />
             )}
             {card.type === "cta" && (
-              <CtaStatCard label={card.label} href={card.href} reduce={reduce} />
+              <CtaStatCard label={card.label} href={card.href} />
             )}
           </motion.div>
-        ))}
+          );
+        })}
       </Stagger>
     </section>
   );
