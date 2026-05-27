@@ -10,6 +10,9 @@ const CALENDLY_CSS =
   "https://assets.calendly.com/assets/external/widget.css";
 const CALENDLY_SCRIPT =
   "https://assets.calendly.com/assets/external/widget.js";
+const EMBED_HEIGHT_CLASS = "h-[min(480px,58vh)] min-h-[380px]";
+const EMBED_HEIGHT_LG_CLASS =
+  "lg:h-[min(480px,58vh)] lg:min-h-[380px]";
 
 declare global {
   interface Window {
@@ -90,7 +93,7 @@ export function ContactCalendar() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden border-t border-vycl-border bg-vycl-dark px-5 py-14 sm:px-8 sm:py-16">
+    <section className="relative overflow-hidden border-t border-vycl-border bg-vycl-dark px-5 py-10 sm:px-8 sm:py-12">
       <div
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(15,36,25,0.92)_0%,rgba(15,110,86,0.55)_100%)]"
         aria-hidden
@@ -100,18 +103,18 @@ export function ContactCalendar() {
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Or schedule a call directly.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
+          <p className="mt-3 text-base leading-relaxed text-white/75">
             30 minutes. No pitch deck required. Just a conversation about where
             subscription fits in your business.
           </p>
         </FadeIn>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(240px,280px)] lg:items-stretch">
+        <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(220px,260px)] lg:items-stretch">
           <FadeIn delay={0.08} className="min-w-0">
             <div className="overflow-hidden rounded-2xl bg-white shadow-xl shadow-black/25 ring-1 ring-white/10">
               <div
                 ref={calendlyRef}
-                className="calendly-inline-widget h-[min(600px,72vh)] w-full min-h-[480px]"
+                className={`calendly-inline-widget w-full ${EMBED_HEIGHT_CLASS}`}
               />
             </div>
             <p className="mt-3 text-center text-xs text-white/50 lg:text-left">
@@ -129,9 +132,9 @@ export function ContactCalendar() {
 
           <FadeIn
             delay={0.14}
-            className="flex min-w-0 lg:h-[min(600px,72vh)] lg:min-h-[480px]"
+            className={`flex min-w-0 ${EMBED_HEIGHT_LG_CLASS}`}
           >
-            <div className="flex w-full flex-col items-center justify-center rounded-2xl border border-white/10 bg-vycl-dark-card/90 px-6 py-8 text-center backdrop-blur-sm sm:px-8">
+            <div className="flex w-full flex-col items-center justify-center rounded-2xl border border-white/10 bg-vycl-dark-card/90 px-5 py-6 text-center backdrop-blur-sm sm:px-6">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-vycl-lime">
                 On mobile?
               </p>
@@ -139,18 +142,18 @@ export function ContactCalendar() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 block rounded-2xl bg-vycl-cream p-5 shadow-lg shadow-black/20 transition-transform hover:scale-[1.02]"
+                className="mt-4 block rounded-2xl bg-vycl-cream p-4 shadow-lg shadow-black/20 transition-transform hover:scale-[1.02]"
               >
                 <Image
                   src="/calendly-qr.png"
                   alt="Scan to schedule a call with VYCL — calendly.com/vycl/30min"
-                  width={220}
-                  height={220}
-                  className="mx-auto h-auto w-full max-w-[200px]"
+                  width={180}
+                  height={180}
+                  className="mx-auto h-auto w-full max-w-[160px]"
                   priority
                 />
               </Link>
-              <h3 className="mt-6 text-lg font-bold text-white">
+              <h3 className="mt-4 text-base font-bold text-white">
                 Scan to schedule
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-white/70">
