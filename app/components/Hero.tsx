@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 import { CONTACT_PATH } from "@/lib/site";
 import { ArrowUpRight, Star } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
@@ -346,12 +347,14 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="mt-6 flex items-center justify-center gap-2 text-sm text-vycl-text-muted"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-base text-vycl-text-muted sm:text-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <span className="font-bold text-vycl-dark">5.0</span>
+          <Highlighter action="highlight" color="#d4f54a" isView>
+            <span className="font-bold text-vycl-dark">5.0</span>
+          </Highlighter>
           <span className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, i) => (
               <motion.span
@@ -360,11 +363,16 @@ export function Hero() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + i * 0.06 }}
               >
-                <Star className="h-4 w-4" />
+                <Star className="h-5 w-5 sm:h-6 sm:w-6" />
               </motion.span>
             ))}
           </span>
-          <span>from industry leaders</span>
+          <span>
+            from{" "}
+            <Highlighter action="underline" color="#0F6E56" isView>
+              industry leaders
+            </Highlighter>
+          </span>
         </motion.div>
       </FadeIn>
 
