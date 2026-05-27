@@ -8,7 +8,7 @@ export function getSiteUrl(): string {
   const vercel = process.env.VERCEL_URL?.replace(/\/$/, "");
   if (vercel) return `https://${vercel}`;
 
-  return "https://www.vycl.ai";
+  return "https://www.vycl.com";
 }
 
 export const RYAN_HEADSHOT_URL = "/ryan-headshot.jpg";
