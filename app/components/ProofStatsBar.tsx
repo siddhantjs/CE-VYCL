@@ -1,7 +1,7 @@
 "use client";
 
-import { NumberTicker } from "@/components/ui/number-ticker";
-import { FadeIn, Stagger, motion, staggerItem } from "./motion";
+import { AnimatedStat } from "@/components/ui/animated-stat";
+import { Stagger, motion, staggerItem } from "./motion";
 
 const stats = [
   { value: 800, suffix: "+", label: "Vehicles subscribed in Hawaii" },
@@ -23,19 +23,17 @@ export function ProofStatsBar() {
             variants={staggerItem}
             className="text-center"
           >
-            <FadeIn>
-              <p className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                <NumberTicker
-                  value={stat.value}
-                  delay={index * 0.15}
-                  className="text-white dark:text-white"
-                />
-                {stat.suffix}
-              </p>
-              <p className="mt-2 text-sm leading-snug text-white/85 sm:text-base">
-                {stat.label}
-              </p>
-            </FadeIn>
+            <p className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+              <AnimatedStat
+                value={stat.value}
+                suffix={stat.suffix}
+                className="text-white"
+                duration={1.4 + index * 0.1}
+              />
+            </p>
+            <p className="mt-2 text-sm leading-snug text-white/85 sm:text-base">
+              {stat.label}
+            </p>
           </motion.div>
         ))}
       </Stagger>

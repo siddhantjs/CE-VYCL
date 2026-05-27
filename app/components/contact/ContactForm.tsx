@@ -7,7 +7,7 @@ const AUDIENCE_OPTIONS = [
   { value: "dealer-group", label: "Dealer Group" },
   { value: "lender", label: "Lender" },
   { value: "saas-platform", label: "SaaS Platform" },
-  { value: "oem-fleet", label: "OEM or Fleet" },
+  { value: "oem-fleet", label: "OEM or Fleet Operator" },
   { value: "other", label: "Other" },
 ] as const;
 

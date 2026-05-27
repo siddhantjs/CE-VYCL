@@ -1,5 +1,6 @@
 "use client";
 
+import { Marquee } from "@/components/ui/marquee";
 import { Star } from "./icons";
 import { FadeIn } from "./motion";
 
@@ -53,8 +54,6 @@ function TestimonialCard({
 }
 
 export function Testimonials() {
-  const loop = [...testimonials, ...testimonials];
-
   return (
     <section className="overflow-hidden bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -79,11 +78,11 @@ export function Testimonials() {
           aria-hidden
         />
 
-        <div className="testimonials-marquee flex w-max gap-4 px-5 sm:px-8">
-          {loop.map((item, i) => (
-            <TestimonialCard key={`${item.name}-${i}`} {...item} />
+        <Marquee pauseOnHover className="px-5 [--duration:50s] sm:px-8" repeat={2}>
+          {testimonials.map((item) => (
+            <TestimonialCard key={item.name} {...item} />
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );

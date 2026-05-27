@@ -4,23 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { CircleDot, LayoutGrid, ShieldCheck, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { NumberTicker } from "@/components/ui/number-ticker";
+import { AnimatedStat } from "@/components/ui/animated-stat";
 import { ArrowUpRight } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
 type FlexRideStat =
   | {
       icon: LucideIcon;
+      kind: "animated";
       value: number;
       prefix: string;
       suffix: string;
       label: string;
     }
-  | { icon: LucideIcon; text: string; label: string };
+  | { icon: LucideIcon; kind: "static"; display: string; label: string };
 
 const stats: FlexRideStat[] = [
   {
     icon: Zap,
+    kind: "animated",
     value: 45,
     prefix: "",
     suffix: "",
@@ -28,14 +30,14 @@ const stats: FlexRideStat[] = [
   },
   {
     icon: CircleDot,
-    value: 0,
-    prefix: "$",
-    suffix: "",
+    kind: "static",
+    display: "$0",
     label: "Incremental headcount required",
   },
   {
     icon: ShieldCheck,
-    text: "Secured",
+    kind: "static",
+    display: "Secured",
     label: "Institutional lending facility (Westlake / CULA)",
   },
 ];
@@ -117,7 +119,7 @@ export function FlexRideCaseStudy() {
 
               <div className="relative min-h-[260px] border-t border-vycl-border lg:min-h-full lg:border-t-0 lg:border-l">
                 <Image
-                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80"
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
                   alt="FlexRide by King — vehicle subscription program built by VYCL at King Windward Nissan, Hawaii"
                   fill
                   className="object-cover"
@@ -148,18 +150,15 @@ export function FlexRideCaseStudy() {
                     <stat.icon className="h-4 w-4" aria-hidden />
                   </span>
                   <p className="mt-3 text-3xl font-extrabold tracking-tight text-vycl-dark">
-                    {"text" in stat ? (
-                      stat.text
+                    {stat.kind === "static" ? (
+                      stat.display
                     ) : (
-                      <>
-                        {stat.prefix}
-                        <NumberTicker
-                          value={stat.value}
-                          delay={index * 0.15}
-                          className="text-vycl-dark dark:text-vycl-dark"
-                        />
-                        {stat.suffix}
-                      </>
+                      <AnimatedStat
+                        value={stat.value}
+                        prefix={stat.prefix}
+                        suffix={stat.suffix}
+                        duration={1.4 + index * 0.1}
+                      />
                     )}
                   </p>
                   <p className="mt-1 text-sm leading-snug text-vycl-text-muted">

@@ -25,7 +25,7 @@ const differentiators: {
     icon: Handshake,
     title: "Partner from day one",
     description:
-      "Whether you're launching your first subscription program or expanding an existing one, VYCL brings hands-on execution and a partner-driven ecosystem no other automotive consultancy can match.",
+      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL brings a level of specificity — in lending structure, platform knowledge, insurance compliance, and inventory sourcing — that no generalist automotive consultancy can match.",
   },
 ];
 

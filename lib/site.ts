@@ -80,7 +80,7 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
     links: [
       { href: "/services", label: "Services" },
       { href: "/programs", label: "Programs" },
-      { href: "/#services", label: "Six Pillars" },
+      { href: "/#pillars", label: "Six Pillars" },
     ],
   },
   {

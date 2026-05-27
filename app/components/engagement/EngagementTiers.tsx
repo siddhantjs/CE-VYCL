@@ -166,7 +166,7 @@ export function EngagementTiers() {
 
         <FadeIn className="mt-10 text-center">
           <Link
-            href="/#services"
+            href="/#pillars"
             className="text-sm font-semibold text-[#0F6E56] transition-opacity hover:opacity-80"
           >
             See the Six Pillars framework →
