@@ -73,6 +73,8 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
       { href: "/", label: "Home" },
       { href: "/about", label: "About" },
       { href: CONTACT_PATH, label: "Contact" },
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
     ],
   },
   {
@@ -80,7 +82,7 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
     links: [
       { href: "/services", label: "Services" },
       { href: "/programs", label: "Programs" },
-      { href: "/#services", label: "Six Pillars" },
+      { href: "/#pillars", label: "Six Pillars" },
     ],
   },
   {
@@ -97,4 +99,6 @@ export const SITEMAP_PATHS: string[] = [
   ...FEATURED_NAV.filter(
     (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
   ).map((item) => item.href),
+  "/privacy",
+  "/terms",
 ];

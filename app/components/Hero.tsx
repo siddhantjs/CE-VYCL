@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { animate, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { animate, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useInViewOnce } from "@/lib/use-in-view-once";
 import { Highlighter } from "@/components/ui/highlighter";
-import { CONTACT_PATH } from "@/lib/site";
 import { ArrowUpRight, Star } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
@@ -49,7 +49,7 @@ const statCards = [
   {
     type: "cta" as const,
     label: "Achieve optimal efficiency and scale recurring mobility revenue",
-    href: "#services",
+    href: "#pillars",
     className: `${statCardBase} bg-vycl-dark text-white`,
   },
 ];
@@ -61,13 +61,20 @@ function AnimatedCounter({
   target: number;
   suffix?: string;
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20px" });
+  const { ref, inView } = useInViewOnce<HTMLSpanElement>({
+    rootMargin: "-20px 0px",
+    threshold: 0.2,
+  });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(reduce ? target : 0);
 
   useEffect(() => {
-    if (!inView || reduce) return;
+    if (reduce) {
+      setCount(target);
+      return;
+    }
+    if (!inView) return;
+
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
@@ -78,7 +85,7 @@ function AnimatedCounter({
 
   return (
     <span ref={ref}>
-      {reduce ? target : count}
+      {count}
       {suffix}
     </span>
   );
@@ -106,9 +113,9 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
         />
       </motion.div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/70 via-vycl-dark/20 to-transparent"
-        initial={{ opacity: 0.5 }}
-        whileHover={{ opacity: 0.85 }}
+        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/85 via-vycl-dark/45 to-vycl-dark/25"
+        initial={{ opacity: 0.85 }}
+        whileHover={{ opacity: 0.95 }}
         transition={{ duration: 0.35 }}
       />
       <motion.p
@@ -311,15 +318,15 @@ export function Hero() {
 
       <FadeIn className="relative mx-auto max-w-4xl text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-vycl-text-muted">
-          Vehicle Subscription Consulting
+          Vehicle Subscription Consultancy
         </p>
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-vycl-dark sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-          Connecting the Dots to{" "}
-          <span className="text-vycl-dark/80">Vehicle Subscription</span>
+          The only consultancy built for the subscription economy.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          The only consultancy purpose-built for the vehicle subscription
-          economy. Expert guidance to launch, optimize, and scale your program.
+          From first program to 100+ rooftops — VYCL connects the dots across
+          inventory, lending, technology, marketing, insurance, and operations so
+          your program actually launches and scales.
         </p>
 
         <motion.div
@@ -330,18 +337,18 @@ export function Hero() {
         >
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href={CONTACT_PATH}
+              href="#contact"
               className="inline-flex min-w-[160px] items-center justify-center rounded-full bg-vycl-dark px-7 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
-              Get Started
+              Let&apos;s Connect
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href="/services"
+              href="#pillars"
               className="inline-flex min-w-[160px] items-center justify-center rounded-full border border-vycl-border bg-white px-7 py-3.5 text-sm font-semibold text-vycl-dark transition-colors hover:bg-vycl-cream-muted"
             >
-              Explore Services
+              Explore the Six Pillars
             </Link>
           </motion.div>
         </motion.div>

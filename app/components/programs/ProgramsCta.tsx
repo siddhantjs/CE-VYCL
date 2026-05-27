@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CALENDLY_URL } from "@/lib/site";
 import { FadeIn, motion } from "../motion";
 
-export function PlatformsCta() {
+export function ProgramsCta() {
   return (
     <section className="px-5 pb-20 sm:px-8 sm:pb-24">
       <FadeIn>
@@ -15,7 +15,7 @@ export function PlatformsCta() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Looking for a US market entry partner?
+            Interested in launching in your market?
           </h2>
           <motion.div
             className="mt-8 inline-block"

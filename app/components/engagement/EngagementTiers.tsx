@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const tiers = [
@@ -9,15 +8,15 @@ const tiers = [
     label: "Advisory",
     featured: false,
     description:
-      "Strategic guidance for organizations at the evaluation stage. VYCL delivers market assessment, program design, partner identification, and a clear go/no-go recommendation — senior counsel without execution overhead. You leave with strategic clarity, not a slide deck that gathers dust.",
+      "Strategic guidance for organisations at the evaluation stage. Market assessment, program design, partner identification, and go/no-go recommendation.",
     bestFor:
       "OEMs, lenders, and SaaS platforms exploring the US subscription market",
     extras: {
-      heading: "Typical deliverables",
+      heading: "Partners involved",
       items: [
-        "Market assessment memo",
-        "Partner shortlist",
-        "Program design framework",
+        "KEYVO underwriting assessment",
+        "JRNY platform evaluation",
+        "Axle compliance review",
       ],
     },
   },
@@ -25,39 +24,27 @@ const tiers = [
     tier: "02",
     label: "Implementation",
     featured: true,
-    description:
-      "Hands-on buildout from concept to launch, covering all Six Pillars. We configure the JRNY platform, engage lenders through Westlake and CULA, integrate Axle for insurance verification, source inventory through AVIS/Budget and PLUG, launch MiaVita marketing, and design day-to-day operations — end to end, on your rooftop.",
+    description: "Hands-on buildout from concept to launch. All Six Pillars covered.",
     bestFor: "Dealer groups launching their first or second rooftop",
     extras: {
-      heading: "Partner stack",
+      heading: "What's included",
       items: [
-        "JRNY platform",
-        "Westlake / CULA",
-        "Axle",
-        "AVIS/Budget + PLUG",
-        "MiaVita",
-        "Operational design",
+        "JRNY platform configuration (exclusive US licensing partner)",
+        "Lender engagement — Westlake Financial / CULA facility structure",
+        "Axle insurance verification integration",
+        "Inventory sourcing — AVIS/Budget wholesale + PLUG EV platform",
+        "Digital marketing launch via MiaVita Solutions",
+        "Operational design — staffing model, workflow, subscriber onboarding",
       ],
     },
-    proof: "FlexRide by King — 45-day launch, zero incremental headcount",
   },
   {
     tier: "03",
     label: "Ongoing Partnership",
     featured: false,
     description:
-      "Embedded strategic and operational support for programs already running. VYCL leads performance review, lender relationship management, platform optimization, and national expansion planning — so your team stays focused on subscribers and rooftops, not firefighting infrastructure.",
-    bestFor:
-      "Multi-rooftop operators scaling beyond their home market",
-    extras: {
-      heading: "Focus areas",
-      items: [
-        "Performance review",
-        "Lender relationship management",
-        "Platform optimization",
-        "National expansion planning",
-      ],
-    },
+      "Embedded strategic and operational support for programs already running. Performance review, lender relationship management, platform optimisation, and national expansion planning.",
+    bestFor: "Multi-rooftop operators scaling beyond their home market",
   },
 ];
 
@@ -86,7 +73,7 @@ export function EngagementTiers() {
                       : "text-xs font-semibold uppercase tracking-widest text-vycl-text-muted"
                   }
                 >
-                  Tier {tier.tier}
+                  Engagement Tier {tier.tier}
                 </span>
               </div>
               <h2
@@ -108,6 +95,34 @@ export function EngagementTiers() {
                 {tier.description}
               </p>
 
+              {"extras" in tier && tier.extras ? (
+                <div className="mt-5">
+                  <p
+                    className={
+                      tier.featured
+                        ? "text-xs font-semibold text-white/50"
+                        : "text-xs font-semibold text-vycl-text-muted"
+                    }
+                  >
+                    {tier.extras.heading}
+                  </p>
+                  <ul className="mt-2 space-y-2">
+                    {tier.extras.items.map((item) => (
+                      <li
+                        key={item}
+                        className={
+                          tier.featured
+                            ? "text-sm leading-relaxed text-white/85 before:mr-2 before:content-['•']"
+                            : "text-sm leading-relaxed text-vycl-dark before:mr-2 before:text-[#0F6E56] before:content-['•']"
+                        }
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+
               <div className="mt-6 border-t border-vycl-border/40 pt-5">
                 <p
                   className={
@@ -128,50 +143,9 @@ export function EngagementTiers() {
                   {tier.bestFor}
                 </p>
               </div>
-
-              <div className="mt-5">
-                <p
-                  className={
-                    tier.featured
-                      ? "text-xs font-semibold text-white/50"
-                      : "text-xs font-semibold text-vycl-text-muted"
-                  }
-                >
-                  {tier.extras.heading}
-                </p>
-                <ul className="mt-2 flex flex-wrap gap-2">
-                  {tier.extras.items.map((item) => (
-                    <li
-                      key={item}
-                      className={
-                        tier.featured
-                          ? "rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/85"
-                          : "rounded-full bg-vycl-cream-muted px-3 py-1 text-xs font-medium text-vycl-dark"
-                      }
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {"proof" in tier && tier.proof ? (
-                <p className="mt-5 rounded-2xl bg-vycl-lime/15 px-4 py-3 text-xs font-semibold text-vycl-lime">
-                  {tier.proof}
-                </p>
-              ) : null}
             </motion.article>
           ))}
         </Stagger>
-
-        <FadeIn className="mt-10 text-center">
-          <Link
-            href="/#services"
-            className="text-sm font-semibold text-[#0F6E56] transition-opacity hover:opacity-80"
-          >
-            See the Six Pillars framework →
-          </Link>
-        </FadeIn>
       </div>
     </section>
   );

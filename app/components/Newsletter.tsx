@@ -5,10 +5,39 @@ import { FadeIn } from "./motion";
 
 export function Newsletter() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+
+    const form = e.currentTarget;
+    const email = new FormData(form).get("email");
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error ?? "Subscription failed. Please try again.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Subscription failed. Please try again.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -33,16 +62,23 @@ export function Newsletter() {
           >
             <input
               type="email"
+              name="email"
               required
               placeholder="Email address"
               className="flex-1 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-white/45 outline-none ring-vycl-lime focus:ring-2"
             />
             <button
               type="submit"
-              className="rounded-full bg-vycl-lime px-6 py-3 text-sm font-semibold text-vycl-dark transition-opacity hover:opacity-90"
+              disabled={submitting}
+              className="rounded-full bg-vycl-lime px-6 py-3 text-sm font-semibold text-vycl-dark transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Subscribe
+              {submitting ? "Subscribing…" : "Subscribe"}
             </button>
+            {error ? (
+              <p className="w-full text-sm text-red-300 sm:col-span-2" role="alert">
+                {error}
+              </p>
+            ) : null}
           </form>
         )}
       </FadeIn>

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  createPageMetadata,
+  localBusinessJsonLd,
+  personJsonLd,
+} from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -12,9 +19,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "VYCL — Vehicle Subscription Consultancy | Ryan Yamauchi",
-  description:
-    "VYCL is the only consultancy purpose-built for the vehicle subscription economy. Serving dealer groups, lenders, OEMs, and SaaS platforms across the US.",
+  metadataBase: new URL(getSiteUrl()),
+  ...createPageMetadata({ path: "/" }),
 };
 
 export default function RootLayout({
@@ -23,7 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "scroll-smooth", jakarta.variable, "font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className={cn(
+        "h-full",
+        "scroll-smooth",
+        jakarta.variable,
+        "font-sans",
+        geist.variable,
+      )}
+    >
+      <head>
+        <JsonLd data={[localBusinessJsonLd, personJsonLd]} />
+      </head>
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );
