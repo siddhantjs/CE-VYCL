@@ -1,30 +1,24 @@
 import type { Metadata } from "next";
 import { DealerGroupsCta } from "../components/dealer-groups/DealerGroupsCta";
 import { DealerGroupsHero } from "../components/dealer-groups/DealerGroupsHero";
-import { DealerProblemSolution } from "../components/dealer-groups/DealerProblemSolution";
 import { DealerProofPoints } from "../components/dealer-groups/DealerProofPoints";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dealer Groups — Vehicle Subscription for Dealers | VYCL",
+export const metadata: Metadata = createPageMetadata({
+  title: "Vehicle Subscription for Dealer Groups — VYCL",
   description:
-    "Launch a car subscription program on your dealer rooftops without rebuilding operations. VYCL handles platform, lending, insurance, and playbook — proven with FlexRide by King.",
+    "Launch and scale a vehicle subscription program on your existing rooftops without adding headcount. VYCL handles the playbook, the partners, and the launch.",
+  path: "/dealer-groups",
   keywords: [
-    "car subscription program for dealers",
-    "dealership subscription program",
-    "dealer group consulting firm",
-    "new revenue streams for car dealerships",
-    "dealer subscription program launch",
-    "subscription model for auto dealers",
-    "dealership recurring revenue model",
-    "JRNY platform dealer setup",
-    "vehicle subscription underwriting platform",
-    "Axle insurance verification automotive",
-    "hire automotive consultant",
-    "car dealership consultant",
+    "dealer subscription program",
+    "franchise dealer subscription",
+    "dealership recurring revenue",
+    "KEYVO subscription underwriting",
+    "multi-rooftop subscription",
   ],
-};
+});
 
 export default function DealerGroupsPage() {
   return (
@@ -32,7 +26,6 @@ export default function DealerGroupsPage() {
       <Header />
       <main>
         <DealerGroupsHero />
-        <DealerProblemSolution />
         <DealerProofPoints />
         <DealerGroupsCta />
       </main>

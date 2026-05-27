@@ -4,26 +4,21 @@ import { FleetOperatorsHero } from "../components/fleet-operators/FleetOperators
 import { FleetProofPoints } from "../components/fleet-operators/FleetProofPoints";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Fleet Operators — Fleet Subscription Programs & EV Fleet | VYCL",
+export const metadata: Metadata = createPageMetadata({
+  title: "Fleet Subscription Consulting — VYCL Fleet Operator Strategy",
   description:
-    "Turn your fleet into a subscription business. VYCL integrates AVIS/Budget wholesale inventory, PLUG EV sourcing, Axle compliance, and KEYVO underwriting — built for rental companies, EV fleet operators, and hosts at scale.",
+    "VYCL designs branded subscription programs for fleet operators and OEMs — from fleet composition through subscriber experience, backed by PLUG, AVIS/Budget, Axle, and KEYVO.",
+  path: "/fleet-operators",
   keywords: [
     "fleet operator subscription consulting",
-    "fleet rental to subscription transition",
     "EV fleet subscription program",
-    "pre-owned EV subscription inventory",
-    "AVIS Budget wholesale channel subscription",
-    "Rivian fleet subscription program",
-    "fleet program consulting",
-    "fleet vehicle ROI subscription",
-    "Turo fleet subscription model",
-    "captive fleet subscription program",
-    "PLUG EV fleet sourcing",
-    "fleet insurance compliance subscription",
+    "AVIS Budget wholesale dealer inventory",
+    "PLUG EV platform",
+    "fleet rental to subscription transition",
   ],
-};
+});
 
 export default function FleetOperatorsPage() {
   return (

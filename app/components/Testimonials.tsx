@@ -80,7 +80,7 @@ export function Testimonials() {
 
         <Marquee pauseOnHover className="px-5 [--duration:50s] sm:px-8" repeat={2}>
           {testimonials.map((item) => (
-            <TestimonialCard key={item.name} {...item} />
+            <TestimonialCard key={`${item.name}-${item.role}`} {...item} />
           ))}
         </Marquee>
       </div>

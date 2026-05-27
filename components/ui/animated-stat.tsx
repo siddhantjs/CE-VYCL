@@ -1,8 +1,9 @@
 "use client";
 
-import { animate, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { animate, useReducedMotion } from "framer-motion";
+import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { useInViewOnce } from "@/lib/use-in-view-once";
 
 type AnimatedStatProps = {
   value: number;
@@ -12,7 +13,7 @@ type AnimatedStatProps = {
   duration?: number;
 };
 
-/** Count-up stat that animates when scrolled into view (framer-motion). */
+/** Count-up stat that animates when scrolled into view. */
 export function AnimatedStat({
   value,
   suffix,
@@ -20,8 +21,10 @@ export function AnimatedStat({
   className,
   duration = 1.4,
 }: AnimatedStatProps) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px 0px -80px 0px" });
+  const { ref, inView } = useInViewOnce<HTMLSpanElement>({
+    rootMargin: "-40px 0px",
+    threshold: 0.2,
+  });
   const reduce = useReducedMotion();
   const [count, setCount] = useState(reduce ? value : 0);
 
@@ -31,6 +34,7 @@ export function AnimatedStat({
       return;
     }
     if (!inView) return;
+
     const controls = animate(0, value, {
       duration,
       ease: [0.22, 1, 0.36, 1],

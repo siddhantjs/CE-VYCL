@@ -5,15 +5,12 @@ import { RYAN_HEADSHOT_URL } from "@/lib/site";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const credentials = [
-  "KEYVO co-founder",
-  "TJ exclusive",
-  "Structured finance",
-  "Dealer BD national",
-  "Fleet ops",
-  "Captive insurance",
-  "AVIS/Budget wholesale",
-  "PLUG EV",
-  "MiaVita digital partner",
+  "Co-founder, KEYVO — the subscription industry's only dealer and lender underwriting platform",
+  "Exclusive Head of Sales North America — Tomorrow's Journey / JRNY",
+  "Co-founder, NYP LLC — operating entity, FlexRide by King",
+  "Structured institutional lending facility — Westlake Financial / CULA",
+  "Former VP of Operations — AutoSource Hawaii",
+  "Former Director of Strategic Planning — nation's first DTC vehicle subscription company",
 ];
 
 export function FounderBio() {
@@ -28,7 +25,7 @@ export function FounderBio() {
           >
             <Image
               src={RYAN_HEADSHOT_URL}
-              alt="Ryan Yamauchi, Founder of VYCL"
+              alt="Ryan Yamauchi — vehicle subscription consultant, founder of VYCL, co-founder of KEYVO"
               fill
               priority
               className="object-cover object-top"
@@ -39,29 +36,35 @@ export function FounderBio() {
 
         <FadeIn delay={0.1}>
           <p className="text-sm font-semibold uppercase tracking-widest text-vycl-text-muted">
-            Ryan Yamauchi
+            Meet the Founder
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-vycl-dark sm:text-4xl">
-            Operator, not advisor
+            Ryan Yamauchi
           </h2>
 
           <div className="mt-6 space-y-5 text-base leading-relaxed text-vycl-text-muted">
             <p>
-              Ryan Yamauchi has spent more than a decade building, operating,
-              and scaling vehicle subscription programs — from Hawaii&apos;s
-              boutique market to national platform development, institutional
-              lending, and multi-rooftop dealer strategy.
+              Ryan Yamauchi has spent over a decade building, operating, and
+              scaling vehicle subscription programs — starting with Hawaii&apos;s
+              boutique dealership market and expanding to national platform
+              development, institutional lending, and multi-rooftop dealer
+              strategy.
             </p>
             <p>
-              He served as VP of Operations at AutoSource Hawaii and Director
-              of Strategic Planning at the nation&apos;s first
-              direct-to-consumer vehicle subscription company. Today he is
-              founder of VYCL, co-founder of KEYVO and NYP LLC, and exclusive
-              Head of Sales, North America for Tomorrow&apos;s Journey.
+              He served as VP of Operations at AutoSource Hawaii and Director of
+              Strategic Planning at the nation&apos;s first direct-to-consumer
+              vehicle subscription company. Today he is the founder of VYCL,
+              co-founder of KEYVO — the subscription industry&apos;s only
+              underwriting platform for dealers and lenders — co-founder of NYP
+              LLC (the operating entity behind FlexRide by King), and the
+              exclusive Head of Sales North America for Tomorrow&apos;s Journey,
+              the UK-based SaaS company whose JRNY platform powers subscription
+              programs across the US.
             </p>
             <p>
-              His Six Pillars framework has guided 800+ deployments. Programs
-              remain active in Hawaii, with national expansion underway.
+              His Six Pillars framework has guided over 800 vehicle deployments
+              and is the operating foundation for active programs in Hawaii with
+              national expansion underway.
             </p>
           </div>
 

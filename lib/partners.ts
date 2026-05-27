@@ -7,9 +7,12 @@ export type PartnerCard = {
 };
 
 export const KEYVO_BLOCK = {
-  label: "Founded by Ryan Yamauchi",
+  label: "FOUNDED BY RYAN YAMAUCHI",
   title: "The subscription industry's only underwriting platform",
   body: "KEYVO is the only underwriting platform purpose-built for vehicle subscription — usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
+  ctaLabel: "Learn more about KEYVO",
+  /** Set when KEYVO marketing site URL is available */
+  ctaHref: undefined as string | undefined,
 };
 
 export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
@@ -97,5 +100,11 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     relationship: "Referral Partner",
     description:
       "VYCL works with Turo hosts and fleet operators looking to transition from or expand beyond peer-to-peer rental into structured vehicle subscription programs.",
+  },
+  {
+    name: "Rivian",
+    relationship: "Operating Client — EV Fleet",
+    description:
+      "VYCL developed the subscription structure for a 20-unit Rivian EV fleet program in Hawaii — a fleet-scale proof point for branded electric vehicle subscription.",
   },
 ];

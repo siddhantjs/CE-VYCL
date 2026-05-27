@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { animate, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { animate, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useInViewOnce } from "@/lib/use-in-view-once";
 import { Highlighter } from "@/components/ui/highlighter";
 import { ArrowUpRight, Star } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
@@ -60,13 +61,20 @@ function AnimatedCounter({
   target: number;
   suffix?: string;
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20px" });
+  const { ref, inView } = useInViewOnce<HTMLSpanElement>({
+    rootMargin: "-20px 0px",
+    threshold: 0.2,
+  });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(reduce ? target : 0);
 
   useEffect(() => {
-    if (!inView || reduce) return;
+    if (reduce) {
+      setCount(target);
+      return;
+    }
+    if (!inView) return;
+
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
@@ -77,7 +85,7 @@ function AnimatedCounter({
 
   return (
     <span ref={ref}>
-      {reduce ? target : count}
+      {count}
       {suffix}
     </span>
   );
@@ -105,9 +113,9 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
         />
       </motion.div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/70 via-vycl-dark/20 to-transparent"
-        initial={{ opacity: 0.5 }}
-        whileHover={{ opacity: 0.85 }}
+        className="absolute inset-0 bg-gradient-to-t from-vycl-dark/85 via-vycl-dark/45 to-vycl-dark/25"
+        initial={{ opacity: 0.85 }}
+        whileHover={{ opacity: 0.95 }}
         transition={{ duration: 0.35 }}
       />
       <motion.p

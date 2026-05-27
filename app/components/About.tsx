@@ -6,7 +6,7 @@ import { CONTACT_PATH, RYAN_HEADSHOT_URL } from "@/lib/site";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
 const credentials = [
-  "Co-founder, KEYVO — subscription underwriting platform",
+  "Co-founder, KEYVO — the subscription industry's only dealer and lender underwriting platform",
   "Exclusive Head of Sales North America — Tomorrow's Journey / JRNY",
   "Co-founder, NYP LLC — operating entity, FlexRide by King",
   "Structured institutional lending facility — Westlake Financial / CULA",

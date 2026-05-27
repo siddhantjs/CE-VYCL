@@ -6,17 +6,9 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
 export const metadata: Metadata = {
-  title: "How VYCL Works — Vehicle Subscription Services | VYCL",
+  title: "VYCL Services — Vehicle Subscription Advisory, Implementation & Partnership",
   description:
-    "Vehicle subscription strategy consultant for OEMs, lenders, and dealer groups. Advisory, Implementation, and Ongoing Partnership engagements — from market assessment to multi-rooftop scaling.",
-  keywords: [
-    "vehicle subscription consultant",
-    "automotive consultant for hire",
-    "vehicle subscription strategy consultant",
-    "dealer subscription program launch",
-    "vehicle subscription program scaling",
-    "hire automotive consultant",
-  ],
+    "VYCL offers three engagement models for dealer groups, lenders, SaaS platforms, and fleet operators: Advisory, Implementation, and Ongoing Partnership.",
 };
 
 export default function ServicesPage() {

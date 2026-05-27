@@ -5,8 +5,8 @@ import { Stagger, motion, staggerItem } from "./motion";
 
 const stats = [
   { value: 800, suffix: "+", label: "Vehicles subscribed in Hawaii" },
-  { value: 45, suffix: " days", label: "From idea to live program" },
-  { value: 10, suffix: "+ years", label: "Subscription-first experience" },
+  { value: 45, suffix: "", label: "Days from idea to live program" },
+  { value: 10, suffix: "+", label: "Years of subscription-first experience" },
 ];
 
 export function ProofStatsBar() {

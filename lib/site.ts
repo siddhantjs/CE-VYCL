@@ -8,7 +8,7 @@ export function getSiteUrl(): string {
   const vercel = process.env.VERCEL_URL?.replace(/\/$/, "");
   if (vercel) return `https://${vercel}`;
 
-  return "https://www.vycl.com";
+  return "https://www.vycl.ai";
 }
 
 export const RYAN_HEADSHOT_URL = "/ryan-headshot.jpg";
@@ -73,6 +73,8 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
       { href: "/", label: "Home" },
       { href: "/about", label: "About" },
       { href: CONTACT_PATH, label: "Contact" },
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
     ],
   },
   {
@@ -97,4 +99,6 @@ export const SITEMAP_PATHS: string[] = [
   ...FEATURED_NAV.filter(
     (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
   ).map((item) => item.href),
+  "/privacy",
+  "/terms",
 ];

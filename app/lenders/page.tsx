@@ -1,32 +1,25 @@
 import type { Metadata } from "next";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import { LenderProblemSolution } from "../components/lenders/LenderProblemSolution";
 import { LenderProofPoints } from "../components/lenders/LenderProofPoints";
 import { LendersCta } from "../components/lenders/LendersCta";
 import { LendersHero } from "../components/lenders/LendersHero";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Lenders — Vehicle Subscription Lending & Fleet Financing | VYCL",
+export const metadata: Metadata = createPageMetadata({
+  title: "Vehicle Subscription Lending — VYCL Structures Subscription Portfolios",
   description:
-    "Structure vehicle subscription lending facilities with proper collateral, underwriting, and monitoring. VYCL works with auto lenders and credit unions — proven with Westlake Financial / CULA and KEYVO.",
+    "VYCL helps lenders structure fleet-based subscription lending facilities with proper collateral, cash-flow modelling, and KEYVO subscriber underwriting.",
+  path: "/lenders",
   keywords: [
     "vehicle subscription lending facility",
-    "auto subscription lending structure",
     "subscription fleet financing",
-    "subscription auto portfolio financing",
-    "vehicle subscription underwriting",
-    "fleet loan facility for subscription",
-    "Westlake Financial dealer program",
-    "CULA vehicle subscription",
-    "KEYVO subscription underwriting software",
-    "auto finance consultant",
-    "automotive fleet financing consultant",
-    "fleet subscription loan facility",
-    "credit union auto subscription lending",
-    "subscription vehicle collateral structure",
+    "subscription underwriting platform",
+    "KEYVO",
+    "credit union auto subscription",
+    "fleet loan facility",
   ],
-};
+});
 
 export default function LendersPage() {
   return (
@@ -34,7 +27,6 @@ export default function LendersPage() {
       <Header />
       <main>
         <LendersHero />
-        <LenderProblemSolution />
         <LenderProofPoints />
         <LendersCta />
       </main>

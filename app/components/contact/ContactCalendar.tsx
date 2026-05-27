@@ -15,11 +15,11 @@ export function ContactCalendar() {
       <div className="relative mx-auto max-w-3xl">
         <FadeIn className="text-center">
           <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-            Or schedule a call directly
+            Or schedule a call directly.
           </h2>
           <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-white/75">
-            30 minutes — no pitch deck. Just where subscription fits in your
-            business.
+            30 minutes. No pitch deck required. Just a conversation about where
+            subscription fits in your business.
           </p>
         </FadeIn>
 
@@ -34,7 +34,7 @@ export function ContactCalendar() {
               >
                 <Image
                   src="/calendly-qr.png"
-                  alt="Scan to schedule a call with VYCL"
+                  alt="QR code to schedule a vehicle subscription consultation with VYCL founder Ryan Yamauchi"
                   width={96}
                   height={96}
                   className="h-16 w-16"

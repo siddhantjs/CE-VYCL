@@ -6,13 +6,44 @@ import { CONTACT_PATH } from "@/lib/site";
 import { ECOSYSTEM_PARTNERS, KEYVO_BLOCK } from "@/lib/partners";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
-function PartnerLogo({ name, logoSrc }: { name: string; logoSrc?: string }) {
+function KeyvoLogo() {
+  return (
+    <div className="flex items-center gap-2.5">
+      <svg
+        width="36"
+        height="36"
+        viewBox="0 0 36 36"
+        fill="none"
+        aria-hidden
+        className="shrink-0"
+      >
+        <path d="M6 30L18 6L30 30H24L18 18L12 30H6Z" fill="#0F6E56" />
+        <path d="M14 30L18 22L22 30H14Z" fill="#0a5240" />
+      </svg>
+      <span className="text-3xl font-extrabold tracking-tight text-vycl-dark">
+        KEYVO
+      </span>
+    </div>
+  );
+}
+
+function PartnerLogo({
+  name,
+  relationship,
+  logoSrc,
+}: {
+  name: string;
+  relationship: string;
+  logoSrc?: string;
+}) {
+  const alt = `${name} — ${relationship} with VYCL vehicle subscription consultancy`;
+
   if (logoSrc) {
     return (
       <div className="relative h-8 w-28">
         <Image
           src={logoSrc}
-          alt={name}
+          alt={alt}
           fill
           className="object-contain object-left"
           sizes="112px"
@@ -48,7 +79,7 @@ function PartnerCard({
       whileHover={{ y: -3 }}
       transition={{ type: "spring", stiffness: 400, damping: 28 }}
     >
-      <PartnerLogo name={name} logoSrc={logoSrc} />
+      <PartnerLogo name={name} relationship={relationship} logoSrc={logoSrc} />
       <h3 className="mt-4 text-base font-bold text-vycl-dark">{name}</h3>
       <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-[#0F6E56]">
         {relationship}
@@ -83,15 +114,15 @@ export function Partners() {
 
         <FadeIn delay={0.08} className="mt-12">
           <div className="overflow-hidden rounded-3xl border border-[#0F6E56]/20 bg-[#0F6E56]/10">
-            <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center lg:gap-12">
+            <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-12">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F6E56]">
                   {KEYVO_BLOCK.label}
                 </p>
-                <p className="mt-4 text-3xl font-extrabold tracking-tight text-vycl-dark">
-                  KEYVO
-                </p>
-                <p className="mt-2 text-lg font-semibold text-vycl-dark">
+                <div className="mt-4">
+                  <KeyvoLogo />
+                </div>
+                <p className="mt-3 text-lg font-semibold text-vycl-dark">
                   {KEYVO_BLOCK.title}
                 </p>
               </div>
@@ -99,6 +130,21 @@ export function Partners() {
                 <p className="text-sm leading-relaxed text-vycl-text-muted sm:text-base">
                   {KEYVO_BLOCK.body}
                 </p>
+                {KEYVO_BLOCK.ctaHref ? (
+                  <Link
+                    href={KEYVO_BLOCK.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F6E56] transition-opacity hover:opacity-80"
+                  >
+                    {KEYVO_BLOCK.ctaLabel}
+                    <span aria-hidden>→</span>
+                  </Link>
+                ) : (
+                  <p className="mt-5 text-sm font-semibold text-[#0F6E56]">
+                    {KEYVO_BLOCK.ctaLabel} →
+                  </p>
+                )}
               </div>
             </div>
           </div>
