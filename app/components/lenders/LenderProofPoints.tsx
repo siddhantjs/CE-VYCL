@@ -56,15 +56,6 @@ export function LenderProofPoints() {
         </FadeIn>
 
         <div className="relative mt-14 overflow-hidden">
-          <div
-            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-vycl-cream to-transparent sm:w-16"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-vycl-cream to-transparent sm:w-16"
-            aria-hidden
-          />
-
           <Marquee pauseOnHover className="[--duration:45s] [--gap:0.875rem] sm:[--gap:1rem]">
             {proofPoints.map((item) => (
               <ProofPointCard key={item.title} {...item} />

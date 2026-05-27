@@ -37,17 +37,22 @@ export function LenderProblemSolution() {
           </p>
         </FadeIn>
 
-        <Stagger className="mt-12 grid gap-4 lg:grid-cols-3">
+        <Stagger className="mt-12 grid gap-4 lg:grid-cols-3 lg:grid-rows-[auto_auto_auto] lg:gap-y-4">
           {frictionPoints.map((item) => (
             <motion.article
               key={item.problem.slice(0, 40)}
               variants={staggerItem}
-              className="flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm"
+              className="flex flex-col gap-4 rounded-3xl border border-vycl-border bg-white p-6 shadow-sm lg:row-span-3 lg:grid lg:grid-rows-subgrid lg:gap-0"
             >
               <p className="text-sm leading-relaxed text-vycl-dark sm:text-base">
                 {item.problem}
               </p>
-              <p className="mt-4 flex-1 border-t border-vycl-border/60 pt-4 text-sm leading-relaxed text-vycl-text-muted">
+              <div
+                role="separator"
+                aria-hidden
+                className="h-px w-full shrink-0 bg-vycl-border/60"
+              />
+              <p className="text-sm leading-relaxed text-vycl-text-muted">
                 {item.solution}
               </p>
             </motion.article>

@@ -3,11 +3,6 @@
 import { MapPin, Sparkles, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
-import { SpinningText } from "@/components/ui/spinning-text";
-
-/** Short ring copy — each token should read clearly at a glance while spinning. */
-const PLATFORM_RING =
-  "JRNY • DEALERS • FLEXRIDE • PIPELINE • PROOF • DEMOS • SIGNED • ";
 
 type ValueProp = {
   icon: LucideIcon;
@@ -51,23 +46,7 @@ export function PlatformValueProps() {
             Licensing proof, an active pipeline, and a rooftop your sales team
             can point to today.
           </p>
-        </FadeIn>
-
-        <FadeIn className="mt-10 flex justify-center">
-          <div
-            className="relative flex h-36 w-36 items-center justify-center sm:h-40 sm:w-40"
-            aria-hidden
-          >
-            <div className="absolute inset-0 rounded-full bg-vycl-lime/20 blur-2xl" />
-            <SpinningText
-              radius={7.5}
-              duration={18}
-              className="h-full w-full text-[10px] font-bold uppercase tracking-[0.28em] text-vycl-dark sm:text-[11px]"
-            >
-              {PLATFORM_RING}
-            </SpinningText>
-          </div>
-        </FadeIn>
+        </FadeIn> 
 
         <Stagger className="mt-10 grid gap-4 lg:grid-cols-3">
           {valueProps.map((item) => (

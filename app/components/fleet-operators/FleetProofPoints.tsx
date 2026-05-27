@@ -3,6 +3,7 @@
 import {
   Battery,
   Building2,
+  Landmark,
   ShieldCheck,
   Sparkles,
   Zap,
@@ -40,6 +41,11 @@ const proofPoints: {
     title: "KEYVO subscription underwriting",
     body: "KEYVO is purpose-built for subscription portfolio risk — approval workflows, subscriber data, and portfolio visibility that indirect auto systems were never designed to produce. Fleet operators and their lending partners get underwriting infrastructure aligned to how subscription fleets actually perform.",
   },
+  {
+    icon: Landmark,
+    title: "Westlake Financial / CULA",
+    body: "VYCL structured and closed institutional lending for subscription fleet portfolios — collateral modeled for unit turnover and multi-subscriber exposure, not retail auto paper. Fleet operators get lender-ready documentation and a live facility reference before scaling inventory.",
+  },
 ];
 
 export function FleetProofPoints() {
@@ -61,7 +67,7 @@ export function FleetProofPoints() {
             <motion.article
               key={item.title}
               variants={staggerItem}
-              className="flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm lg:last:col-span-1"
+              className="flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime-muted text-vycl-dark">
                 <item.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />

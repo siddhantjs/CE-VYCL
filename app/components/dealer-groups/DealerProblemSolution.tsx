@@ -1,12 +1,30 @@
 "use client";
 
-import { FadeIn, Stagger, motion, staggerItem } from "../motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { FadeIn } from "../motion";
 
 const failureModes = [
-  "Wrong platform — not built for dealer subscription workflows",
-  "No lender relationship — no facility structured for fleet-based portfolios",
-  "No insurance compliance — subscribers verified manually or not at all",
-  "No operational playbook — no workflows, staffing model, or day-one processes",
+  {
+    title: "Wrong platform",
+    description: "Not built for dealer subscription workflows",
+  },
+  {
+    title: "No lender relationship",
+    description: "No facility structured for fleet-based portfolios",
+  },
+  {
+    title: "No insurance compliance",
+    description: "Subscribers verified manually or not at all",
+  },
+  {
+    title: "No operational playbook",
+    description: "No workflows, staffing model, or day-one processes",
+  },
 ];
 
 const partners = [
@@ -26,24 +44,37 @@ export function DealerProblemSolution() {
           </h2>
         </FadeIn>
 
-        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2">
-          {failureModes.map((problem) => (
-            <motion.div
-              key={problem}
-              variants={staggerItem}
-              className="flex gap-3 rounded-2xl border border-vycl-border bg-white p-5 shadow-sm"
-            >
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-700">
-                <span className="text-xs font-bold" aria-hidden>
-                  ×
-                </span>
-              </span>
-              <p className="text-sm leading-relaxed text-vycl-text-muted sm:text-base">
-                {problem}
-              </p>
-            </motion.div>
-          ))}
-        </Stagger>
+        <FadeIn className="mx-auto mt-12 max-w-3xl">
+          <Accordion
+            type="single"
+            collapsible
+            className="overflow-hidden rounded-2xl border border-vycl-border bg-white shadow-sm"
+          >
+            {failureModes.map((item, index) => (
+              <AccordionItem
+                key={item.title}
+                value={`item-${index}`}
+                className="border-vycl-border px-5 last:border-b-0"
+              >
+                <AccordionTrigger className="gap-3 py-5 text-base hover:no-underline sm:text-lg [&>svg]:text-vycl-text-muted">
+                  <span className="flex flex-1 items-center gap-3 text-left">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-500/10 text-red-700">
+                      <span className="text-xs font-bold" aria-hidden>
+                        ×
+                      </span>
+                    </span>
+                    <span className="font-semibold text-vycl-dark">
+                      {item.title}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-5 pl-9 text-sm leading-relaxed text-vycl-text-muted sm:text-base">
+                  {item.description}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </FadeIn>
 
         <FadeIn className="mt-12 overflow-hidden rounded-3xl border border-vycl-border bg-vycl-dark px-8 py-10 text-center text-white sm:px-12">
           <p className="text-xl font-bold tracking-tight sm:text-2xl">
