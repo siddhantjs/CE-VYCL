@@ -2,13 +2,16 @@
 
 import { Building2, ShieldCheck, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { FadeIn, Stagger, motion, staggerItem } from "../motion";
+import { Marquee } from "@/components/ui/marquee";
+import { FadeIn } from "../motion";
 
-const proofPoints: {
+type ProofPoint = {
   icon: LucideIcon;
   title: string;
   body: string;
-}[] = [
+};
+
+const proofPoints: ProofPoint[] = [
   {
     icon: Building2,
     title: "Westlake Financial / CULA facility",
@@ -26,6 +29,18 @@ const proofPoints: {
   },
 ];
 
+function ProofPointCard({ icon: Icon, title, body }: ProofPoint) {
+  return (
+    <article className="flex w-[min(calc(100vw-3rem),20rem)] shrink-0 flex-col rounded-3xl border border-vycl-border bg-white p-5 shadow-sm sm:w-[22rem] sm:p-6 lg:w-[24rem]">
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime-muted text-vycl-dark">
+        <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
+      </span>
+      <h3 className="mt-4 text-base font-bold text-vycl-dark sm:text-lg">{title}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-vycl-text-muted">{body}</p>
+    </article>
+  );
+}
+
 export function LenderProofPoints() {
   return (
     <section className="px-5 py-20 sm:px-8 sm:py-24">
@@ -40,25 +55,22 @@ export function LenderProofPoints() {
           </p>
         </FadeIn>
 
-        <Stagger className="mt-14 grid gap-4 lg:grid-cols-3">
-          {proofPoints.map((item) => (
-            <motion.article
-              key={item.title}
-              variants={staggerItem}
-              className="flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime-muted text-vycl-dark">
-                <item.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
-              </span>
-              <h3 className="mt-4 text-lg font-bold text-vycl-dark">
-                {item.title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-vycl-text-muted">
-                {item.body}
-              </p>
-            </motion.article>
-          ))}
-        </Stagger>
+        <div className="relative mt-14 overflow-hidden">
+          <div
+            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-vycl-cream to-transparent sm:w-16"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-vycl-cream to-transparent sm:w-16"
+            aria-hidden
+          />
+
+          <Marquee pauseOnHover className="[--duration:45s] [--gap:0.875rem] sm:[--gap:1rem]">
+            {proofPoints.map((item) => (
+              <ProofPointCard key={item.title} {...item} />
+            ))}
+          </Marquee>
+        </div>
       </div>
     </section>
   );

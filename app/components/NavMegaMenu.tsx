@@ -35,7 +35,7 @@ function FeaturedLink({
             </span>
           ) : null}
         </span>
-        <span className="mt-0.5 block text-sm leading-snug text-vycl-text-muted">
+        <span className="mt-0.5 block truncate text-sm text-vycl-text-muted">
           {item.description}
         </span>
       </span>

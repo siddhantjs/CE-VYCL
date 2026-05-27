@@ -33,25 +33,21 @@ export const FEATURED_NAV: FeaturedNavItem[] = [
   {
     href: "/dealer-groups",
     label: "Dealer Groups",
-    description:
-      "Launch subscription on your rooftops without rebuilding operations.",
+    description: "Subscription on rooftops—no ops rebuild.",
   },
   {
     href: "/lenders",
     label: "Lenders",
-    description:
-      "Structure fleet-based subscription lending with collateral and cash-flow modeling.",
+    description: "Fleet lending with collateral modeling.",
   },
   {
     href: "/platforms",
     label: "SaaS Platforms",
-    description:
-      "Bring your platform to US dealer networks with onboarding and GTM execution.",
+    description: "Launch across US dealer networks.",
   },
   {
     href: "/fleet-operators",
     label: "Fleet Operators",
-    description:
-      "Design branded or captive subscription programs from fleet to subscriber experience.",
+    description: "Subscription from fleet to subscriber.",
   },
 ];

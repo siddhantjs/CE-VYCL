@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Building2,
   Gauge,
   Megaphone,
   ShieldCheck,
@@ -10,11 +11,15 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
-const proofPoints: {
+type ProofPoint = {
   icon: LucideIcon;
   title: string;
   body: string;
-}[] = [
+  featured?: boolean;
+  highlights?: string[];
+};
+
+const proofPoints: ProofPoint[] = [
   {
     icon: Zap,
     title: "FlexRide by King",
@@ -40,6 +45,11 @@ const proofPoints: {
     title: "MiaVita Solutions",
     body: "Automotive subscription specialist digital marketing. MiaVita runs campaigns built for how subscription is sold — different from traditional retail — so your program gets demand, not just infrastructure.",
   },
+  {
+    icon: Building2,
+    title: "Westlake Financial / CULA",
+    body: "Institutional lending structured and closed before FlexRide went live — collateral modeled for subscription fleet portfolios, not retail paper. VYCL brings the lender relationship to your rooftop so you are not sourcing it alone.",
+  },
 ];
 
 export function DealerProofPoints() {
@@ -61,17 +71,63 @@ export function DealerProofPoints() {
             <motion.article
               key={item.title}
               variants={staggerItem}
-              className="flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm lg:last:col-span-1"
+              className={
+                item.featured
+                  ? "relative flex flex-col overflow-hidden rounded-3xl border-2 border-vycl-lime bg-vycl-dark p-6 text-white shadow-lg sm:p-7"
+                  : "flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm"
+              }
+              whileHover={{ y: -4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime-muted text-vycl-dark">
-                <item.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
-              </span>
-              <h3 className="mt-4 text-lg font-bold text-vycl-dark">
-                {item.title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-vycl-text-muted">
-                {item.body}
-              </p>
+              {item.featured ? (
+                <div
+                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(15,36,25,0.95)_0%,rgba(15,110,86,0.45)_100%)]"
+                  aria-hidden
+                />
+              ) : null}
+
+              <div className="relative flex flex-col flex-1">
+                <span
+                  className={
+                    item.featured
+                      ? "flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime/15 text-vycl-lime"
+                      : "flex h-10 w-10 items-center justify-center rounded-xl bg-vycl-lime-muted text-vycl-dark"
+                  }
+                >
+                  <item.icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
+                </span>
+                <h3
+                  className={
+                    item.featured
+                      ? "mt-4 text-lg font-bold text-white"
+                      : "mt-4 text-lg font-bold text-vycl-dark"
+                  }
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className={
+                    item.featured
+                      ? "mt-2 flex-1 text-sm leading-relaxed text-white/75"
+                      : "mt-2 flex-1 text-sm leading-relaxed text-vycl-text-muted"
+                  }
+                >
+                  {item.body}
+                </p>
+
+                {item.highlights ? (
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {item.highlights.map((highlight) => (
+                      <li
+                        key={highlight}
+                        className="rounded-full bg-vycl-lime/15 px-3 py-1 text-xs font-semibold text-vycl-lime"
+                      >
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
             </motion.article>
           ))}
         </Stagger>
