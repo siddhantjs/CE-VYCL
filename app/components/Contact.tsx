@@ -5,6 +5,7 @@ import { ContactIntro } from "./contact/ContactIntro";
 export function Contact() {
   return (
     <>
+      <ContactCalendar />
       <section
         id="contact"
         className="bg-vycl-cream-muted px-5 py-20 sm:px-8 sm:py-24"
@@ -16,7 +17,6 @@ export function Contact() {
           </div>
         </div>
       </section>
-      <ContactCalendar />
     </>
   );
 }

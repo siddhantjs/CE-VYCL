@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_PATH } from "@/lib/site";
+import { FOOTER_SITEMAP } from "@/lib/site";
 import { LogoMark } from "./icons";
 import { Newsletter } from "./Newsletter";
 
@@ -7,6 +7,34 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-vycl-dark text-white">
       <Newsletter />
+      <div className="border-t border-white/10 px-5 py-12 sm:px-8">
+        <div className="mx-auto max-w-6xl">
+          <nav
+            aria-label="Sitemap"
+            className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {FOOTER_SITEMAP.map((section) => (
+              <div key={section.title}>
+                <h2 className="text-sm font-semibold text-white">
+                  {section.title}
+                </h2>
+                <ul className="mt-4 space-y-2.5">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-white/65 transition-colors hover:text-vycl-lime"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
+        </div>
+      </div>
       <div className="border-t border-white/10 px-5 py-10 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
           <Link href="/" className="flex items-center gap-2.5">
@@ -20,23 +48,6 @@ export function Footer() {
               Hawaii-based. Operating nationally.
             </span>
           </p>
-          <nav className="flex flex-wrap justify-center gap-6 text-sm text-white/65">
-            <Link href="/services" className="hover:text-vycl-lime">
-              Services
-            </Link>
-            <Link href="/programs" className="hover:text-vycl-lime">
-              Programs
-            </Link>
-            <Link href="/#services" className="hover:text-vycl-lime">
-              Six Pillars
-            </Link>
-            <Link href="/about" className="hover:text-vycl-lime">
-              Founder
-            </Link>
-            <Link href={CONTACT_PATH} className="hover:text-vycl-lime">
-              Contact
-            </Link>
-          </nav>
         </div>
       </div>
     </footer>

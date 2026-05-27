@@ -23,6 +23,7 @@ export default function ContactPage() {
     <>
       <Header />
       <main>
+        <ContactCalendar />
         <section className="px-5 pt-16 pb-12 sm:px-8 sm:pt-20 sm:pb-16">
           <div className="mx-auto max-w-6xl">
             <ContactIntro centered />
@@ -31,7 +32,6 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-        <ContactCalendar />
       </main>
       <Footer />
     </>

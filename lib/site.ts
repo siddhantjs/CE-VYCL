@@ -1,9 +1,17 @@
 export const CALENDLY_URL = "https://calendly.com/vycl/30min";
 
-export const RYAN_HEADSHOT_URL = "/ryan-headshot.jpg";
+/** Canonical site origin for absolute URLs (sitemap, robots, Open Graph). */
+export function getSiteUrl(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (fromEnv) return fromEnv;
 
-/** Inline embed — fewer chrome elements so the widget fits the page better. */
-export const CALENDLY_EMBED_URL = `${CALENDLY_URL}?hide_event_type_details=1&hide_gdpr_banner=1`;
+  const vercel = process.env.VERCEL_URL?.replace(/\/$/, "");
+  if (vercel) return `https://${vercel}`;
+
+  return "https://www.vycl.com";
+}
+
+export const RYAN_HEADSHOT_URL = "/ryan-headshot.jpg";
 
 export const CONTACT_PATH = "/contact";
 
@@ -50,4 +58,43 @@ export const FEATURED_NAV: FeaturedNavItem[] = [
     label: "Fleet Operators",
     description: "Subscription from fleet to subscriber.",
   },
+];
+
+export type SitemapSection = {
+  title: string;
+  links: { href: string; label: string }[];
+};
+
+/** Footer sitemap columns — grouped site navigation. */
+export const FOOTER_SITEMAP: SitemapSection[] = [
+  {
+    title: "Company",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/about", label: "About" },
+      { href: CONTACT_PATH, label: "Contact" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      { href: "/services", label: "Services" },
+      { href: "/programs", label: "Programs" },
+      { href: "/#services", label: "Six Pillars" },
+    ],
+  },
+  {
+    title: "Who We Serve",
+    links: FEATURED_NAV.filter(
+      (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
+    ).map((item) => ({ href: item.href, label: item.label })),
+  },
+];
+
+/** Indexable marketing routes for SEO sitemap generation. */
+export const SITEMAP_PATHS: string[] = [
+  ...PRIMARY_NAV.map((item) => item.href),
+  ...FEATURED_NAV.filter(
+    (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
+  ).map((item) => item.href),
 ];
