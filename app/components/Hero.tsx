@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { CONTACT_PATH } from "@/lib/site";
 import { ArrowUpRight, Star } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
@@ -62,14 +63,10 @@ function AnimatedCounter({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-20px" });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(reduce ? target : 0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setCount(target);
-      return;
-    }
+    if (!inView || reduce) return;
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.22, 1, 0.36, 1],
@@ -80,7 +77,7 @@ function AnimatedCounter({
 
   return (
     <span ref={ref}>
-      {count}
+      {reduce ? target : count}
       {suffix}
     </span>
   );
@@ -332,7 +329,7 @@ export function Hero() {
         >
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href="#contact"
+              href={CONTACT_PATH}
               className="inline-flex min-w-[160px] items-center justify-center rounded-full bg-vycl-dark px-7 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get Started
@@ -340,7 +337,7 @@ export function Hero() {
           </motion.div>
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href="#services"
+              href="/services"
               className="inline-flex min-w-[160px] items-center justify-center rounded-full border border-vycl-border bg-white px-7 py-3.5 text-sm font-semibold text-vycl-dark transition-colors hover:bg-vycl-cream-muted"
             >
               Explore Services

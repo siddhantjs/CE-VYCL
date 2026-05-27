@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { CONTACT_PATH } from "@/lib/site";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { FadeIn, Stagger, staggerItem } from "./motion";
 
@@ -146,7 +147,7 @@ export function Partners() {
               whileTap={{ scale: 0.98 }}
             >
               <Link
-                href="#contact"
+                href={CONTACT_PATH}
                 className="inline-flex rounded-full bg-vycl-dark px-7 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Work With Us

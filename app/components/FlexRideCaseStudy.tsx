@@ -2,31 +2,43 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { CircleDot, LayoutGrid, ShieldCheck, Zap } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { ArrowUpRight } from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
-const stats = [
+type FlexRideStat =
+  | {
+      icon: LucideIcon;
+      value: number;
+      prefix: string;
+      suffix: string;
+      label: string;
+    }
+  | { icon: LucideIcon; text: string; label: string };
+
+const stats: FlexRideStat[] = [
   {
-    icon: "⚡",
+    icon: Zap,
     value: 45,
     prefix: "",
     suffix: "",
     label: "Days from concept to live",
   },
   {
-    icon: "◎",
+    icon: CircleDot,
     value: 0,
     prefix: "$",
     suffix: "",
     label: "Incremental headcount required",
   },
   {
-    icon: "◆",
+    icon: ShieldCheck,
     text: "Secured",
     label: "Institutional lending facility (Westlake / CULA)",
   },
-] as const;
+];
 
 const stack = [
   "Tomorrow's Journey / JRNY",
@@ -50,8 +62,8 @@ export function FlexRideCaseStudy() {
           >
             <div className="grid lg:grid-cols-2">
               <div className="flex flex-col p-8 sm:p-10 lg:p-12">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F6E56]/10 text-lg text-[#0F6E56]">
-                  ▣
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F6E56]/10 text-[#0F6E56]">
+                  <LayoutGrid className="h-5 w-5" aria-hidden />
                 </span>
                 <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-[#0F6E56]">
                   Proof of Concept
@@ -132,8 +144,8 @@ export function FlexRideCaseStudy() {
                   whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0F6E56]/10 text-base text-[#0F6E56]">
-                    {stat.icon}
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0F6E56]/10 text-[#0F6E56]">
+                    <stat.icon className="h-4 w-4" aria-hidden />
                   </span>
                   <p className="mt-3 text-3xl font-extrabold tracking-tight text-vycl-dark">
                     {"text" in stat ? (

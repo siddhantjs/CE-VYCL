@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { CONTACT_PATH, RYAN_HEADSHOT_URL } from "@/lib/site";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
 const audiences = [
@@ -24,7 +25,7 @@ export function About() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <Image
-              src="https://img1.wsimg.com/isteam/ip/b84f3793-a6ad-44f2-9aa6-5fa31c433041/Heasdshot.jpg/:/cr=t:16.64%25,l:0%25,w:100%25,h:66.73%25/rs=w:1160,h:1160"
+              src={RYAN_HEADSHOT_URL}
               alt="Ryan Yamauchi, Founder of VYCL"
               fill
               className="object-cover object-top"
@@ -77,7 +78,7 @@ export function About() {
             whileTap={{ scale: 0.97 }}
           >
             <Link
-              href="#contact"
+              href={CONTACT_PATH}
               className="inline-flex rounded-full bg-vycl-lime px-7 py-3.5 text-sm font-semibold text-vycl-dark transition-opacity hover:opacity-90"
             >
               Work With Us
