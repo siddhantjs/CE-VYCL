@@ -2,174 +2,67 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { CALENDLY_EMBED_URL, CALENDLY_URL } from "@/lib/site";
+import { CALENDLY_URL } from "@/lib/site";
 import { FadeIn } from "../motion";
 
-const CALENDLY_CSS =
-  "https://assets.calendly.com/assets/external/widget.css";
-const CALENDLY_SCRIPT =
-  "https://assets.calendly.com/assets/external/widget.js";
-const EMBED_HEIGHT_CLASS = "h-[min(480px,58vh)] min-h-[380px]";
-const EMBED_HEIGHT_LG_CLASS =
-  "lg:h-[min(480px,58vh)] lg:min-h-[380px]";
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (options: {
-        url: string;
-        parentElement: HTMLElement;
-      }) => void;
-    };
-  }
-}
-
-function ensureCalendlyStyles() {
-  if (document.querySelector(`link[href="${CALENDLY_CSS}"]`)) return;
-  const link = document.createElement("link");
-  link.href = CALENDLY_CSS;
-  link.rel = "stylesheet";
-  document.head.appendChild(link);
-}
-
-function loadCalendlyScript(): Promise<void> {
-  if (window.Calendly) return Promise.resolve();
-
-  const existing = document.querySelector<HTMLScriptElement>(
-    `script[src="${CALENDLY_SCRIPT}"]`,
-  );
-  if (existing?.dataset.loaded === "true") return Promise.resolve();
-
-  return new Promise((resolve, reject) => {
-    if (existing) {
-      existing.addEventListener("load", () => resolve(), { once: true });
-      existing.addEventListener("error", () => reject(), { once: true });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = CALENDLY_SCRIPT;
-    script.async = true;
-    script.addEventListener(
-      "load",
-      () => {
-        script.dataset.loaded = "true";
-        resolve();
-      },
-      { once: true },
-    );
-    script.addEventListener("error", () => reject(), { once: true });
-    document.body.appendChild(script);
-  });
-}
-
 export function ContactCalendar() {
-  const calendlyRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const parent = calendlyRef.current;
-    if (!parent) return;
-
-    let cancelled = false;
-
-    ensureCalendlyStyles();
-    loadCalendlyScript()
-      .then(() => {
-        if (cancelled || !calendlyRef.current || !window.Calendly) return;
-        calendlyRef.current.replaceChildren();
-        window.Calendly.initInlineWidget({
-          url: CALENDLY_EMBED_URL,
-          parentElement: calendlyRef.current,
-        });
-      })
-      .catch(() => {
-        /* Widget failed to load — link fallback remains in the QR card. */
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
-    <section className="relative overflow-hidden border-t border-vycl-border bg-vycl-dark px-5 py-10 sm:px-8 sm:py-12">
+    <section className="relative overflow-hidden border-b border-vycl-border bg-vycl-dark px-5 py-10 sm:px-8 sm:py-12">
       <div
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(15,36,25,0.92)_0%,rgba(15,110,86,0.55)_100%)]"
         aria-hidden
       />
-      <div className="relative mx-auto max-w-6xl">
-        <FadeIn className="max-w-2xl">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Or schedule a call directly.
+      <div className="relative mx-auto max-w-3xl">
+        <FadeIn className="text-center">
+          <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+            Or schedule a call directly
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-white/75">
-            30 minutes. No pitch deck required. Just a conversation about where
-            subscription fits in your business.
+          <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-white/75">
+            30 minutes — no pitch deck. Just where subscription fits in your
+            business.
           </p>
         </FadeIn>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(220px,260px)] lg:items-stretch">
-          <FadeIn delay={0.08} className="min-w-0">
-            <div className="overflow-hidden rounded-2xl bg-white shadow-xl shadow-black/25 ring-1 ring-white/10">
-              <div
-                ref={calendlyRef}
-                className={`calendly-inline-widget w-full ${EMBED_HEIGHT_CLASS}`}
-              />
-            </div>
-            <p className="mt-3 text-center text-xs text-white/50 lg:text-left">
-              Prefer a new tab?{" "}
+        <FadeIn delay={0.08} className="mt-6">
+          <div className="flex flex-col items-stretch gap-4 rounded-xl border border-white/10 bg-vycl-dark-card/90 p-4 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+            <div className="flex items-center gap-3">
               <Link
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-vycl-lime underline-offset-2 hover:underline"
-              >
-                Open scheduler
-              </Link>
-            </p>
-          </FadeIn>
-
-          <FadeIn
-            delay={0.14}
-            className={`flex min-w-0 ${EMBED_HEIGHT_LG_CLASS}`}
-          >
-            <div className="flex w-full flex-col items-center justify-center rounded-2xl border border-white/10 bg-vycl-dark-card/90 px-5 py-6 text-center backdrop-blur-sm sm:px-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-vycl-lime">
-                On mobile?
-              </p>
-              <Link
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 block rounded-2xl bg-vycl-cream p-4 shadow-lg shadow-black/20 transition-transform hover:scale-[1.02]"
+                className="shrink-0 rounded-lg bg-vycl-cream p-2 shadow-md shadow-black/15 transition-transform hover:scale-[1.02]"
               >
                 <Image
                   src="/calendly-qr.png"
-                  alt="Scan to schedule a call with VYCL — calendly.com/vycl/30min"
-                  width={180}
-                  height={180}
-                  className="mx-auto h-auto w-full max-w-[160px]"
+                  alt="Scan to schedule a call with VYCL"
+                  width={96}
+                  height={96}
+                  className="h-16 w-16"
                   priority
                 />
               </Link>
-              <h3 className="mt-4 text-base font-bold text-white">
-                Scan to schedule
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
-                30-minute intro call with Ryan Yamauchi
-              </p>
-              <Link
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 break-all text-sm font-medium text-vycl-lime underline-offset-2 hover:underline"
-              >
-                calendly.com/vycl/30min
-              </Link>
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-vycl-lime">
+                  On your phone?
+                </p>
+                <p className="mt-0.5 text-sm font-semibold text-white">
+                  Scan to schedule
+                </p>
+                <p className="text-xs text-white/65">
+                  30-min intro with Ryan Yamauchi
+                </p>
+              </div>
             </div>
-          </FadeIn>
-        </div>
+            <Link
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-vycl-lime px-5 py-2.5 text-sm font-semibold text-vycl-dark transition-opacity hover:opacity-90 sm:self-center"
+            >
+              Open scheduler
+            </Link>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
