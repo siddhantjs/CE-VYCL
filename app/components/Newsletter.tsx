@@ -12,18 +12,18 @@ export function Newsletter() {
   }
 
   return (
-    <section className="border-t border-vycl-border bg-white px-5 py-16 sm:px-8">
+    <section className="border-t border-white/10 bg-vycl-dark px-5 py-16 text-white sm:px-8">
       <FadeIn className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center sm:flex-row sm:text-left">
         <div className="flex-1">
-          <h2 className="text-2xl font-extrabold text-vycl-dark">
+          <h2 className="text-2xl font-extrabold text-white">
             Join Our Mailing List
           </h2>
-          <p className="mt-2 text-sm text-vycl-text-muted">
+          <p className="mt-2 text-sm text-white/65">
             Industry insights and updates on the vehicle subscription economy.
           </p>
         </div>
         {submitted ? (
-          <p className="text-sm font-medium text-vycl-dark">
+          <p className="text-sm font-medium text-vycl-lime">
             You&apos;re subscribed. Thank you!
           </p>
         ) : (
@@ -35,11 +35,11 @@ export function Newsletter() {
               type="email"
               required
               placeholder="Email address"
-              className="flex-1 rounded-full border border-vycl-border bg-vycl-cream px-5 py-3 text-sm outline-none ring-vycl-dark focus:ring-2"
+              className="flex-1 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-white/45 outline-none ring-vycl-lime focus:ring-2"
             />
             <button
               type="submit"
-              className="rounded-full bg-vycl-dark px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="rounded-full bg-vycl-lime px-6 py-3 text-sm font-semibold text-vycl-dark transition-opacity hover:opacity-90"
             >
               Subscribe
             </button>
