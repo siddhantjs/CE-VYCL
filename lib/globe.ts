@@ -10,7 +10,7 @@ export type GlobeArc = {
   color: string;
 };
 
-/** VYCL brand-aligned globe styling — dark green base with lime accents. */
+/** VYCL brand-aligned globe styling   dark green base with lime accents. */
 export const GLOBE_CONFIG: GlobeConfig = {
   pointSize: 1.2,
   globeColor: "#163328",

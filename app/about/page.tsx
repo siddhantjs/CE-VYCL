@@ -8,9 +8,9 @@ import { Header } from "../components/Header";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About VYCL — Vehicle Subscription Expert | Ryan Yamauchi",
+  title: "About VYCL   Vehicle Subscription Expert | Ryan Yamauchi",
   description:
-    "Ryan Yamauchi built and scaled vehicle subscription programs for over a decade — from Hawaii to national platforms. VYCL is the consultancy purpose-built for the subscription economy.",
+    "Ryan Yamauchi built and scaled vehicle subscription programs for over a decade   from Hawaii to national platforms. VYCL is the consultancy purpose-built for the subscription economy.",
   path: "/about",
   keywords: [
     "vehicle subscription expert",

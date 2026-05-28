@@ -324,7 +324,7 @@ export function Hero() {
           The only consultancy built for the subscription economy.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          From first program to 100+ rooftops — VYCL connects the dots across
+          From first program to 100+ rooftops   VYCL connects the dots across
           inventory, lending, technology, marketing, insurance, and operations so
           your program actually launches and scales.
         </p>

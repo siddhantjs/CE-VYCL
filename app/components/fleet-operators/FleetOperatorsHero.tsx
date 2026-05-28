@@ -13,7 +13,7 @@ export function FleetOperatorsHero() {
           Fleet-based subscription programs need a fundamentally different
           structure. VYCL has direct access to the AVIS/Budget wholesale channel
           for fleet-ready inventory, pre-owned EV sourcing through PLUG, insurance
-          verification through Axle, and subscriber underwriting through KEYVO —
+          verification through Axle, and subscriber underwriting through KEYVO  
           all integrated into a program designed for fleet-scale operations.
         </p>
       </FadeIn>

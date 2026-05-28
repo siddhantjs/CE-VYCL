@@ -1,4 +1,4 @@
-# VYCL — Connecting the Dots to Vehicle Subscription
+# VYCL   Connecting the Dots to Vehicle Subscription
 
 ## Overview
 
@@ -50,7 +50,7 @@ The company emphasizes deep expertise across multiple industries that are essent
 
 ---
 
-# Key Services — The 6 Pillars of Vehicle Subscription
+# Key Services   The 6 Pillars of Vehicle Subscription
 
 The website is structured around six foundational business pillars that support a successful vehicle subscription ecosystem.
 
@@ -369,4 +369,4 @@ VYCL helps OEMs, dealerships, lenders, insurers, and technology providers launch
 
 # Footer
 
-© 2025 VYCL — All Rights Reserved.
+© 2025 VYCL   All Rights Reserved.

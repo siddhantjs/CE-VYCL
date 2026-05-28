@@ -6,12 +6,12 @@ import { CONTACT_PATH, RYAN_HEADSHOT_URL } from "@/lib/site";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
 const credentials = [
-  "Co-founder, KEYVO — the subscription industry's only dealer and lender underwriting platform",
-  "Exclusive Head of Sales North America — Tomorrow's Journey / JRNY",
-  "Co-founder, NYP LLC — operating entity, FlexRide by King",
-  "Structured institutional lending facility — Westlake Financial / CULA",
-  "Former VP of Operations — AutoSource Hawaii",
-  "Former Director of Strategic Planning — nation's first DTC vehicle subscription company",
+  "Co-founder, KEYVO   the subscription industry's only dealer and lender underwriting platform",
+  "Exclusive Head of Sales North America   Tomorrow's Journey / JRNY",
+  "Co-founder, NYP LLC   operating entity, FlexRide by King",
+  "Structured institutional lending facility   Westlake Financial / CULA",
+  "Former VP of Operations   AutoSource Hawaii",
+  "Former Director of Strategic Planning   nation's first DTC vehicle subscription company",
 ];
 
 export function About() {
@@ -26,7 +26,7 @@ export function About() {
           >
             <Image
               src={RYAN_HEADSHOT_URL}
-              alt="Ryan Yamauchi — vehicle subscription consultant, founder of VYCL, co-founder of KEYVO"
+              alt="Ryan Yamauchi   vehicle subscription consultant, founder of VYCL, co-founder of KEYVO"
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -45,7 +45,7 @@ export function About() {
           <div className="mt-5 space-y-4 text-base leading-relaxed text-vycl-text-muted">
             <p>
               Ryan Yamauchi has spent over a decade building, operating, and
-              scaling vehicle subscription programs — starting with Hawaii&apos;s
+              scaling vehicle subscription programs   starting with Hawaii&apos;s
               boutique dealership market and expanding to national platform
               development, institutional lending, and multi-rooftop dealer
               strategy.
@@ -54,8 +54,8 @@ export function About() {
               He served as VP of Operations at AutoSource Hawaii and Director of
               Strategic Planning at the nation&apos;s first direct-to-consumer
               vehicle subscription company. Today he is the founder of VYCL,
-              co-founder of KEYVO — the subscription industry&apos;s only
-              underwriting platform for dealers and lenders — co-founder of NYP
+              co-founder of KEYVO   the subscription industry&apos;s only
+              underwriting platform for dealers and lenders   co-founder of NYP
               LLC (the operating entity behind FlexRide by King), and the
               exclusive Head of Sales North America for Tomorrow&apos;s Journey,
               the UK-based SaaS company whose JRNY platform powers subscription

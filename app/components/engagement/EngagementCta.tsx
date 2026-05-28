@@ -18,7 +18,7 @@ export function EngagementCta() {
             Not sure which engagement fits?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/70">
-            Every conversation starts the same — 30 minutes, no agenda except
+            Every conversation starts the same   30 minutes, no agenda except
             understanding where you are and where you want to go.
           </p>
           <motion.div

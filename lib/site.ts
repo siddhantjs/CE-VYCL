@@ -27,7 +27,7 @@ export type FeaturedNavItem = {
   comingSoon?: boolean;
 };
 
-/** Top-level navbar links — always visible on desktop. */
+/** Top-level navbar links   always visible on desktop. */
 export const PRIMARY_NAV: PrimaryNavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -36,12 +36,12 @@ export const PRIMARY_NAV: PrimaryNavItem[] = [
   { href: CONTACT_PATH, label: "Contact" },
 ];
 
-/** Audience pages and related links — shown in the “Who We Serve” mega-menu card. */
+/** Audience pages and related links   shown in the “Who We Serve” mega-menu card. */
 export const FEATURED_NAV: FeaturedNavItem[] = [
   {
     href: "/dealer-groups",
     label: "Dealer Groups",
-    description: "Subscription on rooftops—no ops rebuild.",
+    description: "Subscription on rooftops no ops rebuild.",
   },
   {
     href: "/lenders",
@@ -65,7 +65,7 @@ export type SitemapSection = {
   links: { href: string; label: string }[];
 };
 
-/** Footer sitemap columns — grouped site navigation. */
+/** Footer sitemap columns   grouped site navigation. */
 export const FOOTER_SITEMAP: SitemapSection[] = [
   {
     title: "Company",

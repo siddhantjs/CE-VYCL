@@ -29,7 +29,7 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting — purpose-built for subscription portfolio risk",
+    text: "KEYVO underwriting   purpose-built for subscription portfolio risk",
   },
 ];
 

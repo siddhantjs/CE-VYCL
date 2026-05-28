@@ -20,7 +20,7 @@ export function ContactIntro({ centered = false }: ContactIntroProps) {
       </h1>
       <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
         Whether you are a dealer group, lender, SaaS platform, or fleet
-        operator — VYCL has a lane for you. Tell us where you are and where you
+        operator   VYCL has a lane for you. Tell us where you are and where you
         want to go.
       </p>
     </FadeIn>

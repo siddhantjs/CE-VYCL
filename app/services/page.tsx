@@ -6,7 +6,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
 export const metadata: Metadata = {
-  title: "VYCL Services — Vehicle Subscription Advisory, Implementation & Partnership",
+  title: "VYCL Services   Vehicle Subscription Advisory, Implementation & Partnership",
   description:
     "VYCL offers three engagement models for dealer groups, lenders, SaaS platforms, and fleet operators: Advisory, Implementation, and Ongoing Partnership.",
 };

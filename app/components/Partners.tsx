@@ -36,7 +36,7 @@ function PartnerLogo({
   relationship: string;
   logoSrc?: string;
 }) {
-  const alt = `${name} — ${relationship} with VYCL vehicle subscription consultancy`;
+  const alt = `${name}   ${relationship} with VYCL vehicle subscription consultancy`;
 
   if (logoSrc) {
     return (
@@ -107,7 +107,7 @@ export function Partners() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
             VYCL bridges automotive retail, finance, insurance, technology,
-            inventory, and marketing — connecting every stakeholder your
+            inventory, and marketing   connecting every stakeholder your
             subscription program needs to succeed.
           </p>
         </FadeIn>

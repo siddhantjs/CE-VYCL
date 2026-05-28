@@ -35,7 +35,7 @@ export function ProgramBlocks() {
               <div className="flex flex-col p-8 sm:p-10 lg:p-12">
                 <Image
                   src="/flexride-logo.svg"
-                  alt="FlexRide by King logo — Hawaii vehicle subscription program operated by VYCL and King Auto Group"
+                  alt="FlexRide by King logo   Hawaii vehicle subscription program operated by VYCL and King Auto Group"
                   width={240}
                   height={54}
                   className="h-auto w-48 sm:w-56"
@@ -51,7 +51,7 @@ export function ProgramBlocks() {
                 </div>
 
                 <h2 className="mt-6 text-2xl font-extrabold tracking-tight text-vycl-dark sm:text-3xl">
-                  FlexRide by King — Hawaii
+                  FlexRide by King   Hawaii
                 </h2>
 
                 <dl className="mt-8 space-y-3 rounded-2xl border border-vycl-border bg-vycl-cream-muted/50 p-5">
@@ -74,7 +74,7 @@ export function ProgramBlocks() {
               <div className="relative min-h-[280px] border-t border-vycl-border lg:min-h-full lg:border-t-0 lg:border-l">
                 <Image
                   src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80"
-                  alt="FlexRide by King — vehicle subscription program at King Auto Group, Hawaii"
+                  alt="FlexRide by King   vehicle subscription program at King Auto Group, Hawaii"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -100,7 +100,7 @@ export function ProgramBlocks() {
               </span>
             </div>
             <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-vycl-dark sm:text-3xl">
-              Central Florida — Coming Soon
+              Central Florida   Coming Soon
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-vycl-text-muted sm:text-base">
               VYCL is actively developing its next market engagement in Central

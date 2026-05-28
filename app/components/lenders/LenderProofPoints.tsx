@@ -11,11 +11,11 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting platform — purpose-built for subscription portfolios",
+    text: "KEYVO underwriting platform   purpose-built for subscription portfolios",
   },
   {
     icon: ShieldCheck,
-    text: "Axle-powered insurance verification — subscriber-level compliance reducing lender exposure",
+    text: "Axle-powered insurance verification   subscriber-level compliance reducing lender exposure",
   },
 ];
 

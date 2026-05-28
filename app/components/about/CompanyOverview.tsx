@@ -16,7 +16,7 @@ export function CompanyOverview() {
           <p className="mt-5 max-w-3xl text-base leading-relaxed text-vycl-text-muted">
             Founded by Ryan Yamauchi, VYCL LLC is Hawaii-based and operating
             nationally. It is the only consultancy purpose-built for the
-            vehicle subscription economy — not a generalist automotive firm, but
+            vehicle subscription economy   not a generalist automotive firm, but
             a specialist built exclusively for subscription.
           </p>
         </div>

@@ -50,7 +50,7 @@ export function GlobalReach() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70">
             From live programs in Hawaii to lending, SaaS, and dealer network
-            deployments across the U.S. — VYCL connects every stakeholder your
+            deployments across the U.S.   VYCL connects every stakeholder your
             subscription program needs.
           </p>
         </FadeIn>

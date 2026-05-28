@@ -78,7 +78,7 @@ export function DealerProblemSolution() {
 
         <FadeIn className="mt-12 overflow-hidden rounded-3xl border border-vycl-border bg-vycl-dark px-8 py-10 text-center text-white sm:px-12">
           <p className="text-xl font-bold tracking-tight sm:text-2xl">
-            VYCL solves all four — before you launch.
+            VYCL solves all four   before you launch.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">
             We configure the JRNY platform as your exclusive US licensing partner,

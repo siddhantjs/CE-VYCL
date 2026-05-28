@@ -7,7 +7,7 @@ import { ProgramsHero } from "../components/programs/ProgramsHero";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "VYCL Active Programs — Vehicle Subscription in Hawaii and Beyond",
+  title: "VYCL Active Programs   Vehicle Subscription in Hawaii and Beyond",
   description:
     "VYCL has built and operates Hawaii's most active vehicle subscription program. See FlexRide by King and what's coming next.",
   path: "/programs",

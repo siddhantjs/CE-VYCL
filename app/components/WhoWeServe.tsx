@@ -9,7 +9,7 @@ const audiences = [
     title: "Dealer Groups",
     href: "/dealer-groups",
     description:
-      "Launch and scale subscription programs on your existing rooftops — without adding headcount. We handle the playbook, the partners, and the dealer subscription program launch.",
+      "Launch and scale subscription programs on your existing rooftops   without adding headcount. We handle the playbook, the partners, and the dealer subscription program launch.",
     proof: "FlexRide by King, Hawaii",
   },
   {
@@ -26,7 +26,7 @@ const audiences = [
     href: "/platforms",
     description:
       "Bridge your technology to US dealer networks with market-ready onboarding and go-to-market execution.",
-    proof: "Exclusive US Licensing Partner — Tomorrow's Journey / JRNY",
+    proof: "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
   },
   {
     icon: "◎",

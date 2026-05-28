@@ -7,7 +7,7 @@ import { Header } from "../components/Header";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Vehicle Subscription for Dealer Groups — VYCL",
+  title: "Vehicle Subscription for Dealer Groups   VYCL",
   description:
     "Launch and scale a vehicle subscription program on your existing rooftops without adding headcount. VYCL handles the playbook, the partners, and the launch.",
   path: "/dealer-groups",
