@@ -2,6 +2,7 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { FlexRideCaseStudy } from "./components/FlexRideCaseStudy";
 import { Footer } from "./components/Footer";
+import { GlobalReach } from "./components/GlobalReach";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Partners } from "./components/Partners";
@@ -36,8 +37,10 @@ export default function Home() {
         <Testimonials />
         {/* S11 — Contact + Calendar */}
         <Contact />
+        {/* S12 — Global Reach Globe */}
+        <GlobalReach />
       </main>
-      {/* S12 — Footer (includes mailing list) */}
+      {/* S13 — Footer (includes mailing list) */}
       <Footer />
     </>
   );
