@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn, Stagger, motion, staggerItem } from "../motion";
+import { Stagger, motion, staggerItem } from "../motion";
 
 const tiers = [
   {

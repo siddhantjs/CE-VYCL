@@ -66,14 +66,10 @@ function AnimatedCounter({
     threshold: 0.2,
   });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(reduce ? target : 0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (reduce) {
-      setCount(target);
-      return;
-    }
-    if (!inView) return;
+    if (reduce || !inView) return;
 
     const controls = animate(0, target, {
       duration: 1.4,
@@ -83,9 +79,11 @@ function AnimatedCounter({
     return () => controls.stop();
   }, [inView, target, reduce]);
 
+  const displayCount = reduce ? target : count;
+
   return (
     <span ref={ref}>
-      {count}
+      {displayCount}
       {suffix}
     </span>
   );

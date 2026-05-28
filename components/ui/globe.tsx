@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Color, Scene, PerspectiveCamera, Vector3, Group } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
@@ -118,10 +118,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (!globeRef.current || !isInitialized || !data) return;
 
     const arcs = data;
-    let points = [];
+    const points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
@@ -240,43 +239,39 @@ export function Globe({ globeConfig, data }: WorldProps) {
 }
 
 export function WebGLRendererConfig() {
-  const { gl, size } = useThree();
+  const { gl, size, camera } = useThree();
 
   useEffect(() => {
     gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     gl.setSize(size.width, size.height);
     gl.setClearColor(0x000000, 0);
-  }, [gl, size.height, size.width]);
-
-  return null;
-}
-
-function CameraSync() {
-  const { camera, size } = useThree();
-
-  useEffect(() => {
     if (camera instanceof PerspectiveCamera) {
-      camera.aspect = size.width / Math.max(size.height, 1);
-      camera.updateProjectionMatrix();
+      const aspect = size.width / Math.max(size.height, 1);
+      if (camera.aspect !== aspect) {
+        // Three.js cameras are updated imperatively on resize.
+        // eslint-disable-next-line react-hooks/immutability -- R3F camera aspect sync
+        camera.aspect = aspect;
+        camera.updateProjectionMatrix();
+      }
     }
-  }, [camera, size.width, size.height]);
+  }, [gl, size.height, size.width, camera]);
 
   return null;
 }
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
-  const scene = new Scene();
+  const scene = useMemo(() => new Scene(), []);
+  const camera = useMemo(() => new PerspectiveCamera(50, 1, 180, 1800), []);
   return (
     <Canvas
       scene={scene}
       className="h-full w-full"
       gl={{ alpha: true, antialias: true }}
-      camera={new PerspectiveCamera(50, 1, 180, 1800)}
+      camera={camera}
       style={{ background: "transparent" }}
     >
       <WebGLRendererConfig />
-      <CameraSync />
       <ambientLight color={globeConfig.ambientLight} intensity={0.55} />
       <directionalLight
         color={globeConfig.directionalLeftLight}
@@ -314,12 +309,12 @@ export function World(props: WorldProps) {
 }
 
 export function hexToRgb(hex: string) {
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b;
   });
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
         r: parseInt(result[1], 16),

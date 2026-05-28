@@ -26,14 +26,10 @@ export function AnimatedStat({
     threshold: 0.2,
   });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(reduce ? value : 0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (reduce) {
-      setCount(value);
-      return;
-    }
-    if (!inView) return;
+    if (reduce || !inView) return;
 
     const controls = animate(0, value, {
       duration,
@@ -43,10 +39,12 @@ export function AnimatedStat({
     return () => controls.stop();
   }, [inView, value, reduce, duration]);
 
+  const displayCount = reduce ? value : count;
+
   return (
     <span ref={ref} className={cn("tabular-nums", className)}>
       {prefix}
-      {count}
+      {displayCount}
       {suffix}
     </span>
   );
