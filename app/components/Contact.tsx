@@ -11,7 +11,7 @@ export function Contact() {
         className="bg-vycl-cream-muted px-5 py-20 sm:px-8 sm:py-24"
       >
         <div className="mx-auto max-w-6xl">
-          <ContactIntro />
+          <ContactIntro centered />
           <div className="mx-auto mt-12 max-w-2xl">
             <ContactForm />
           </div>

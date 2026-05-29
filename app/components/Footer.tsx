@@ -8,10 +8,10 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-vycl-dark text-white">
       <Newsletter />
       <div className="border-t border-white/10 px-5 py-12 sm:px-8">
-        <div className="mx-auto max-w-6xl">
+        <div className="max-w-6xl mx-auto">
           <nav
             aria-label="Sitemap"
-            className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
+            className="flex flex-col gap-16 sm:gap-32 sm:flex-row"
           >
             {FOOTER_SITEMAP.map((section) => (
               <div key={section.title}>

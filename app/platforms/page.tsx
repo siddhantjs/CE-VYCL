@@ -7,7 +7,7 @@ import { PlatformsHero } from "../components/platforms/PlatformsHero";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Automotive SaaS US Market Entry — VYCL Platform Partnership",
+  title: "Automotive SaaS US Market Entry   VYCL Platform Partnership",
   description:
     "VYCL is the exclusive US licensing partner for Tomorrow's Journey / JRNY. We bridge automotive SaaS platforms to US dealer networks with proven go-to-market execution.",
   path: "/platforms",

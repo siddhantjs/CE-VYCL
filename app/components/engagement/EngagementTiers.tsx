@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn, Stagger, motion, staggerItem } from "../motion";
+import { Stagger, motion, staggerItem } from "../motion";
 
 const tiers = [
   {
@@ -30,11 +30,11 @@ const tiers = [
       heading: "What's included",
       items: [
         "JRNY platform configuration (exclusive US licensing partner)",
-        "Lender engagement — Westlake Financial / CULA facility structure",
+        "Lender engagement   Westlake Financial / CULA facility structure",
         "Axle insurance verification integration",
-        "Inventory sourcing — AVIS/Budget wholesale + PLUG EV platform",
+        "Inventory sourcing   AVIS/Budget wholesale + PLUG EV platform",
         "Digital marketing launch via MiaVita Solutions",
-        "Operational design — staffing model, workflow, subscriber onboarding",
+        "Operational design   staffing model, workflow, subscriber onboarding",
       ],
     },
   },

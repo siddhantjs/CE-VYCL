@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: "Terms of Service — VYCL LLC",
+    title: "Terms of Service   VYCL LLC",
     description:
       "Terms governing use of the VYCL website. Site content is informational only and does not constitute a consulting agreement.",
     path: "/terms",
@@ -36,8 +36,8 @@ export default function TermsPage() {
 
       <LegalSection title="2. Intellectual Property">
         <p>
-          All content on this website — including text, graphics, logos, images,
-          and the Six Pillars framework — is owned by VYCL LLC or used with
+          All content on this website   including text, graphics, logos, images,
+          and the Six Pillars framework   is owned by VYCL LLC or used with
           permission. The Six Pillars framework is proprietary to VYCL LLC and
           may not be reproduced, distributed, or adapted without prior written
           consent.

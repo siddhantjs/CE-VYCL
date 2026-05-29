@@ -7,7 +7,7 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Sparkles,
-    text: "Exclusive US Licensing Partner — Tomorrow's Journey / JRNY",
+    text: "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
   },
   {
     icon: MapPin,
@@ -15,7 +15,7 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Zap,
-    text: "Live proof-of-concept rooftop — the strongest sales tool in any platform conversation",
+    text: "Live proof-of-concept rooftop   the strongest sales tool in any platform conversation",
   },
 ];
 

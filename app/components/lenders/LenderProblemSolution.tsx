@@ -65,7 +65,7 @@ export function LenderProblemSolution() {
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">
             We structured and closed institutional lending with Westlake Financial
-            and CULA for FlexRide by King — giving lenders a live reference for
+            and CULA for FlexRide by King   giving lenders a live reference for
             facility design, underwriting criteria, and portfolio monitoring in
             production.
           </p>

@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-    title: "Privacy Policy — VYCL LLC",
+    title: "Privacy Policy   VYCL LLC",
     description:
       "How VYCL LLC collects, uses, and protects personal information submitted through our website contact form and mailing list.",
     path: "/privacy",
@@ -66,11 +66,11 @@ export default function PrivacyPage() {
         </p>
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            <strong className="text-vycl-dark">Calendly</strong> — for scheduling
+            <strong className="text-vycl-dark">Calendly</strong>   for scheduling
             calls when you book through our Calendly link.
           </li>
           <li>
-            <strong className="text-vycl-dark">Email service provider</strong> —
+            <strong className="text-vycl-dark">Email service provider</strong>  
             for sending mailing list communications and responding to contact
             form submissions.
           </li>

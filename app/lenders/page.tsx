@@ -7,7 +7,7 @@ import { LendersHero } from "../components/lenders/LendersHero";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Vehicle Subscription Lending — VYCL Structures Subscription Portfolios",
+  title: "Vehicle Subscription Lending   VYCL Structures Subscription Portfolios",
   description:
     "VYCL helps lenders structure fleet-based subscription lending facilities with proper collateral, cash-flow modelling, and KEYVO subscriber underwriting.",
   path: "/lenders",

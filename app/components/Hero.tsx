@@ -66,14 +66,10 @@ function AnimatedCounter({
     threshold: 0.2,
   });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(reduce ? target : 0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (reduce) {
-      setCount(target);
-      return;
-    }
-    if (!inView) return;
+    if (reduce || !inView) return;
 
     const controls = animate(0, target, {
       duration: 1.4,
@@ -83,9 +79,11 @@ function AnimatedCounter({
     return () => controls.stop();
   }, [inView, target, reduce]);
 
+  const displayCount = reduce ? target : count;
+
   return (
     <span ref={ref}>
-      {count}
+      {displayCount}
       {suffix}
     </span>
   );
@@ -324,7 +322,7 @@ export function Hero() {
           The only consultancy built for the subscription economy.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          From first program to 100+ rooftops — VYCL connects the dots across
+          From first program to 100+ rooftops   VYCL connects the dots across
           inventory, lending, technology, marketing, insurance, and operations so
           your program actually launches and scales.
         </p>

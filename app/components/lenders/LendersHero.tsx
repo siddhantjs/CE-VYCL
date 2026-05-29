@@ -15,7 +15,7 @@ export function LendersHero() {
           fleet portfolios. VYCL works with lenders to build the right facility
           structure, underwriting criteria, and monitoring framework.
           Subscriber-level insurance compliance is managed in real time through
-          Axle. Subscriber underwriting is powered by KEYVO — the only platform
+          Axle. Subscriber underwriting is powered by KEYVO   the only platform
           built specifically for subscription portfolio risk.
         </p>
       </FadeIn>

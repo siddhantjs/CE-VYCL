@@ -85,7 +85,7 @@ export function FlexRideCaseStudy() {
                   </p>
                   <p>
                     It is the clearest proof that the Six Pillars framework
-                    works — not in theory, but in the market.
+                    works   not in theory, but in the market.
                   </p>
                 </div>
 
@@ -120,7 +120,7 @@ export function FlexRideCaseStudy() {
               <div className="relative min-h-[260px] border-t border-vycl-border lg:min-h-full lg:border-t-0 lg:border-l">
                 <Image
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
-                  alt="FlexRide by King — vehicle subscription program built by VYCL at King Windward Nissan, Hawaii"
+                  alt="FlexRide by King   vehicle subscription program built by VYCL at King Windward Nissan, Hawaii"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

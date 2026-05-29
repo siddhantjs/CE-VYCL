@@ -3,7 +3,7 @@ import { getSiteUrl, RYAN_HEADSHOT_URL } from "@/lib/site";
 
 export const SITE_NAME = "VYCL";
 export const DEFAULT_TITLE =
-  "VYCL — Vehicle Subscription Consultancy | Ryan Yamauchi";
+  "VYCL   Vehicle Subscription Consultancy | Ryan Yamauchi";
 export const DEFAULT_DESCRIPTION =
   "VYCL is the only consultancy purpose-built for the vehicle subscription economy. Serving dealer groups, lenders, OEMs, and SaaS platforms across the US.";
 
@@ -52,7 +52,7 @@ export function createPageMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: "VYCL — vehicle subscription consultancy for dealer groups, lenders, and SaaS platforms",
+          alt: "VYCL   vehicle subscription consultancy for dealer groups, lenders, and SaaS platforms",
         },
       ],
     },

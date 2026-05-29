@@ -10,7 +10,7 @@ export function ServicesHero() {
           How VYCL Works
         </h1>
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          Vehicle subscription is not one problem — it&apos;s six. VYCL solves
+          Vehicle subscription is not one problem   it&apos;s six. VYCL solves
           all of them, in whatever combination your business needs.
         </p>
       </FadeIn>

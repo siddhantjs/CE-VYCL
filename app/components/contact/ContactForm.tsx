@@ -118,7 +118,7 @@ export function ContactForm() {
 
             <p className="text-lg font-semibold text-vycl-dark">
 
-              Thank you — we received your message.
+              Thank you   we received your message.
 
             </p>
 

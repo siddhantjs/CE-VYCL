@@ -17,19 +17,19 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting — the only subscription-native subscriber approval tool available to dealers",
+    text: "KEYVO underwriting   the only subscription-native subscriber approval tool available to dealers",
   },
   {
     icon: Gauge,
-    text: "JRNY platform — configured and optimised as exclusive US licensing partner",
+    text: "JRNY platform   configured and optimised as exclusive US licensing partner",
   },
   {
     icon: ShieldCheck,
-    text: "Axle — real-time insurance compliance across every subscriber",
+    text: "Axle   real-time insurance compliance across every subscriber",
   },
   {
     icon: Megaphone,
-    text: "MiaVita Solutions — automotive and subscription-specialist digital marketing",
+    text: "MiaVita Solutions   automotive and subscription-specialist digital marketing",
   },
 ];
 

@@ -7,9 +7,9 @@ import { Header } from "../components/Header";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact VYCL — Hire an Automotive Subscription Consultant",
+  title: "Contact VYCL   Hire an Automotive Subscription Consultant",
   description:
-    "Ready to build your vehicle subscription program? Contact VYCL for consulting on dealer groups, lenders, SaaS platforms, and fleet operators — or schedule a 30-minute call directly.",
+    "Ready to build your vehicle subscription program? Contact VYCL for consulting on dealer groups, lenders, SaaS platforms, and fleet operators   or schedule a 30-minute call directly.",
   path: "/contact",
   keywords: [
     "hire automotive consultant",

@@ -12,7 +12,7 @@ export function DealerGroupsHero() {
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
           Most programs fail not because the model is wrong, but because the
           implementation is. VYCL handles the platform, the lender, insurance
-          compliance, and inventory before you go live — so the program works on
+          compliance, and inventory before you go live   so the program works on
           day one.
         </p>
       </FadeIn>
