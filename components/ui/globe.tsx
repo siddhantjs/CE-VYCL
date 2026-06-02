@@ -38,6 +38,9 @@ export type GlobeConfig = {
   emissiveIntensity?: number;
   shininess?: number;
   polygonColor?: string;
+  hexPolygonResolution?: number;
+  hexPolygonMargin?: number;
+  pointRadius?: number;
   ambientLight?: string;
   directionalLeftLight?: string;
   directionalTopLight?: string;
@@ -149,8 +152,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .hexPolygonsData(countries.features)
-      .hexPolygonResolution(3)
-      .hexPolygonMargin(0.7)
+      .hexPolygonResolution(defaultProps.hexPolygonResolution ?? 3)
+      .hexPolygonMargin(defaultProps.hexPolygonMargin ?? 0.7)
       .showAtmosphere(defaultProps.showAtmosphere)
       .atmosphereColor(defaultProps.atmosphereColor)
       .atmosphereAltitude(defaultProps.atmosphereAltitude)
@@ -167,8 +170,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
         const rgb = hexToRgb(base);
         if (!rgb) return [base, base] as [string, string];
         return [
-          `rgba(${rgb.r},${rgb.g},${rgb.b},0)`,
-          `rgba(${rgb.r},${rgb.g},${rgb.b},0.9)`,
+          `rgba(${rgb.r},${rgb.g},${rgb.b},0.95)`,
+          `rgba(${rgb.r},${rgb.g},${rgb.b},0.12)`,
         ] as [string, string];
       })
       .arcAltitude((e) => (e as { arcAlt: number }).arcAlt * 1)
@@ -183,7 +186,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .pointColor((e) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
-      .pointRadius(2);
+      .pointRadius(defaultProps.pointRadius ?? 2);
 
     globeRef.current
       .ringsData([])
@@ -201,6 +204,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     defaultProps.atmosphereColor,
     defaultProps.atmosphereAltitude,
     defaultProps.polygonColor,
+    defaultProps.hexPolygonResolution,
+    defaultProps.hexPolygonMargin,
+    defaultProps.pointRadius,
     defaultProps.arcLength,
     defaultProps.arcTime,
     defaultProps.rings,
@@ -222,10 +228,11 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
       const ringsData = data
         .filter((d, i) => newNumbersOfRings.includes(i))
-        .flatMap((d) => [
-          { lat: d.startLat, lng: d.startLng, color: d.color },
-          { lat: d.endLat, lng: d.endLng, color: d.color },
-        ]);
+        .map((d) => ({
+          lat: d.startLat,
+          lng: d.startLng,
+          color: d.color,
+        }));
 
       globeRef.current.ringsData(ringsData);
     }, 1400);

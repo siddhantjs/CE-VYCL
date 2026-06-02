@@ -10,17 +10,26 @@ export type GlobeArc = {
   color: string;
 };
 
-/** VYCL brand-aligned globe styling   dark green base with lime accents. */
+/** Honolulu — hub for all national reach arcs (matches GeoJSON CRS84 lng/lat). */
+export const GLOBE_HUB = {
+  lat: 21.3069,
+  lng: -157.8583,
+} as const;
+
+/** VYCL brand-aligned globe styling — tokens mirror app/globals.css (--vycl-*). */
 export const GLOBE_CONFIG: GlobeConfig = {
-  pointSize: 1.2,
-  globeColor: "#163328",
+  pointSize: 1.5,
+  globeColor: "#1c3f30",
   showAtmosphere: true,
   atmosphereColor: "#d4f54a",
   atmosphereAltitude: 0.14,
   emissive: "#1a3d2e",
-  emissiveIntensity: 0.22,
+  emissiveIntensity: 0.32,
   shininess: 0.85,
-  polygonColor: "rgba(212, 245, 74, 0.22)",
+  polygonColor: "rgba(212, 245, 74, 0.5)",
+  hexPolygonResolution: 4,
+  hexPolygonMargin: 0.55,
+  pointRadius: 2.2,
   ambientLight: "#ffffff",
   directionalLeftLight: "#d4f54a",
   directionalTopLight: "#ffffff",
@@ -36,12 +45,12 @@ export const GLOBE_CONFIG: GlobeConfig = {
 const LIME = "#d4f54a";
 const LIME_MUTED = "#e8f9a0";
 
-/** Arcs radiating from Honolulu and cross-country connections for continuous motion. */
+/** Arcs radiating from Honolulu to U.S. deployment locations only. */
 export const GLOBE_ARCS: GlobeArc[] = [
   {
     order: 1,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 34.0522,
     endLng: -118.2437,
     arcAlt: 0.28,
@@ -49,8 +58,8 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 2,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 37.7749,
     endLng: -122.4194,
     arcAlt: 0.3,
@@ -58,8 +67,8 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 3,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 32.7767,
     endLng: -96.797,
     arcAlt: 0.34,
@@ -67,8 +76,8 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 4,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 41.8781,
     endLng: -87.6298,
     arcAlt: 0.36,
@@ -76,8 +85,8 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 5,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 40.7128,
     endLng: -74.006,
     arcAlt: 0.38,
@@ -85,8 +94,8 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 6,
-    startLat: 21.3069,
-    startLng: -157.8583,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 33.749,
     endLng: -84.388,
     arcAlt: 0.32,
@@ -94,56 +103,56 @@ export const GLOBE_ARCS: GlobeArc[] = [
   },
   {
     order: 7,
-    startLat: 34.0522,
-    startLng: -118.2437,
-    endLat: 40.7128,
-    endLng: -74.006,
-    arcAlt: 0.42,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
+    endLat: 47.6062,
+    endLng: -122.3321,
+    arcAlt: 0.3,
     color: LIME,
   },
   {
     order: 8,
-    startLat: 37.7749,
-    startLng: -122.4194,
-    endLat: 47.6062,
-    endLng: -122.3321,
-    arcAlt: 0.22,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
+    endLat: 25.7617,
+    endLng: -80.1918,
+    arcAlt: 0.4,
     color: LIME_MUTED,
   },
   {
     order: 9,
-    startLat: 32.7767,
-    startLng: -96.797,
-    endLat: 25.7617,
-    endLng: -80.1918,
-    arcAlt: 0.4,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
+    endLat: 42.3601,
+    endLng: -71.0589,
+    arcAlt: 0.38,
     color: LIME,
   },
   {
     order: 10,
-    startLat: 41.8781,
-    startLng: -87.6298,
-    endLat: 42.3601,
-    endLng: -71.0589,
-    arcAlt: 0.35,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
+    endLat: 39.7392,
+    endLng: -104.9903,
+    arcAlt: 0.34,
     color: LIME_MUTED,
   },
   {
     order: 11,
-    startLat: 39.7392,
-    startLng: -104.9903,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
     endLat: 33.4484,
     endLng: -112.074,
-    arcAlt: 0.26,
+    arcAlt: 0.32,
     color: LIME,
   },
   {
     order: 12,
-    startLat: 29.7604,
-    startLng: -95.3698,
-    endLat: 30.2672,
-    endLng: -97.7431,
-    arcAlt: 0.18,
+    startLat: GLOBE_HUB.lat,
+    startLng: GLOBE_HUB.lng,
+    endLat: 29.7604,
+    endLng: -95.3698,
+    arcAlt: 0.36,
     color: LIME_MUTED,
   },
 ];
