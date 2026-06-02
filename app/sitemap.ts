@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl, SITEMAP_PATHS } from "@/lib/site";
+import { absoluteUrl } from "@/lib/seo";
+import { getSitemapEntries } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = getSiteUrl();
+  const lastModified = new Date();
 
-  return SITEMAP_PATHS.map((path) => ({
-    url: path === "/" ? baseUrl : `${baseUrl}${path}`,
-    lastModified: new Date(),
-    changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : 0.8,
+  return getSitemapEntries().map(({ path, changeFrequency, priority }) => ({
+    url: absoluteUrl(path),
+    lastModified,
+    changeFrequency,
+    priority,
   }));
 }

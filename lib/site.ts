@@ -75,6 +75,7 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
       { href: CONTACT_PATH, label: "Contact" },
       { href: "/privacy", label: "Privacy Policy" },
       { href: "/terms", label: "Terms of Service" },
+      { href: "/sitemap.xml", label: "Sitemap" },
     ],
   },
   {
@@ -93,12 +94,53 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
   },
 ];
 
+const LEGAL_PATHS = ["/privacy", "/terms"] as const;
+
+export type SitemapEntry = {
+  path: string;
+  changeFrequency:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
+  priority: number;
+};
+
+function getSitemapMeta(path: string): Pick<SitemapEntry, "changeFrequency" | "priority"> {
+  if (path === "/") {
+    return { changeFrequency: "weekly", priority: 1 };
+  }
+
+  if ((LEGAL_PATHS as readonly string[]).includes(path)) {
+    return { changeFrequency: "yearly", priority: 0.3 };
+  }
+
+  if (path === CONTACT_PATH) {
+    return { changeFrequency: "monthly", priority: 0.9 };
+  }
+
+  if (PRIMARY_NAV.some((item) => item.href === path)) {
+    return { changeFrequency: "monthly", priority: 0.9 };
+  }
+
+  return { changeFrequency: "monthly", priority: 0.8 };
+}
+
 /** Indexable marketing routes for SEO sitemap generation. */
-export const SITEMAP_PATHS: string[] = [
-  ...PRIMARY_NAV.map((item) => item.href),
-  ...FEATURED_NAV.filter(
-    (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
-  ).map((item) => item.href),
-  "/privacy",
-  "/terms",
-];
+export function getSitemapEntries(): SitemapEntry[] {
+  const paths = [
+    ...PRIMARY_NAV.map((item) => item.href),
+    ...FEATURED_NAV.filter(
+      (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
+    ).map((item) => item.href),
+    ...LEGAL_PATHS,
+  ];
+
+  return [...new Set(paths)].map((path) => ({
+    path,
+    ...getSitemapMeta(path),
+  }));
+}
