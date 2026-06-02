@@ -132,7 +132,7 @@ npm run lint   # ESLint
 | `NEWSLETTER_PROVIDER_URL` | Newsletter subscribe endpoint |
 | `NEWSLETTER_API_KEY` | Optional Bearer token for newsletter provider |
 
-Contact and newsletter API routes return `{ ok: true }` even without webhooks configured (validation still enforced).
+Contact and newsletter routes validate input server-side; configure `CONTACT_WEBHOOK_URL` and newsletter provider env vars in deployment for delivery to CRM or email automation.
 
 ### Key directories
 
@@ -172,7 +172,22 @@ AppDetails.md           # Product/copy reference
 - Prefer editing content in `lib/pillars.ts`, `lib/partners.ts`, or page-level metadata over duplicating copy in components.
 - Image remote hosts allowed: `images.unsplash.com`, `img1.wsimg.com` (`next.config.ts`).
 - Do not commit secrets; wire webhooks via environment variables only.
-- Internal redesign docs: `docs/Milestone1.md`, `docs/VYCL_Gap_Analysis_May2026.md`.
+- Internal planning notes may exist under `docs/` in the repository; treat as contributor context, not public marketing copy.
+
+---
+
+## FAQs
+
+See [/llms.txt](https://www.vycl.com/llms.txt) for the canonical FAQ list. Additional detail:
+
+**Does VYCL sell or operate JRNY?**  
+VYCL is the exclusive US licensing partner for Tomorrow's Journey / JRNY and leads implementation for dealer and platform clients; JRNY remains the subscription platform backbone.
+
+**What does Implementation engagement include?**  
+JRNY configuration, lender engagement (Westlake/CULA structure), Axle insurance verification, AVIS/Budget and PLUG inventory sourcing, MiaVita marketing launch, and operational design (staffing, workflows, subscriber onboarding)—per `/services`.
+
+**Is VYCL only for Hawaii?**  
+No. Hawaii is the live proof market (FlexRide and related programs); VYCL positions for dealer groups, lenders, platforms, and fleets across the US.
 
 ---
 

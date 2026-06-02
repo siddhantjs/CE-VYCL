@@ -75,6 +75,7 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
       { href: CONTACT_PATH, label: "Contact" },
       { href: "/privacy", label: "Privacy Policy" },
       { href: "/terms", label: "Terms of Service" },
+      { href: "/sitemap.xml", label: "Sitemap" },
     ],
   },
   {
