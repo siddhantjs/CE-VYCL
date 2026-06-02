@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { FlexRideCaseStudy } from "./components/FlexRideCaseStudy";
@@ -11,6 +13,20 @@ import { Services } from "./components/Services";
 import { Testimonials } from "./components/Testimonials";
 import { WhoWeServe } from "./components/WhoWeServe";
 import { WhyVycl } from "./components/WhyVycl";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "VYCL   Vehicle Subscription Consultancy | Ryan Yamauchi",
+  description:
+    "VYCL is the only consultancy purpose-built for the vehicle subscription economy. Serving dealer groups, lenders, OEMs, and SaaS platforms across the US.",
+  path: "/",
+  keywords: [
+    "vehicle subscription consultancy",
+    "automotive subscription consulting",
+    "dealer subscription programs",
+    "fleet subscription strategy",
+    "Ryan Yamauchi automotive consultant",
+  ],
+});
 
 export default function Home() {
   return (

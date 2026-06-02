@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     description:
       "How VYCL LLC collects, uses, and protects personal information submitted through our website contact form and mailing list.",
     path: "/privacy",
+    keywords: [
+      "VYCL privacy policy",
+      "VYCL data protection",
+      "contact form privacy",
+      "mailing list privacy",
+      "VYCL LLC personal information",
+    ],
   }),
   robots: { index: true, follow: true },
 };
