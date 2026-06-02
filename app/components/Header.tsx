@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,11 +19,14 @@ export function Header() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <LogoMark />
-          <span className="text-lg font-bold tracking-tight text-vycl-dark">
-            VYCL
-          </span>
+        <Link href="/" className="">
+        <Image
+              src="/LOGO-dark.svg"
+              alt="VYCL"
+              width={28}
+              height={28}
+              className="h-10 w-10 md:h-12 md:w-12"
+            />
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex lg:gap-8">
