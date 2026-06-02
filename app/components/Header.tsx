@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { CALENDLY_URL,PRIMARY_NAV } from "@/lib/site";
-import { LogoMark } from "./icons";
 import { NavMegaMenu } from "./NavMegaMenu";
 
 export function Header() {
