@@ -39,7 +39,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/Logo-light.svg"
+              src="/LOGO-light.svg"
               alt="VYCL"
               width={28}
               height={28}
