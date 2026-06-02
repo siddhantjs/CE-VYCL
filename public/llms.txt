@@ -1,0 +1,39 @@
+# VYCL
+
+> VYCL LLC is the only consultancy purpose-built for the vehicle subscription economy. Founded by Ryan Yamauchi, VYCL helps dealer groups, lenders, SaaS platforms, and fleet operators launch, finance, and scale subscription programs across the United States—with live operating proof in Hawaii (FlexRide by King, 800+ vehicles subscribed).
+
+VYCL connects lending, inventory, marketing, insurance, technology, and operations through its Six Pillars framework and an ecosystem of partners (KEYVO underwriting, Tomorrow's Journey / JRNY, Axle, PLUG, AVIS/Budget, MiaVita, Westlake Financial, CULA). Engagement models: Advisory, Implementation, and Ongoing Partnership.
+
+- **Canonical site:** https://www.vycl.com
+- **Primary contact:** https://www.vycl.com/contact
+- **Schedule a call:** https://calendly.com/vycl/30min
+- **Entity:** VYCL LLC · Hawaii-based, operating nationally
+- **Founder:** Ryan Yamauchi
+
+## Site pages
+
+- [Home](https://www.vycl.com/): Hero, proof stats (800+ vehicles, 45-day launch, 10+ years), Why VYCL, Who We Serve, partner ecosystem, Six Pillars, FlexRide case study, founder, testimonials, contact
+- [About](https://www.vycl.com/about): Company overview and Ryan Yamauchi founder bio
+- [Services](https://www.vycl.com/services): Three engagement tiers—Advisory, Implementation, Ongoing Partnership
+- [Programs](https://www.vycl.com/programs): Active subscription programs including FlexRide by King
+- [Contact](https://www.vycl.com/contact): Lead form and Calendly scheduling
+- [Dealer Groups](https://www.vycl.com/dealer-groups): Subscription on rooftops without ops rebuild; KEYVO, JRNY, Axle
+- [Lenders](https://www.vycl.com/lenders): Fleet lending, collateral modeling, KEYVO underwriting, Westlake/CULA
+- [SaaS Platforms](https://www.vycl.com/platforms): US market entry and exclusive Tomorrow's Journey / JRNY licensing
+- [Fleet Operators](https://www.vycl.com/fleet-operators): Fleet-to-subscriber programs; PLUG, AVIS/Budget inventory
+
+## Six Pillars
+
+- [Lending](https://www.vycl.com/#pillars): Westlake Financial and CULA facilities; lender-ready portfolio structure
+- [Inventory Management](https://www.vycl.com/#pillars): AVIS/Budget wholesale and PLUG pre-owned EV sourcing
+- [Marketing](https://www.vycl.com/#pillars): Subscription-specific acquisition via MiaVita Solutions
+- [Insurance](https://www.vycl.com/#pillars): Axle-powered verification across subscribers and rooftops
+- [Technology](https://www.vycl.com/#pillars): Exclusive US licensing partner for Tomorrow's Journey JRNY platform
+- [Operations](https://www.vycl.com/#pillars): Workflows, staffing, and multi-rooftop program design
+
+## Optional
+
+- [Privacy Policy](https://www.vycl.com/privacy): Data collection and use for VYCL LLC
+- [Terms of Service](https://www.vycl.com/terms): Terms governing use of the site
+- [Sitemap](https://www.vycl.com/sitemap.xml): Machine-readable index of public routes
+- [Full LLM context](https://www.vycl.com/llms-full.txt): Extended business, partner, and codebase documentation for this project
