@@ -11,6 +11,13 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "VYCL has built and operates Hawaii's most active vehicle subscription program. See FlexRide by King and what's coming next.",
   path: "/programs",
+  keywords: [
+    "FlexRide King Hawaii subscription",
+    "vehicle subscription program Hawaii",
+    "active vehicle subscription programs",
+    "Six Pillars framework",
+    "automotive subscription case study",
+  ],
 });
 
 export default function ProgramsPage() {

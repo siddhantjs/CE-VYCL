@@ -8,6 +8,13 @@ export const metadata: Metadata = {
     description:
       "Terms governing use of the VYCL website. Site content is informational only and does not constitute a consulting agreement.",
     path: "/terms",
+    keywords: [
+      "VYCL terms of service",
+      "VYCL website terms of use",
+      "VYCL LLC legal terms",
+      "vehicle subscription consultancy terms",
+      "website disclaimer VYCL",
+    ],
   }),
   robots: { index: true, follow: true },
 };
