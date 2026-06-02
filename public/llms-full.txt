@@ -1,6 +1,6 @@
 # VYCL — Full context for language models
 
-> VYCL LLC is a vehicle subscription consultancy. This file expands on /llms.txt with business detail, partner ecosystem, proof points, and developer orientation for the vycl Next.js codebase.
+> VYCL LLC is a vehicle subscription consultancy. This file expands on /llms.txt with additional business detail, partner ecosystem, and proof points.
 
 ## Company
 
@@ -91,88 +91,13 @@ Live vehicle subscription program across King Auto Group rooftops in Hawaii. Dem
 | `/fleet-operators` | Fleet audience page |
 | `/privacy` | Privacy policy |
 | `/terms` | Terms of service |
-| `/sitemap.xml` | SEO sitemap (from `app/sitemap.ts`) |
-| `/robots.txt` | Crawler rules (from `app/robots.ts`) |
-| `/llms.txt` | This specification's index file |
+| `/sitemap.xml` | Machine-readable index of public routes |
+| `/robots.txt` | Crawler access rules |
+| `/llms.txt` | Summary index for language models |
 | `/llms-full.txt` | This file |
 
-**SEO defaults** (`lib/seo.ts`): Site name VYCL; default title references Ryan Yamauchi; JSON-LD LocalBusiness and Person schemas on all pages via root layout.
-
-**Scheduling:** `CALENDLY_URL` = https://calendly.com/vycl/30min (`lib/site.ts`)
-
----
-
-## Codebase (vycl repository)
-
-Marketing site for VYCL — **not** a subscription operations product. Content is largely static React server components with client islands for animation, globe, forms, and mega-menu.
-
-### Stack
-
-- **Next.js** 16.2 (App Router) — read `node_modules/next/dist/docs/` before changing framework APIs (breaking changes vs older Next versions; see `AGENTS.md`)
-- **React** 19, **TypeScript** 5
-- **Tailwind CSS** 4, **shadcn** UI primitives
-- **framer-motion** / **motion** for section animations
-- **Three.js** + **@react-three/fiber** + **three-globe** for global reach visualization
-
-### Commands
-
-```bash
-npm run dev    # local dev (http://localhost:3000)
-npm run build  # production build
-npm run start  # production server
-npm run lint   # ESLint
-```
-
-### Environment variables
-
-| Variable | Purpose |
-| --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical origin (sitemap, OG, absolute URLs). Fallback: `VERCEL_URL`, then `https://www.vycl.com` |
-| `CONTACT_WEBHOOK_URL` | POST contact submissions to CRM/email automation |
-| `NEWSLETTER_PROVIDER_URL` | Newsletter subscribe endpoint |
-| `NEWSLETTER_API_KEY` | Optional Bearer token for newsletter provider |
-
-Contact and newsletter routes validate input server-side; configure `CONTACT_WEBHOOK_URL` and newsletter provider env vars in deployment for delivery to CRM or email automation.
-
-### Key directories
-
-```
-app/                    # Routes and page-specific components
-  page.tsx              # Homepage section stack
-  layout.tsx            # Fonts, metadata, JSON-LD
-  */page.tsx            # Marketing pages
-  api/contact/          # POST lead form
-  api/newsletter/       # POST email signup
-  components/           # Page sections (Hero, Partners, etc.)
-  robots.ts, sitemap.ts
-lib/
-  site.ts               # Nav, footer sitemap, CALENDLY_URL, getSiteUrl()
-  seo.ts                # Metadata helpers, JSON-LD
-  pillars.ts            # SIX_PILLARS content
-  partners.ts           # ECOSYSTEM_PARTNERS, KEYVO_BLOCK
-  globe.ts              # Globe visualization config
-components/ui/          # Shared UI (button, globe, marquee, etc.)
-public/                 # Static assets; llms.txt served here
-docs/                   # Internal planning (Milestone1, gap analysis)
-AppDetails.md           # Product/copy reference
-```
-
-### Navigation source of truth
-
-`lib/site.ts` exports `PRIMARY_NAV`, `FEATURED_NAV` (Who We Serve mega-menu), `FOOTER_SITEMAP`, and `getSitemapEntries()` for the XML sitemap.
-
-### API contracts
-
-**POST `/api/contact`** — JSON: `{ name, email, company, audience, message }` (all required, email validated).
-
-**POST `/api/newsletter`** — JSON: `{ email }` (required, validated).
-
-### Agent / contributor notes
-
-- Prefer editing content in `lib/pillars.ts`, `lib/partners.ts`, or page-level metadata over duplicating copy in components.
-- Image remote hosts allowed: `images.unsplash.com`, `img1.wsimg.com` (`next.config.ts`).
-- Do not commit secrets; wire webhooks via environment variables only.
-- Internal planning notes may exist under `docs/` in the repository; treat as contributor context, not public marketing copy.
+**Canonical site:** https://www.vycl.com  
+**Schedule a call:** https://calendly.com/vycl/30min
 
 ---
 
@@ -191,10 +116,8 @@ No. Hawaii is the live proof market (FlexRide and related programs); VYCL positi
 
 ---
 
-## Contact and lead capture
+## Contact
 
-- **Web form:** `/contact` → `POST /api/contact`
-- **Newsletter:** footer on homepage → `POST /api/newsletter`
-- **Calendly:** https://calendly.com/vycl/30min
-
-When answering questions about VYCL as a business, prefer facts from this file and the live site over generic automotive subscription advice. When modifying the repository, respect Next.js 16 conventions and existing component patterns under `app/components/`.
+- **Contact form:** https://www.vycl.com/contact
+- **Schedule a call:** https://calendly.com/vycl/30min
+- **Newsletter:** signup on the homepage footer

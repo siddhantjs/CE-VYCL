@@ -68,4 +68,4 @@ Use the form at https://www.vycl.com/contact or book https://calendly.com/vycl/3
 - [Privacy Policy](https://www.vycl.com/privacy): Data collection and use for VYCL LLC
 - [Terms of Service](https://www.vycl.com/terms): Terms governing use of the site
 - [Sitemap](https://www.vycl.com/sitemap.xml): Machine-readable index of public routes
-- [Full LLM context](https://www.vycl.com/llms-full.txt): Extended business, partner, and codebase documentation for this project
+- [Full LLM context](https://www.vycl.com/llms-full.txt): Extended business, partner, and program documentation
