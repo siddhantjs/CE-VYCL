@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Handshake, MapPin, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
@@ -19,21 +20,21 @@ const differentiators: {
     icon: MapPin,
     title: "Proven at scale",
     description:
-      "Active programs span Hawaii and are growing nationally. We've structured lending with institutional partners, launched SaaS into US dealer networks, and guided 800+ deployments via the Six Pillars framework.",
+      "With active programs in Hawaii and California, we have deployed over 1000 vehicles and via the Six Pillars framework.",
   },
   {
     icon: Handshake,
     title: "Partner from day one",
     description:
-      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL brings a level of specificity   in lending structure, platform knowledge, insurance compliance, and inventory sourcing   that no generalist automotive consultancy can match.",
+      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL operates on the foundation of Stewardship not just expertise that no generalist automotive consultancy can match.",
   },
 ];
 
 const highlights = [
-  "Hawaii & national programs",
-  "Institutional lending",
-  "US dealer network launches",
-  "Six Pillars framework",
+  { label: "Hawaii & national programs", href: "/programs" },
+  { label: "Institutional lending", href: "/lenders" },
+  { label: "US dealer network launches", href: "/dealer-groups" },
+  { label: "Six Pillars framework", href: "/#pillars" },
 ];
 
 export function WhyVycl() {
@@ -96,12 +97,14 @@ export function WhyVycl() {
 
         <FadeIn delay={0.12} className="mt-8">
           <ul className="flex flex-wrap justify-center gap-2">
-            {highlights.map((label) => (
-              <li
-                key={label}
-                className="rounded-full border border-vycl-border bg-vycl-cream-muted px-3.5 py-1.5 text-xs font-medium text-vycl-dark"
-              >
-                {label}
+            {highlights.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="inline-block rounded-full border border-vycl-border bg-vycl-cream-muted px-3.5 py-1.5 text-xs font-medium text-vycl-dark transition-colors hover:border-vycl-dark/20 hover:bg-white"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

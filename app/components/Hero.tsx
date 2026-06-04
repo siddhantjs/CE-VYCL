@@ -319,12 +319,10 @@ export function Hero() {
           Vehicle Subscription Consultancy
         </p>
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-vycl-dark sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-          The only consultancy built for the subscription economy.
+        The only consultancy built for the vehicle subscription economy
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          From first program to 100+ rooftops   VYCL connects the dots across
-          inventory, lending, technology, marketing, insurance, and operations so
-          your program actually launches and scales.
+           From single dealerships to multi-rooftop groups, VYCL connects the dots across inventory, lending, technology, marketing, insurance, and operations so your program not only launches but scales.
         </p>
 
         <motion.div
@@ -349,35 +347,6 @@ export function Hero() {
               Explore the Six Pillars
             </Link>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-base text-vycl-text-muted sm:text-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          <Highlighter action="highlight" color="#d4f54a" isView>
-            <span className="font-bold text-vycl-dark">5.0</span>
-          </Highlighter>
-          <span className="flex gap-0.5">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 + i * 0.06 }}
-              >
-                <Star className="h-5 w-5 sm:h-6 sm:w-6" />
-              </motion.span>
-            ))}
-          </span>
-          <span>
-            from{" "}
-            <Highlighter action="underline" color="#0F6E56" isView>
-              industry leaders
-            </Highlighter>
-          </span>
         </motion.div>
       </FadeIn>
 

@@ -9,18 +9,8 @@ import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 function KeyvoLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        aria-hidden
-        className="shrink-0"
-      >
-        <path d="M6 30L18 6L30 30H24L18 18L12 30H6Z" fill="#0F6E56" />
-        <path d="M14 30L18 22L22 30H14Z" fill="#0a5240" />
-      </svg>
-      <span className="text-3xl font-extrabold tracking-tight text-vycl-dark">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none"><path fill="currentColor" d="M8 56V8h14.4v22.098L44.498 8H56v11.502L24.674 50.828h7.29l9.313-9.316H56V56H8Z"/></svg>
+      <span className="text-4xl font-extrabold tracking-tight text-vycl-dark">
         KEYVO
       </span>
     </div>
