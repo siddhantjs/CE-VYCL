@@ -348,35 +348,6 @@ export function Hero() {
             </Link>
           </motion.div>
         </motion.div>
-
-        <motion.div
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-base text-vycl-text-muted sm:text-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          <Highlighter action="highlight" color="#d4f54a" isView>
-            <span className="font-bold text-vycl-dark">5.0</span>
-          </Highlighter>
-          <span className="flex gap-0.5">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5 + i * 0.06 }}
-              >
-                <Star className="h-5 w-5 sm:h-6 sm:w-6" />
-              </motion.span>
-            ))}
-          </span>
-          <span>
-            from{" "}
-            <Highlighter action="underline" color="#0F6E56" isView>
-              industry leaders
-            </Highlighter>
-          </span>
-        </motion.div>
       </FadeIn>
 
       <Stagger className="mx-auto mt-14 grid max-w-6xl auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-5">
