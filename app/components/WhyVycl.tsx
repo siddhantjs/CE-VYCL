@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Handshake, MapPin, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
@@ -30,10 +31,10 @@ const differentiators: {
 ];
 
 const highlights = [
-  "Hawaii & national programs",
-  "Institutional lending",
-  "US dealer network launches",
-  "Six Pillars framework",
+  { label: "Hawaii & national programs", href: "/programs" },
+  { label: "Institutional lending", href: "/lenders" },
+  { label: "US dealer network launches", href: "/dealer-groups" },
+  { label: "Six Pillars framework", href: "/#pillars" },
 ];
 
 export function WhyVycl() {
@@ -96,12 +97,14 @@ export function WhyVycl() {
 
         <FadeIn delay={0.12} className="mt-8">
           <ul className="flex flex-wrap justify-center gap-2">
-            {highlights.map((label) => (
-              <li
-                key={label}
-                className="rounded-full border border-vycl-border bg-vycl-cream-muted px-3.5 py-1.5 text-xs font-medium text-vycl-dark"
-              >
-                {label}
+            {highlights.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="inline-block rounded-full border border-vycl-border bg-vycl-cream-muted px-3.5 py-1.5 text-xs font-medium text-vycl-dark transition-colors hover:border-vycl-dark/20 hover:bg-white"
+                >
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
