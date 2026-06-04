@@ -11,7 +11,7 @@ export const SIX_PILLARS: Pillar[] = [
     number: "01",
     title: "Lending",
     description:
-      "The right financing structure is what separates a program that launches from one that lasts. VYCL has structured facilities with Westlake Financial and CULA, and knows how to build a lender-ready case from scratch.",
+      "The right financing structure is what separates a program that launches from one that lasts. VYCL provides access to institutional lenders to scale your vehicle subscription program and knows how to build a lender-ready case from scratch.",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80",
     imageAlt:
@@ -21,7 +21,7 @@ export const SIX_PILLARS: Pillar[] = [
     number: "02",
     title: "Inventory Management",
     description:
-      "Subscription programs live or die by how well inventory moves. VYCL's strategies are backed by direct wholesale access to AVIS/Budget fleet vehicles and pre-owned EV sourcing through PLUG   reducing carrying costs and accelerating launch.",
+      "Inventory sitting is money lost. VYCL turns subscription into a dealer's most powerful inventory management tool — reducing carrying costs and accelerating vehicle movement from day one.",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
     imageAlt:
@@ -31,7 +31,7 @@ export const SIX_PILLARS: Pillar[] = [
     number: "03",
     title: "Marketing",
     description:
-      "Subscription is a different sell than a purchase or lease. VYCL builds and executes targeted strategies that educate the market and drive conversions   with digital execution delivered through MiaVita Solutions.",
+      "Subscription is a different sell than a purchase or lease. VYCL builds and executes targeted strategies that educate the market and drive conversions with full digital execution delivered in-house.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
     imageAlt:
