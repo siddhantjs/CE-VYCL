@@ -10,7 +10,6 @@ const audiences = [
     href: "/dealer-groups",
     description:
       "Launch and scale subscription programs on your existing rooftops   without adding headcount. We handle the playbook, the partners, and the dealer subscription program launch.",
-    proof: "FlexRide by King, Hawaii",
   },
   {
     icon: "◆",
@@ -18,14 +17,13 @@ const audiences = [
     href: "/lenders",
     description:
       "Structure lending facilities for fleet-based subscription portfolios with proper collateral, cash-flow modeling, and lender-ready documentation.",
-    proof: "Westlake Financial / CULA",
   },
   {
     icon: "⬡",
     title: "SaaS Platforms",
     href: "/platforms",
     description:
-      "Bridge your technology to US dealer networks with market-ready onboarding and go-to-market execution.",
+      "We provide the technology operations platform powered by Tomorrow's Journey  underwritten by KEYVO.",
     proof: "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
   },
   {

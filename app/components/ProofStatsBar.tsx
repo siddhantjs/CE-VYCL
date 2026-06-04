@@ -4,8 +4,8 @@ import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Stagger, motion, staggerItem } from "./motion";
 
 const stats = [
-  { value: 800, suffix: "+", label: "Vehicles subscribed in Hawaii" },
-  { value: 45, suffix: "", label: "Days from idea to live program" },
+  { value: 1000, suffix: "+", label: "Vehicles subscribed" },
+  { value: 45, suffix: "", label: "Days from idea to dealer launch" },
   { value: 10, suffix: "+", label: "Years of subscription-first experience" },
 ];
 

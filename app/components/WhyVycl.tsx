@@ -19,13 +19,13 @@ const differentiators: {
     icon: MapPin,
     title: "Proven at scale",
     description:
-      "Active programs span Hawaii and are growing nationally. We've structured lending with institutional partners, launched SaaS into US dealer networks, and guided 800+ deployments via the Six Pillars framework.",
+      "With active programs in Hawaii and California, we have deployed over 1000 vehicles and via the Six Pillars framework.",
   },
   {
     icon: Handshake,
     title: "Partner from day one",
     description:
-      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL brings a level of specificity   in lending structure, platform knowledge, insurance compliance, and inventory sourcing   that no generalist automotive consultancy can match.",
+      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL operates on the foundation of Stewardship not just expertise that no generalist automotive consultancy can match.",
   },
 ];
 
