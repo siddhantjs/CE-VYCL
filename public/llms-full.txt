@@ -1,4 +1,4 @@
-# VYCL — Full context for language models
+# VYCL   Full context for language models
 
 > VYCL LLC is a vehicle subscription consultancy. This file expands on /llms.txt with additional business detail, partner ecosystem, and proof points.
 
@@ -8,7 +8,7 @@
 **Tagline:** Connecting the Dots to Vehicle Subscription  
 **Positioning:** The only consultancy purpose-built for the vehicle subscription economy.  
 **Geography:** Hawaii-based; serves dealer groups, lenders, OEMs, SaaS platforms, and fleet operators across the United States.  
-**Founder:** Ryan Yamauchi — 10+ years in vehicle subscription; former strategic planning and operations leadership at a pioneering direct-to-consumer subscription company; co-founder of KEYVO (subscription underwriting platform).
+**Founder:** Ryan Yamauchi   10+ years in vehicle subscription; former strategic planning and operations leadership at a pioneering direct-to-consumer subscription company; co-founder of KEYVO (subscription underwriting platform).
 
 ### Proof points (published on site)
 
@@ -27,18 +27,18 @@
 
 ### Engagement models (`/services`)
 
-1. **Advisory** — Strategy, feasibility, partner alignment  
-2. **Implementation** — Launch playbook, integrations, program design  
-3. **Ongoing Partnership** — Operating support and optimization  
+1. **Advisory**   Strategy, feasibility, partner alignment  
+2. **Implementation**   Launch playbook, integrations, program design  
+3. **Ongoing Partnership**   Operating support and optimization  
 
 ### Six Pillars (framework)
 
-1. **Lending** — Facilities with Westlake Financial and CULA; lender-ready cases  
-2. **Inventory Management** — AVIS/Budget wholesale; PLUG pre-owned EV sourcing  
-3. **Marketing** — Subscription-specific campaigns via MiaVita Solutions  
-4. **Insurance** — Program design; Axle verification for compliance  
-5. **Technology** — Exclusive US licensing partner for Tomorrow's Journey / JRNY  
-6. **Operations** — Workflows, staffing, multi-rooftop infrastructure  
+1. **Lending**   Facilities with Westlake Financial and CULA; lender-ready cases  
+2. **Inventory Management**   AVIS/Budget wholesale; PLUG pre-owned EV sourcing  
+3. **Marketing**   Subscription-specific campaigns via MiaVita Solutions  
+4. **Insurance**   Program design; Axle verification for compliance  
+5. **Technology**   Exclusive US licensing partner for Tomorrow's Journey / JRNY  
+6. **Operations**   Workflows, staffing, multi-rooftop infrastructure  
 
 ### KEYVO (elevated partner)
 
@@ -66,13 +66,13 @@ KEYVO is the subscription industry's underwriting platform for dealers and lende
 
 ### FlexRide by King (case study)
 
-Live vehicle subscription program across King Auto Group rooftops in Hawaii. Demonstrates 45-day launch, Westlake/CULA financing, Axle insurance stack, and JRNY technology — operated through NYP, LLC.
+Live vehicle subscription program across King Auto Group rooftops in Hawaii. Demonstrates 45-day launch, Westlake/CULA financing, Axle insurance stack, and JRNY technology   operated through NYP, LLC.
 
 ### Testimonials (featured)
 
-- **Conor Chinn** (Reynolds & Reynolds) — dealership operations expertise  
-- **Anil Chandy** (Northern Trust) — business leadership  
-- **Dan Grossman** (Shared Mobility Advisors) — leadership and acumen  
+- **Conor Chinn** (Reynolds & Reynolds)   dealership operations expertise  
+- **Anil Chandy** (Northern Trust)   business leadership  
+- **Dan Grossman** (Shared Mobility Advisors)   leadership and acumen  
 
 ---
 
@@ -109,7 +109,7 @@ See [/llms.txt](https://www.vycl.com/llms.txt) for the canonical FAQ list. Addit
 VYCL is the exclusive US licensing partner for Tomorrow's Journey / JRNY and leads implementation for dealer and platform clients; JRNY remains the subscription platform backbone.
 
 **What does Implementation engagement include?**  
-JRNY configuration, lender engagement (Westlake/CULA structure), Axle insurance verification, AVIS/Budget and PLUG inventory sourcing, MiaVita marketing launch, and operational design (staffing, workflows, subscriber onboarding)—per `/services`.
+JRNY configuration, lender engagement (Westlake/CULA structure), Axle insurance verification, AVIS/Budget and PLUG inventory sourcing, MiaVita marketing launch, and operational design (staffing, workflows, subscriber onboarding) per `/services`.
 
 **Is VYCL only for Hawaii?**  
 No. Hawaii is the live proof market (FlexRide and related programs); VYCL positions for dealer groups, lenders, platforms, and fleets across the US.

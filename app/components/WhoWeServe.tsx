@@ -24,7 +24,6 @@ const audiences = [
     href: "/platforms",
     description:
       "We provide the technology operations platform powered by Tomorrow's Journey  underwritten by KEYVO.",
-    proof: "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
   },
   {
     icon: "◎",
@@ -32,7 +31,6 @@ const audiences = [
     href: "/fleet-operators",
     description:
       "Design branded or captive subscription programs from fleet composition through subscriber experience.",
-    proof: "Rivian EV fleet structure, Hawaii",
   },
 ];
 
@@ -64,9 +62,6 @@ export function WhoWeServe() {
                 </h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-vycl-text-muted">
                   {item.description}
-                </p>
-                <p className="mt-4 text-xs font-semibold text-[#0F6E56]">
-                  {item.proof}
                 </p>
               </>
             );

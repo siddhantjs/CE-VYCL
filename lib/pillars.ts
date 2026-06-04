@@ -21,7 +21,7 @@ export const SIX_PILLARS: Pillar[] = [
     number: "02",
     title: "Inventory Management",
     description:
-      "Inventory sitting is money lost. VYCL turns subscription into a dealer's most powerful inventory management tool — reducing carrying costs and accelerating vehicle movement from day one.",
+      "Inventory sitting is money lost. VYCL turns subscription into a dealer's most powerful inventory management tool   reducing carrying costs and accelerating vehicle movement from day one.",
     image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
     imageAlt:
