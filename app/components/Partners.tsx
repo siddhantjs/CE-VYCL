@@ -3,19 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_PATH } from "@/lib/site";
-import { ECOSYSTEM_PARTNERS, KEYVO_BLOCK } from "@/lib/partners";
+import { ECOSYSTEM_PARTNERS} from "@/lib/partners";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
-
-function KeyvoLogo() {
-  return (
-    <div className="flex items-center gap-2.5">
-      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none"><path fill="currentColor" d="M8 56V8h14.4v22.098L44.498 8H56v11.502L24.674 50.828h7.29l9.313-9.316H56V56H8Z"/></svg>
-      <span className="text-4xl font-extrabold tracking-tight text-vycl-dark">
-        KEYVO
-      </span>
-    </div>
-  );
-}
 
 function PartnerLogo({
   name,
@@ -108,44 +97,6 @@ export function Partners() {
             inventory, and marketing   connecting every stakeholder your
             subscription program needs to succeed.
           </p>
-        </FadeIn>
-
-        <FadeIn delay={0.08} className="mt-12">
-          <div className="overflow-hidden rounded-3xl border border-[#0F6E56]/20 bg-[#0F6E56]/10">
-            <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-12">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0F6E56]">
-                  {KEYVO_BLOCK.label}
-                </p>
-                <div className="mt-4">
-                  <KeyvoLogo />
-                </div>
-                <p className="mt-3 text-lg font-semibold text-vycl-dark">
-                  {KEYVO_BLOCK.title}
-                </p>
-              </div>
-              <div>
-                <p className="text-sm leading-relaxed text-vycl-text-muted sm:text-base">
-                  {KEYVO_BLOCK.body}
-                </p>
-                {KEYVO_BLOCK.ctaHref ? (
-                  <Link
-                    href={KEYVO_BLOCK.ctaHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F6E56] transition-opacity hover:opacity-80"
-                  >
-                    {KEYVO_BLOCK.ctaLabel}
-                    <span aria-hidden>→</span>
-                  </Link>
-                ) : (
-                  <p className="mt-5 text-sm font-semibold text-[#0F6E56]">
-                    {KEYVO_BLOCK.ctaLabel} →
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
         </FadeIn>
 
         <FadeIn delay={0.12} className="mt-10">

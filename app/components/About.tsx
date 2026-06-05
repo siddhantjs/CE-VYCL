@@ -17,7 +17,7 @@ const credentials = [
 export function About() {
   return (
     <section id="about" className="px-5 py-20 sm:px-8 sm:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-vycl-cream-muted lg:aspect-auto lg:min-h-[480px]">
           <motion.div
             className="relative h-full min-h-[320px] w-full lg:min-h-[480px]"
