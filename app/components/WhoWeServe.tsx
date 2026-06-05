@@ -67,7 +67,7 @@ export function WhoWeServe() {
             );
 
             const className =
-              "flex flex-col rounded-3xl border border-vycl-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md";
+              "flex flex-col h-full rounded-3xl border border-vycl-border bg-white p-6 shadow-sm transition-shadow hover:shadow-md";
 
             return (
               <motion.div

@@ -136,4 +136,12 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     logoSrc: "/RIVIAN.svg",
     logoClassName: "h-8 w-32",
   },
+  {
+    name: "KEYVO",
+    relationship: "The subscription industry's only underwriting platform",
+    description:
+      "KEYVO is the only underwriting platform purpose-built for vehicle subscription usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
+    logoSrc: "/Logo_Mark_Black.png",
+    logoClassName: "h-10 w-32",
+  },
 ];
