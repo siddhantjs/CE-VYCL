@@ -109,6 +109,8 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     relationship: "Operating Client   Rooftop",
     description:
       "Infiniti of Honolulu is an active VYCL operating client rooftop   a King Auto Group dealership running the FlexRide by King subscription program in Hawaii.",
+      logoSrc: "/INIFINITI.webp",
+      logoClassName: "h-10 w-36",
   },
   {
     name: "P2P Fleet",

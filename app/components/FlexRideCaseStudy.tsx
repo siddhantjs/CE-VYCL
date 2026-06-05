@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CircleDot, LayoutGrid, ShieldCheck, Zap } from "lucide-react";
+import { CircleDot, LayoutGrid,Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { AnimatedStat } from "@/components/ui/animated-stat";
 import { ArrowUpRight } from "./icons";
