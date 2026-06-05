@@ -1,0 +1,6 @@
+<svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" width="320" height="120">
+  <!-- Black background with arrow-right notch -->
+  <polygon points="0,0 145,0 160,30 145,60 0,60" fill="#111111" style="fill:rgb(17, 17, 17);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- TURO text in white -->
+  <text x="22" y="39" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="26" fill="white" letter-spacing="3" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Arial Black&quot;, Arial, sans-serif;font-size:26px;font-weight:900;text-anchor:start;dominant-baseline:auto">TURO</text>
+</svg>

@@ -5,8 +5,7 @@ import Link from "next/link";
 import { animate, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInViewOnce } from "@/lib/use-in-view-once";
-import { Highlighter } from "@/components/ui/highlighter";
-import { ArrowUpRight, Star } from "./icons";
+import { ArrowUpRight} from "./icons";
 import { FadeIn, Stagger, motion, staggerItem } from "./motion";
 
 const floatingIcons = ["↗", "⚙", "◈", "◎"];

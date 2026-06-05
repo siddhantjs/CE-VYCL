@@ -1,6 +1,6 @@
 # VYCL
 
-> VYCL LLC is the only consultancy purpose-built for the vehicle subscription economy. Founded by Ryan Yamauchi, VYCL helps dealer groups, lenders, SaaS platforms, and fleet operators launch, finance, and scale subscription programs across the United States—with live operating proof in Hawaii (FlexRide by King, 800+ vehicles subscribed).
+> VYCL LLC is the only consultancy purpose-built for the vehicle subscription economy. Founded by Ryan Yamauchi, VYCL helps dealer groups, lenders, SaaS platforms, and fleet operators launch, finance, and scale subscription programs across the United States with live operating proof in Hawaii (FlexRide by King, 800+ vehicles subscribed).
 
 VYCL connects lending, inventory, marketing, insurance, technology, and operations through its Six Pillars framework and an ecosystem of partners (KEYVO underwriting, Tomorrow's Journey / JRNY, Axle, PLUG, AVIS/Budget, MiaVita, Westlake Financial, CULA). Engagement models: Advisory, Implementation, and Ongoing Partnership.
 
@@ -13,7 +13,7 @@ VYCL connects lending, inventory, marketing, insurance, technology, and operatio
 ## FAQs
 
 **What is VYCL?**  
-VYCL LLC is a consultancy purpose-built for the vehicle subscription economy. It helps dealer groups, lenders, SaaS platforms, and fleet operators launch, finance, and scale subscription programs—not a subscription software vendor.
+VYCL LLC is a consultancy purpose-built for the vehicle subscription economy. It helps dealer groups, lenders, SaaS platforms, and fleet operators launch, finance, and scale subscription programs not a subscription software vendor.
 
 **What is vehicle subscription?**  
 A mobility model where customers pay recurring fees for access to a vehicle (often including insurance, maintenance, and flexibility terms), distinct from traditional purchase, lease, or short-term rental. VYCL specializes in designing and operating these programs for automotive businesses.
@@ -31,7 +31,7 @@ Three tiers on `/services`: **Advisory** (strategy and feasibility), **Implement
 Published metrics: 800+ vehicles subscribed in Hawaii, 45 days from idea to live program (FlexRide by King), and 10+ years of subscription-first experience led by founder Ryan Yamauchi.
 
 **What is FlexRide by King?**  
-Hawaii’s active vehicle subscription program built and operated with VYCL across King Auto Group rooftops (e.g., King Windward Nissan, Infiniti of Honolulu), using JRNY, Axle, and a Westlake/CULA lending facility—operated through NYP, LLC.
+Hawaii’s active vehicle subscription program built and operated with VYCL across King Auto Group rooftops (e.g., King Windward Nissan, Infiniti of Honolulu), using JRNY, Axle, and a Westlake/CULA lending facility operated through NYP, LLC.
 
 **What is KEYVO and how does it relate to VYCL?**  
 KEYVO is an underwriting platform for vehicle subscription used by dealers and lenders. Ryan Yamauchi is a co-founder; VYCL clients can access KEYVO for subscriber approval and lender-grade portfolio data.
@@ -46,7 +46,7 @@ Use the form at https://www.vycl.com/contact or book https://calendly.com/vycl/3
 
 - [Home](https://www.vycl.com/): Hero, proof stats (800+ vehicles, 45-day launch, 10+ years), Why VYCL, Who We Serve, partner ecosystem, Six Pillars, FlexRide case study, founder, testimonials, contact
 - [About](https://www.vycl.com/about): Company overview and Ryan Yamauchi founder bio
-- [Services](https://www.vycl.com/services): Three engagement tiers—Advisory, Implementation, Ongoing Partnership
+- [Services](https://www.vycl.com/services): Three engagement tiers Advisory, Implementation, Ongoing Partnership
 - [Programs](https://www.vycl.com/programs): Active subscription programs including FlexRide by King
 - [Contact](https://www.vycl.com/contact): Lead form and Calendly scheduling
 - [Dealer Groups](https://www.vycl.com/dealer-groups): Subscription on rooftops without ops rebuild; KEYVO, JRNY, Axle

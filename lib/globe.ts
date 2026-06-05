@@ -10,13 +10,13 @@ export type GlobeArc = {
   color: string;
 };
 
-/** Honolulu — hub for all national reach arcs (matches GeoJSON CRS84 lng/lat). */
+/** Honolulu   hub for all national reach arcs (matches GeoJSON CRS84 lng/lat). */
 export const GLOBE_HUB = {
   lat: 21.3069,
   lng: -157.8583,
 } as const;
 
-/** VYCL brand-aligned globe styling — tokens mirror app/globals.css (--vycl-*). */
+/** VYCL brand-aligned globe styling   tokens mirror app/globals.css (--vycl-*). */
 export const GLOBE_CONFIG: GlobeConfig = {
   pointSize: 1.5,
   globeColor: "#1c3f30",
