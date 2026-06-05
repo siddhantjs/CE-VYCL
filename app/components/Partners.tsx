@@ -21,22 +21,24 @@ function PartnerLogo({
   name,
   relationship,
   logoSrc,
+  logoClassName = "h-10 w-36",
 }: {
   name: string;
   relationship: string;
   logoSrc?: string;
+  logoClassName?: string;
 }) {
   const alt = `${name}   ${relationship} with VYCL vehicle subscription consultancy`;
 
   if (logoSrc) {
     return (
-      <div className="relative h-8 w-28">
+      <div className={`relative ${logoClassName}`}>
         <Image
           src={logoSrc}
           alt={alt}
           fill
           className="object-contain object-left"
-          sizes="112px"
+          sizes="160px"
         />
       </div>
     );
@@ -61,6 +63,7 @@ function PartnerCard({
   relationship,
   description,
   logoSrc,
+  logoClassName,
 }: (typeof ECOSYSTEM_PARTNERS)[number]) {
   return (
     <motion.article
@@ -69,7 +72,12 @@ function PartnerCard({
       whileHover={{ y: -3 }}
       transition={{ type: "spring", stiffness: 400, damping: 28 }}
     >
-      <PartnerLogo name={name} relationship={relationship} logoSrc={logoSrc} />
+      <PartnerLogo
+        name={name}
+        relationship={relationship}
+        logoSrc={logoSrc}
+        logoClassName={logoClassName}
+      />
       <h3 className="mt-4 text-base font-bold text-vycl-dark">{name}</h3>
       <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-[#0F6E56]">
         {relationship}

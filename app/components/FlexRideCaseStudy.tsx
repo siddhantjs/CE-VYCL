@@ -34,22 +34,10 @@ const stats: FlexRideStat[] = [
     display: "$0",
     label: "Incremental headcount required",
   },
-  {
-    icon: ShieldCheck,
-    kind: "static",
-    display: "Secured",
-    label: "Institutional lending facility (Westlake / CULA)",
-  },
 ];
 
-const stack = [
-  "Tomorrow's Journey / JRNY",
-  "Axle",
-  "Westlake Financial",
-  "CULA",
-];
 
-export function FlexRideCaseStudy() {
+export function   FlexRideCaseStudy() {
   return (
     <section
       id="flexride"
@@ -68,7 +56,7 @@ export function FlexRideCaseStudy() {
                   <LayoutGrid className="h-5 w-5" aria-hidden />
                 </span>
                 <p className="mt-5 text-sm font-semibold uppercase tracking-widest text-[#0F6E56]">
-                  Proof of Concept
+                  Case Study
                 </p>
                 <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-vycl-dark sm:text-4xl">
                   FlexRide by King
@@ -87,17 +75,6 @@ export function FlexRideCaseStudy() {
                     It is the clearest proof that the Six Pillars framework
                     works   not in theory, but in the market.
                   </p>
-                </div>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {stack.map((partner) => (
-                    <span
-                      key={partner}
-                      className="rounded-full border border-vycl-border bg-vycl-cream px-3 py-1.5 text-xs font-medium text-vycl-dark"
-                    >
-                      {partner}
-                    </span>
-                  ))}
                 </div>
 
                 <motion.div
@@ -137,7 +114,7 @@ export function FlexRideCaseStudy() {
               </div>
             </div>
 
-            <Stagger className="grid gap-4 border-t border-vycl-border bg-vycl-cream-muted/60 p-6 sm:grid-cols-3 sm:p-8">
+            <Stagger className="grid gap-4 border-t border-vycl-border bg-vycl-cream-muted/60 p-6 sm:grid-cols-2 sm:p-8 mx-auto">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
