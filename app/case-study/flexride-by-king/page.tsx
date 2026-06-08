@@ -26,7 +26,13 @@ export const metadata: Metadata = createPageMetadata({
   title: seo.title,
   description: seo.description,
   path: FLEXRIDE_BY_KING_CASE_STUDY.path,
-  keywords: [...seo.keywords],
+  keywords: [
+    ...seo.keywords,
+    "car subscription program ROI for dealers",
+    "vehicle subscription program Hawaii",
+    "FlexRide King Windward Nissan",
+    "Nissan dealer subscription program",
+  ],
 });
 
 export default function FlexRideByKingCaseStudyPage() {
