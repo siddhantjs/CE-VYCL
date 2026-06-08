@@ -87,7 +87,7 @@ export function   FlexRideCaseStudy() {
                     href={FLEXRIDE_BY_KING_CASE_STUDY.path}
                     className="group inline-flex w-fit max-w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-vycl-lime px-6 py-3 text-sm font-semibold text-vycl-dark shadow-sm transition-[box-shadow,background-color] hover:bg-vycl-lime-muted hover:shadow-md"
                   >
-                    <span>Visit case study by FlexRide by King</span>
+                    <span>Visit case study of FlexRide by King</span>
                     <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
                 </motion.div>
