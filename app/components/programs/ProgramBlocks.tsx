@@ -51,8 +51,14 @@ export function ProgramBlocks() {
                 </div>
 
                 <h2 className="mt-6 text-2xl font-extrabold tracking-tight text-vycl-dark sm:text-3xl">
-                  FlexRide by King   Hawaii
+                  FlexRide by King   Hawaii vehicle subscription program
                 </h2>
+
+                <p className="mt-4 text-sm leading-relaxed text-vycl-text-muted sm:text-base">
+                  A Nissan dealer subscription program and used car subscription
+                  program operating as FlexRide King Windward Nissan across King
+                  Auto Group rooftops.
+                </p>
 
                 <dl className="mt-8 space-y-3 rounded-2xl border border-vycl-border bg-vycl-cream-muted/50 p-5">
                   {flexRideDetails.map((row) => (
@@ -104,7 +110,9 @@ export function ProgramBlocks() {
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-vycl-text-muted sm:text-base">
               VYCL is actively developing its next market engagement in Central
-              Florida. Details to follow.
+              Florida. Hawaii also hosts a Rivian fleet subscription program  
+              a 20-unit EV fleet subscription program built on the same Six
+              Pillars framework.
             </p>
           </motion.article>
         </FadeIn>

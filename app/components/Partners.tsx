@@ -95,7 +95,8 @@ export function Partners() {
           <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
             VYCL bridges automotive retail, finance, insurance, technology,
             inventory, and marketing   connecting every stakeholder your
-            subscription program needs to succeed.
+            vehicle subscription program needs, from car subscription dealer
+            group strategy through launch.
           </p>
         </FadeIn>
 

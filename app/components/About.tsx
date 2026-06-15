@@ -44,23 +44,23 @@ export function About() {
             </h2>
 
             <div className="mt-5 space-y-4 text-base leading-relaxed text-vycl-text-muted">
-              <p>
-                Ryan Yamauchi has spent over a decade building, operating, and
-                scaling vehicle subscription programs   starting with Hawaii&apos;s
-                boutique dealership market and expanding to national platform
-                development, institutional lending, and multi-rooftop dealer
-                strategy.
-              </p>
+            <p>
+              Ryan Yamauchi is a vehicle subscription expert, automotive SaaS
+              dealer sales consultant, and dealer group strategic advisor who has
+              spent over a decade building, operating, and scaling vehicle
+              subscription programs   starting with Hawaii&apos;s boutique
+              dealership market and expanding to national platform development,
+              institutional lending, and multi-rooftop dealer strategy.
+            </p>
               <p>
                 He served as VP of Operations at AutoSource Hawaii and Director of
                 Strategic Planning at the nation&apos;s first direct-to-consumer
-                vehicle subscription company. Today he is the founder of VYCL,
-                co-founder of KEYVO   the subscription industry&apos;s only
-                underwriting platform for dealers and lenders   co-founder of NYP
-                LLC (the operating entity behind FlexRide by King), and the
-                exclusive Head of Sales North America for Tomorrow&apos;s Journey,
-                the UK-based SaaS company whose JRNY platform powers subscription
-                programs across the US.
+                vehicle subscription company. Today he is the founder of VYCL, the
+                automotive SaaS licensing partner US for Tomorrow&apos;s Journey,
+                a fractional automotive executive and mobility as a service
+                consultant, automotive startup advisor, and automotive disruption
+                consultant   co-founder of KEYVO, co-founder of NYP LLC (FlexRide
+                by King), and exclusive Head of Sales North America for JRNY.
               </p>
               <p>
                 His Six Pillars framework has guided over 800 vehicle deployments

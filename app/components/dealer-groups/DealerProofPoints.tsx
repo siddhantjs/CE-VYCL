@@ -13,11 +13,11 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Zap,
-    text: "FlexRide by King: 45-day launch, zero headcount, institutional lending secured",
+    text: "FlexRide by King: 45-day dealer subscription program launch, zero headcount, institutional lending secured",
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting   the only subscription-native subscriber approval tool available to dealers",
+    text: "KEYVO underwriting   the vehicle subscription underwriting platform and only subscription-native subscriber approval tool available to dealers",
   },
   {
     icon: Gauge,
@@ -25,11 +25,19 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: ShieldCheck,
-    text: "Axle   real-time insurance compliance across every subscriber",
+    text: "Axle   real-time vehicle subscription insurance compliance across every subscriber",
   },
   {
     icon: Megaphone,
-    text: "MiaVita Solutions   automotive and subscription-specialist digital marketing",
+    text: "Car subscription program ROI for dealers   proven recurring revenue with MiaVita digital marketing",
+  },
+  {
+    icon: Sparkles,
+    text: "Pre-owned vehicle subscription dealer inventory via PLUG and AVIS/Budget wholesale sourcing",
+  },
+  {
+    icon: Megaphone,
+    text: "Dealer loaner fleet subscription structures for groups expanding beyond traditional loaner models",
   },
 ];
 

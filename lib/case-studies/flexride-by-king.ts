@@ -55,7 +55,7 @@ export const FLEXRIDE_BY_KING_CASE_STUDY = {
   },
   location: "King Windward Nissan · Kane'ohe, HI",
   sidebarNote: "Modeled after FlexRide at King Windward Nissan",
-  eyebrow: "From aged inventory to recurring revenue",
+  eyebrow: "Nissan dealer subscription program   from aged inventory to recurring revenue",
   headline:
     "How FlexRide became King Windward Nissan's newest profit center   without disrupting a single department.",
   sidebarHighlights: [
@@ -152,7 +152,7 @@ export const FLEXRIDE_BY_KING_CASE_STUDY = {
     {
       title: "Inventory Strategy",
       accent: "dark",
-      body: "Aged, off-cycle, and loaner fleet vehicles   previously a carrying cost   redeployed as revenue-generating subscription assets, producing $80,924/mo in recurring income.",
+      body: "Aged, off-cycle, and loaner fleet vehicles   previously a carrying cost   redeployed as revenue-generating subscription assets in this Nissan dealer subscription program, producing $80,924/mo in recurring income.",
     },
     {
       title: "Recurring Revenue",

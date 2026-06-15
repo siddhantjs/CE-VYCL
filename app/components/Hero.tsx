@@ -318,10 +318,15 @@ export function Hero() {
           Vehicle Subscription Consultancy
         </p>
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-vycl-dark sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-        The only consultancy built for the vehicle subscription economy
+          The automotive industry consulting firm built for the subscription
+          economy
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-           From single dealerships to multi-rooftop groups, VYCL connects the dots across inventory, lending, technology, marketing, insurance, and operations so your program not only launches but scales.
+          VYCL is your vehicle subscription expert, automotive business
+          consultant, and automotive subscription platform consultant   bridging
+          subscription economy automotive strategy across inventory, lending,
+          technology, marketing, insurance, and operations so your program
+          launches and scales.
         </p>
 
         <motion.div

@@ -32,8 +32,10 @@ export function LenderProblemSolution() {
             The lender problem
           </h2>
           <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
-            Subscription portfolios need different data, different underwriting,
-            and different monitoring.
+            Subscription portfolios need different data, different vehicle
+            subscription underwriting, and different monitoring   from how to
+            finance a subscription fleet through a closed subscription lending
+            facility agreement.
           </p>
         </FadeIn>
 
@@ -65,8 +67,9 @@ export function LenderProblemSolution() {
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base">
             We structured and closed institutional lending with Westlake Financial
-            and CULA for FlexRide by King   giving lenders a live reference for
-            facility design, underwriting criteria, and portfolio monitoring in
+            and CULA for FlexRide by King   a live reference for subscription
+            auto portfolio financing, auto lender subscription program partnership,
+            and automotive fleet financing consultant-led facility design in
             production.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">

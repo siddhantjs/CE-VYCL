@@ -10,8 +10,8 @@ export type PartnerCard = {
 
 export const KEYVO_BLOCK = {
   label: "FOUNDED BY RYAN YAMAUCHI",
-  title: "The subscription industry's only underwriting platform",
-  body: "KEYVO is the only underwriting platform purpose-built for vehicle subscription   usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
+  title: "The vehicle subscription underwriting platform",
+  body: "KEYVO is KEYVO subscription underwriting software and the vehicle subscription underwriting platform purpose-built for vehicle subscription underwriting   usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
   ctaLabel: "Learn more about KEYVO",
   /** Set when KEYVO marketing site URL is available */
   ctaHref: undefined as string | undefined,
@@ -22,7 +22,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Tomorrow's Journey / JRNY",
     relationship: "Exclusive US Licensing Partner",
     description:
-      "VYCL is the exclusive US licensing partner for Tomorrow's Journey and their JRNY platform   the operating backbone of active subscription programs across our dealer network.",
+      "VYCL is the automotive SaaS licensing partner US for Tomorrow's Journey and their JRNY subscription platform US   the operating backbone of UK automotive SaaS US expansion and active dealer onboarding subscription software deployments across our network.",
     logoSrc: "/TOMMORROW-JRNY.svg",
     logoClassName: "h-10 w-40",
   },
@@ -30,7 +30,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Axle",
     relationship: "Insurance Verification Partner",
     description:
-      "Insurance verification for VYCL dealer and lender partners is powered by Axle   providing real-time compliance tracking and bulk subscriber onboarding across multi-rooftop operations.",
+      "Axle insurance verification automotive for VYCL dealer and lender partners   real-time insurance verification API automotive compliance tracking and bulk subscriber onboarding across multi-rooftop operations.",
     logoSrc: "/AXLE.svg",
     logoClassName: "h-7 w-24",
   },
@@ -38,7 +38,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "PLUG",
     relationship: "EV Inventory & Referral Partner",
     description:
-      "VYCL actively deploys the PLUG platform to help dealer clients build pre-owned EV subscription inventory   sourcing vehicles that are fleet-ready from day one.",
+      "VYCL actively deploys the PLUG EV platform dealer inventory pipeline for pre-owned EV fleet subscription   sourcing electric vehicle subscription dealer inventory that is fleet-ready from day one.",
     logoSrc: "/PLUG.svg",
     logoClassName: "h-10 w-36",
   },
@@ -46,7 +46,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "AVIS / Budget",
     relationship: "Wholesale Inventory Partner",
     description:
-      "VYCL has direct access to the AVIS/Budget wholesale channel   enabling dealer partners to source fleet-ready vehicles at scale for subscription program inventory buildout.",
+      "VYCL has direct access to the AVIS/Budget wholesale channel   AVIS Budget wholesale channel subscription and rental car fleet subscription program inventory at scale for subscription program buildout.",
     logoSrc: "/AVIS.svg",
     logoClassName: "h-8 w-36",
   },
@@ -54,7 +54,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "MiaVita Solutions",
     relationship: "Digital Marketing Partner",
     description:
-      "VYCL's referral partner for digital marketing   MiaVita brings deep experience in automotive and vehicle subscription marketing, delivering targeted campaigns and subscriber acquisition.",
+      "VYCL's referral partner for digital marketing   MiaVita brings deep experience in automotive and car subscription marketing strategy, delivering targeted campaigns and subscriber acquisition.",
     logoSrc: "/MIAVITA.avif",
     logoClassName: "h-10 w-36",
   },
@@ -68,7 +68,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Westlake Financial",
     relationship: "Institutional Lending Partner",
     description:
-      "VYCL has structured and closed a fleet lending facility with Westlake Financial, backing the FlexRide by King subscription program in Hawaii.",
+      "VYCL has structured and closed a fleet lending facility with Westlake Financial   the Westlake Financial dealer program backing the FlexRide by King subscription program in Hawaii.",
     logoSrc: "/WESTLAKE.png",
     logoClassName: "h-10 w-36",
   },
@@ -76,7 +76,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "CULA",
     relationship: "Credit Union Lending Partner",
     description:
-      "CULA (Credit Union Leasing of America) is the credit union-side lending partner on the Westlake facility   expanding lender optionality for subscription portfolios.",
+      "CULA (Credit Union Leasing of America) is the credit union-side lending partner on the Westlake facility   CULA vehicle subscription and credit union auto subscription lending that expands lender optionality for subscription portfolios.",
     logoSrc: "/CULA.png",
     logoClassName: "h-10 w-28",
   },
@@ -116,7 +116,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "P2P Fleet",
     relationship: "Operating Client",
     description:
-      "P2P Fleet is a VYCL operating client leveraging the vehicle subscription model to scale inventory and generate recurring revenue through the subscription economy.",
+      "P2P Fleet is a VYCL operating client running a P2P fleet subscription program   leveraging the vehicle subscription model to scale inventory and generate recurring revenue through the subscription economy.",
     logoSrc: "/P2P.jpg",
     logoClassName: "h-10 w-36",
   },
@@ -124,7 +124,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Turo",
     relationship: "Referral Partner",
     description:
-      "VYCL works with Turo hosts and fleet operators looking to transition from or expand beyond peer-to-peer rental into structured vehicle subscription programs.",
+      "VYCL works with Turo hosts and fleet operators looking for a Turo host vehicle subscription alternative   transitioning from peer-to-peer rental into structured vehicle subscription programs.",
     logoSrc: "/TURO.svg",
     logoClassName: "h-9 w-28",
   },
@@ -132,7 +132,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Rivian",
     relationship: "Operating Client   EV Fleet",
     description:
-      "VYCL developed the subscription structure for a 20-unit Rivian EV fleet program in Hawaii   a fleet-scale proof point for branded electric vehicle subscription.",
+      "VYCL developed the EV fleet subscription program and Rivian fleet subscription program structure for a 20-unit Rivian fleet in Hawaii   a fleet-scale proof point for branded electric vehicle subscription.",
     logoSrc: "/RIVIAN.svg",
     logoClassName: "h-8 w-32",
   },
@@ -140,7 +140,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "KEYVO",
     relationship: "The subscription industry's only underwriting platform",
     description:
-      "KEYVO is the only underwriting platform purpose-built for vehicle subscription usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
+      "KEYVO subscription underwriting software and the vehicle subscription underwriting platform purpose-built for vehicle subscription underwriting usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
     logoSrc: "/Logo_Mark_Black.png",
     logoClassName: "h-10 w-32",
   },

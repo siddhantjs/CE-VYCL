@@ -13,23 +13,23 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Zap,
-    text: "EV fleet subscription structure developed for a 20-unit Rivian program in Hawaii",
+    text: "EV fleet subscription program and Rivian fleet subscription program   20-unit structure developed in Hawaii",
   },
   {
     icon: Building2,
-    text: "Direct AVIS/Budget wholesale access for fleet inventory at scale",
+    text: "AVIS Budget wholesale channel subscription   rental car fleet subscription program inventory at fleet scale",
   },
   {
     icon: Battery,
-    text: "PLUG EV platform for pre-owned EV inventory sourcing",
+    text: "PLUG platform for pre-owned EV fleet subscription and electric vehicle subscription dealer inventory",
   },
   {
     icon: ShieldCheck,
-    text: "Axle insurance verification for fleet-level compliance",
+    text: "Fleet leasing consultant support with subscription vehicle depreciation model and fleet vehicle ROI subscription analysis",
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting   purpose-built for subscription portfolio risk",
+    text: "Mobility subscription fleet operator programs   KEYVO underwriting purpose-built for subscription portfolio risk",
   },
 ];
 
