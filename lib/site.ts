@@ -1,3 +1,5 @@
+import { BLOG_POSTS } from "@/lib/blog/posts";
+
 export const CALENDLY_URL = "https://calendly.com/vycl/30min";
 
 /** Canonical site origin for absolute URLs (sitemap, robots, Open Graph). */
@@ -83,6 +85,7 @@ export const FOOTER_SITEMAP: SitemapSection[] = [
     links: [
       { href: "/services", label: "Services" },
       { href: "/programs", label: "Programs" },
+      { href: "/blog", label: "Blog" },
       { href: "/#pillars", label: "Six Pillars" },
     ],
   },
@@ -136,6 +139,8 @@ export function getSitemapEntries(): SitemapEntry[] {
     ...FEATURED_NAV.filter(
       (item): item is FeaturedNavItem & { href: string } => Boolean(item.href),
     ).map((item) => item.href),
+    "/blog",
+    ...BLOG_POSTS.map((post) => post.path),
     ...LEGAL_PATHS,
   ];
 
