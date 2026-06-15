@@ -10,8 +10,11 @@ export function ServicesHero() {
           How VYCL Works
         </h1>
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          Vehicle subscription is not one problem   it&apos;s six. VYCL solves
-          all of them, in whatever combination your business needs.
+          VYCL delivers B2B automotive consulting services as your vehicle
+          subscription strategy consultant and car subscription business model
+          consultant   solving all six pillars and building your vehicle
+          subscription business plan in whatever combination your organisation
+          needs.
         </p>
       </FadeIn>
     </section>

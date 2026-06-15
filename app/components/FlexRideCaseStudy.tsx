@@ -65,10 +65,11 @@ export function   FlexRideCaseStudy() {
                 <div className="mt-5 space-y-4 text-sm leading-relaxed text-vycl-text-muted sm:text-base">
                   <p>
                     FlexRide by King is Hawaii&apos;s most active vehicle
-                    subscription program, built by VYCL and operating across King
-                    Windward Nissan&apos;s rooftops. Launched in under 45 days
-                    with zero incremental headcount, the program runs on
-                    Tomorrow&apos;s Journey&apos;s JRNY platform, insurance
+                    subscription program   a car subscription program proof of
+                    concept built by VYCL and operating across King Windward
+                    Nissan&apos;s rooftops. Launched in under 45 days with zero
+                    incremental headcount, the program runs on Tomorrow&apos;s
+                    Journey&apos;s JRNY platform, vehicle subscription insurance
                     compliance managed through Axle, and is backed by a lending
                     facility secured through Westlake Financial and CULA.
                   </p>

@@ -14,7 +14,7 @@ const differentiators: {
     icon: Wrench,
     title: "Operators, not observers",
     description:
-      "VYCL is the only consultancy purpose-built for the vehicle subscription economy. We don't advise from the sidelines   we've built, operated, and financed real programs on real rooftops.",
+      "VYCL is the dealer group consulting firm purpose-built for the vehicle subscription economy. We don't advise from the sidelines   we've built, operated, and financed real programs on real rooftops.",
   },
   {
     icon: MapPin,
@@ -26,14 +26,14 @@ const differentiators: {
     icon: Handshake,
     title: "Partner from day one",
     description:
-      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL operates on the foundation of Stewardship not just expertise that no generalist automotive consultancy can match.",
+      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL brings a dealership recurring revenue model and automotive retail consulting expertise that no generalist firm can match.",
   },
 ];
 
 const highlights = [
   { label: "Hawaii & national programs", href: "/programs" },
-  { label: "Institutional lending", href: "/lenders" },
-  { label: "US dealer network launches", href: "/dealer-groups" },
+  { label: "Subscription fleet financing", href: "/lenders" },
+  { label: "Subscription model for auto dealers", href: "/dealer-groups" },
   { label: "Six Pillars framework", href: "/#pillars" },
 ];
 
@@ -49,8 +49,9 @@ export function WhyVycl() {
             Built for the vehicle subscription economy
           </h2>
           <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
-            Subscription expertise forged on real rooftops - not borrowed from
-            generic automotive consulting playbooks.
+            An automotive revenue consultant and vehicle subscription strategy
+            consultant   forged on real rooftops, not borrowed from generic
+            automotive consulting playbooks.
           </p>
         </FadeIn>
 

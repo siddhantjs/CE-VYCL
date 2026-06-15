@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { LenderProblemSolution } from "../components/lenders/LenderProblemSolution";
 import { LenderProofPoints } from "../components/lenders/LenderProofPoints";
 import { LendersCta } from "../components/lenders/LendersCta";
 import { LendersHero } from "../components/lenders/LendersHero";
@@ -54,6 +55,7 @@ export default function LendersPage() {
       <main>
         <LendersHero />
         <LenderProofPoints />
+        <LenderProblemSolution />
         <LendersCta />
       </main>
       <Footer />

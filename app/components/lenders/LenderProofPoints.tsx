@@ -1,21 +1,33 @@
 "use client";
 
-import { Building2, ShieldCheck, Sparkles } from "lucide-react";
+import { Building2, FileText, LineChart, ShieldCheck, Sparkles, Users } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Building2,
-    text: "Structured and closed a lending facility with Westlake Financial / CULA for FlexRide by King",
+    text: "Closed a subscription lending facility agreement with Westlake Financial   Westlake Financial dealer program   and CULA credit union auto subscription lending for FlexRide by King",
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting platform   purpose-built for subscription portfolios",
+    text: "KEYVO subscription underwriting software   vehicle subscription underwriting and automotive fintech subscription portfolio monitoring",
+  },
+  {
+    icon: LineChart,
+    text: "Pro forma subscription fleet lender deliverables   subscription loan cash flow modeling, auto subscription data tape lender files, and auto subscription monthly cash flow projections",
+  },
+  {
+    icon: FileText,
+    text: "How to finance a subscription fleet   fleet loan facility for subscription design, indirect auto lending subscription mapping, and lender-ready documentation",
+  },
+  {
+    icon: Users,
+    text: "Auto lender subscription program partnership and automotive lender subscription strategy for dealers scaling a dealer subscription finance program",
   },
   {
     icon: ShieldCheck,
-    text: "Axle-powered insurance verification   subscriber-level compliance reducing lender exposure",
+    text: "Subscription fleet financing with Axle-powered verification   subscriber-level compliance reducing lender exposure across every rooftop",
   },
 ];
 

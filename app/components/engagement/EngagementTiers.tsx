@@ -8,9 +8,9 @@ const tiers = [
     label: "Advisory",
     featured: false,
     description:
-      "Strategic guidance for organisations at the evaluation stage. Market assessment, program design, partner identification, and go/no-go recommendation.",
+      "Strategic guidance for organisations at the evaluation stage. Dealer group strategic advisor support, fractional automotive executive engagement, automotive partnership development, dealer group revenue diversification planning, and go/no-go recommendation.",
     bestFor:
-      "OEMs, lenders, and SaaS platforms exploring the US subscription market",
+      "OEMs, lenders, and SaaS platforms exploring the US subscription market   or dealers evaluating dealer group revenue diversification",
     extras: {
       heading: "Partners involved",
       items: [
@@ -24,17 +24,18 @@ const tiers = [
     tier: "02",
     label: "Implementation",
     featured: true,
-    description: "Hands-on buildout from concept to launch. All Six Pillars covered.",
+    description:
+      "Hands-on vehicle subscription software implementation from concept to launch   your automotive program launch consultant for dealer onboarding subscription software, subscription lifecycle management automotive, and all Six Pillars.",
     bestFor: "Dealer groups launching their first or second rooftop",
     extras: {
       heading: "What's included",
       items: [
-        "JRNY platform configuration (exclusive US licensing partner)",
-        "Lender engagement   Westlake Financial / CULA facility structure",
+        "JRNY platform dealer setup and car subscription technology dealer integration (exclusive US licensing partner)",
+        "Lender engagement   Westlake Financial / CULA subscription lending facility agreement and vehicle subscription lending facility",
         "Axle insurance verification integration",
         "Inventory sourcing   AVIS/Budget wholesale + PLUG EV platform",
-        "Digital marketing launch via MiaVita Solutions",
-        "Operational design   staffing model, workflow, subscriber onboarding",
+        "Car subscription marketing strategy via MiaVita Solutions",
+        "Vehicle subscription operations setup   subscription billing automotive software, vehicle subscription CRM integration, staffing model, and subscriber onboarding",
       ],
     },
   },
@@ -43,8 +44,8 @@ const tiers = [
     label: "Ongoing Partnership",
     featured: false,
     description:
-      "Embedded strategic and operational support for programs already running. Performance review, lender relationship management, platform optimisation, and national expansion planning.",
-    bestFor: "Multi-rooftop operators scaling beyond their home market",
+      "Embedded strategic and operational support on an automotive consulting retainer. Performance review, lender relationship management, platform optimisation, fleet program consulting, and multi-rooftop expansion.",
+    bestFor: "Multi-rooftop operators and SaaS platforms scaling beyond their home market",
   },
 ];
 

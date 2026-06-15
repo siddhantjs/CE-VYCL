@@ -1,21 +1,25 @@
 "use client";
 
-import { MapPin, Sparkles, Zap } from "lucide-react";
+import { LineChart, MapPin, Sparkles, Zap } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Sparkles,
-    text: "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
+    text: "JRNY subscription platform US   exclusive automotive SaaS licensing partner US for Tomorrow's Journey",
   },
   {
     icon: MapPin,
-    text: "Active dealer BD pipeline across multiple US markets",
+    text: "Automotive SaaS dealer adoption and subscription software for franchise dealers across active US dealer BD pipeline",
   },
   {
     icon: Zap,
-    text: "Live proof-of-concept rooftop   the strongest sales tool in any platform conversation",
+    text: "Live proof-of-concept rooftop   vehicle subscription platform ROI and car subscription technology dealer integration reference",
+  },
+  {
+    icon: LineChart,
+    text: "Automotive SaaS dealer sales consultant support   subscription management software automotive evaluation and go-to-market execution",
   },
 ];
 

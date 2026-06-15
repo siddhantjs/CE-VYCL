@@ -10,8 +10,9 @@ export function ProgramsHero() {
           Programs built. Programs running.
         </h1>
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          The Six Pillars framework isn&apos;t theoretical. These are the programs
-          where it runs.
+          The Six Pillars framework isn&apos;t theoretical. These are the live
+          vehicle subscription program Hawaii deployments, EV fleet subscription
+          programs, and national programs where it runs.
         </p>
       </FadeIn>
     </section>
