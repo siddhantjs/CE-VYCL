@@ -105,7 +105,7 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
         }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=600&q=80"
+          src="https://images.pexels.com/photos/34337859/pexels-photo-34337859.jpeg"
           alt="Aerial city at night with light trails"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
