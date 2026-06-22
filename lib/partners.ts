@@ -4,6 +4,8 @@ export type PartnerCard = {
   description: string;
   /** Optional path under /public when a logo asset exists */
   logoSrc?: string;
+  /** Multiple logos shown side by side (e.g. dual-brand rooftops) */
+  logoSrcs?: string[];
   /** Tailwind classes for the logo container (default: h-10 w-36) */
   logoClassName?: string;
 };
@@ -71,7 +73,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     relationship: "Operating Program",
     description:
       'Flexride is a "first of its kind" marketplace built to connect the inventories of multiple rooftops into a single customer facing subscription destination.',
-    logoSrc: "/flexride-logo.svg",
+    logoSrc: "/flex-ride-logo.avif",
     logoClassName: "h-10 w-36",
   },
   {
@@ -79,8 +81,8 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     relationship: "Operating Client",
     description:
       "King Auto Group is a VYCL operating client and participating partner in the Flexride marketplace.",
-    logoSrc: "/KING.png",
-    logoClassName: "h-10 w-32",
+    logoSrc: "/king-auto-logo.avif",
+    logoClassName: "h-10 w-36",
   },
   {
     name: "King Windward Nissan",
@@ -103,6 +105,8 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     relationship: "Operating Client",
     description:
       "CCVM is the inaugural Operating Client in the contiguous 48.",
+    logoSrcs: ["/volvo-image.jpg", "/mazda-image.jpg"],
+    logoClassName: "h-10 w-36",
   },
   {
     name: "P2P Fleet",

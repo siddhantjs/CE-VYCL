@@ -33,14 +33,16 @@ export function ProgramBlocks() {
           >
             <div className="grid lg:grid-cols-2">
               <div className="flex flex-col p-8 sm:p-10 lg:p-12">
-                <Image
-                  src="/flexride-logo.svg"
-                  alt="FlexRide by King logo   Hawaii vehicle subscription program operated by VYCL and King Auto Group"
-                  width={240}
-                  height={54}
-                  className="h-auto w-48 sm:w-56"
-                  priority
-                />
+                <div className="relative h-14 w-48 sm:h-16 sm:w-56">
+                  <Image
+                    src="/flex-ride-logo.avif"
+                    alt="FlexRide by King logo   Hawaii vehicle subscription program operated by VYCL and King Auto Group"
+                    fill
+                    className="object-contain object-left"
+                    sizes="(max-width: 640px) 192px, 224px"
+                    priority
+                  />
+                </div>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <span className="inline-flex w-fit items-center rounded-full bg-[#0F6E56] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
                     Featured, Live

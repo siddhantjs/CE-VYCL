@@ -10,14 +10,34 @@ function PartnerLogo({
   name,
   relationship,
   logoSrc,
+  logoSrcs,
   logoClassName = "h-10 w-36",
 }: {
   name: string;
   relationship: string;
   logoSrc?: string;
+  logoSrcs?: string[];
   logoClassName?: string;
 }) {
   const alt = `${name}   ${relationship} with VYCL vehicle subscription consultancy`;
+
+  if (logoSrcs?.length) {
+    return (
+      <div className={`flex items-center justify-start gap-1 ${logoClassName}`}>
+        {logoSrcs.map((src) => (
+          <div key={src} className="relative h-10 w-16 shrink-0">
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className="object-contain object-center"
+              sizes="64px"
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   if (logoSrc) {
     return (
@@ -52,6 +72,7 @@ function PartnerCard({
   relationship,
   description,
   logoSrc,
+  logoSrcs,
   logoClassName,
 }: (typeof ECOSYSTEM_PARTNERS)[number]) {
   return (
@@ -65,6 +86,7 @@ function PartnerCard({
         name={name}
         relationship={relationship}
         logoSrc={logoSrc}
+        logoSrcs={logoSrcs}
         logoClassName={logoClassName}
       />
       <h3 className="mt-4 text-base font-bold text-vycl-dark">{name}</h3>
