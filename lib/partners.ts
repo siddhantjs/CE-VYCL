@@ -4,6 +4,8 @@ export type PartnerCard = {
   description: string;
   /** Optional path under /public when a logo asset exists */
   logoSrc?: string;
+  /** Multiple logos shown side by side (e.g. dual-brand rooftops) */
+  logoSrcs?: string[];
   /** Tailwind classes for the logo container (default: h-10 w-36) */
   logoClassName?: string;
 };
@@ -38,7 +40,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "PLUG",
     relationship: "EV Inventory & Referral Partner",
     description:
-      "VYCL actively deploys the PLUG EV platform dealer inventory pipeline for pre-owned EV fleet subscription   sourcing electric vehicle subscription dealer inventory that is fleet-ready from day one.",
+      "Providing regional access to the PLUG network allowing Dealers to build their subscription ready EV Fleets.",
     logoSrc: "/PLUG.svg",
     logoClassName: "h-10 w-36",
   },
@@ -59,48 +61,34 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     logoClassName: "h-10 w-36",
   },
   {
-    name: "NYP, LLC",
-    relationship: "Founding Operating Entity",
+    name: "Westlake + CULA",
+    relationship: "Lending Partners",
     description:
-      "NYP, LLC (Niethammer Yamauchi Platform) is the founding operating entity co-created by Ryan Yamauchi and Mike Niethammer of King Auto Group   the structure that powers FlexRide by King.",
-  },
-  {
-    name: "Westlake Financial",
-    relationship: "Institutional Lending Partner",
-    description:
-      "VYCL has structured and closed a fleet lending facility with Westlake Financial   the Westlake Financial dealer program backing the FlexRide by King subscription program in Hawaii.",
+      "Providing Dealers access to Subscription specific lending solutions to scale their business.",
     logoSrc: "/WESTLAKE.png",
     logoClassName: "h-10 w-36",
   },
   {
-    name: "CULA",
-    relationship: "Credit Union Lending Partner",
-    description:
-      "CULA (Credit Union Leasing of America) is the credit union-side lending partner on the Westlake facility   CULA vehicle subscription and credit union auto subscription lending that expands lender optionality for subscription portfolios.",
-    logoSrc: "/CULA.png",
-    logoClassName: "h-10 w-28",
-  },
-  {
-    name: "FlexRide by King",
+    name: "FlexRide",
     relationship: "Operating Program",
     description:
-      "FlexRide by King is Hawaii's most active vehicle subscription program   the live proof-of-concept built and operated by VYCL across King Auto Group rooftops.",
-    logoSrc: "/flexride-logo.svg",
+      'Flexride is a "first of its kind" marketplace built to connect the inventories of multiple rooftops into a single customer facing subscription destination.',
+    logoSrc: "/flex-ride-logo.avif",
     logoClassName: "h-10 w-36",
   },
   {
     name: "King Auto Group",
     relationship: "Operating Client",
     description:
-      "King Auto Group is a VYCL operating client and the dealer group behind the FlexRide by King subscription program, operated through NYP, LLC across their Hawaii rooftops.",
-    logoSrc: "/KING.png",
-    logoClassName: "h-10 w-32",
+      "King Auto Group is a VYCL operating client and participating partner in the Flexride marketplace.",
+    logoSrc: "/king-auto-logo.avif",
+    logoClassName: "h-10 w-36",
   },
   {
     name: "King Windward Nissan",
     relationship: "Operating Client   Rooftop",
     description:
-      "King Windward Nissan is an active VYCL operating client rooftop   one of the King Auto Group dealerships running FlexRide by King in Hawaii.",
+      "King Windward Nissan is a VYCL operating client and participating partner in the Flexride marketplace.",
     logoSrc: "/KING-NISSAN.avif",
     logoClassName: "h-10 w-36",
   },
@@ -108,15 +96,23 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Infiniti of Honolulu",
     relationship: "Operating Client   Rooftop",
     description:
-      "Infiniti of Honolulu is an active VYCL operating client rooftop   a King Auto Group dealership running the FlexRide by King subscription program in Hawaii.",
-      logoSrc: "/INIFINITI.webp",
-      logoClassName: "h-10 w-36",
+      "Infiniti of Honolulu is a VYCL operating client and participating partner in the Flexride marketplace.",
+    logoSrc: "/INIFINITI.webp",
+    logoClassName: "h-10 w-36",
+  },
+  {
+    name: "Culver City Volvo/Mazda (CCVM)",
+    relationship: "Operating Client",
+    description:
+      "CCVM is the inaugural Operating Client in the contiguous 48.",
+    logoSrcs: ["/volvo-image.jpg", "/mazda-image.jpg"],
+    logoClassName: "h-10 w-36",
   },
   {
     name: "P2P Fleet",
     relationship: "Operating Client",
     description:
-      "P2P Fleet is a VYCL operating client running a P2P fleet subscription program   leveraging the vehicle subscription model to scale inventory and generate recurring revenue through the subscription economy.",
+      "P2P Fleet is a VYCL operating client leveraging the vehicle subscription model to scale inventory and generate recurring revenue for the Peer to Peer economy.",
     logoSrc: "/P2P.jpg",
     logoClassName: "h-10 w-36",
   },
@@ -124,15 +120,15 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Turo",
     relationship: "Referral Partner",
     description:
-      "VYCL works with Turo hosts and fleet operators looking for a Turo host vehicle subscription alternative   transitioning from peer-to-peer rental into structured vehicle subscription programs.",
+      "VYCL works with Turo and its hosts to build their inventories through vehicle subscription.",
     logoSrc: "/TURO.svg",
     logoClassName: "h-9 w-28",
   },
   {
     name: "Rivian",
-    relationship: "Operating Client   EV Fleet",
+    relationship: "Fleet Access",
     description:
-      "VYCL developed the EV fleet subscription program and Rivian fleet subscription program structure for a 20-unit Rivian fleet in Hawaii   a fleet-scale proof point for branded electric vehicle subscription.",
+      "Providing Regional access RIVIAN at the fleet level.",
     logoSrc: "/RIVIAN.svg",
     logoClassName: "h-8 w-32",
   },

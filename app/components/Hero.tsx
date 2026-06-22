@@ -28,26 +28,28 @@ const statCards = [
   },
   {
     type: "dark" as const,
-    stat: 50,
-    label: "Esteemed clients and partners across mobility",
+    stat: 1000,
+    label: "vehicles subscribed",
     className: `${statCardBase} bg-vycl-dark text-white`,
   },
   {
     type: "chart" as const,
-    stat: 10,
-    eyebrow: "Programs Launched",
-    label: "Decade of subscription expertise",
+    eyebrow: "Programs Launching <45 Days",
+    label: "Everything you need",
     className: `${statCardBase} border border-vycl-border bg-white transition-colors group-hover:border-vycl-lime/50`,
   },
   {
     type: "lime" as const,
+    eyebrow: "Not A Theory",
     stat: 10,
-    label: "Years of dedicated service in vehicle subscription",
+    label: "Over a decade subscribing vehicles",
     className: `${statCardBase} bg-vycl-lime text-vycl-dark`,
   },
   {
     type: "cta" as const,
-    label: "Achieve optimal efficiency and scale recurring mobility revenue",
+    eyebrow: "Systems = Success",
+    label:
+      "Achieve optimal efficiency, reduce costs, scale recurring revenue via mobility",
     href: "#pillars",
     className: `${statCardBase} bg-vycl-dark text-white`,
   },
@@ -56,9 +58,11 @@ const statCards = [
 function AnimatedCounter({
   target,
   suffix = "+",
+  duration = 1.4,
 }: {
   target: number;
   suffix?: string;
+  duration?: number;
 }) {
   const { ref, inView } = useInViewOnce<HTMLSpanElement>({
     rootMargin: "-20px 0px",
@@ -71,17 +75,17 @@ function AnimatedCounter({
     if (reduce || !inView) return;
 
     const controls = animate(0, target, {
-      duration: 1.4,
+      duration,
       ease: [0.22, 1, 0.36, 1],
       onUpdate: (value) => setCount(Math.round(value)),
     });
     return () => controls.stop();
-  }, [inView, target, reduce]);
+  }, [inView, target, reduce, duration]);
 
   const displayCount = reduce ? target : count;
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="tabular-nums">
       {displayCount}
       {suffix}
     </span>
@@ -101,8 +105,8 @@ function ImageStatCard({ reduce }: { reduce: boolean | null }) {
         }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80"
-          alt="Modern vehicle in showroom"
+          src="https://images.pexels.com/photos/34337859/pexels-photo-34337859.jpeg"
+          alt="Aerial city at night with light trails"
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 1024px) 50vw, 20vw"
@@ -150,9 +154,15 @@ function DarkStatCard({
       />
       <div className="relative min-h-[1.25rem]" aria-hidden />
       <div className="relative flex flex-1 flex-col justify-center">
-        <p className={statCardValue}>
-          <AnimatedCounter target={stat} />
-        </p>
+        <motion.p
+          className={statCardValue}
+          initial={reduce ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <AnimatedCounter target={stat} duration={2.2} />
+        </motion.p>
       </div>
       <p
         className={`relative ${statCardLabel} text-white/80 transition-colors group-hover:text-white`}
@@ -169,7 +179,7 @@ function ChartStatCard({
   label,
   reduce,
 }: {
-  stat: number;
+  stat?: number;
   eyebrow: string;
   label: string;
   reduce: boolean | null;
@@ -178,10 +188,12 @@ function ChartStatCard({
     <>
       <p className={statCardEyebrow}>{eyebrow}</p>
       <div className="flex flex-1 flex-col justify-center">
-        <p className={`${statCardValue} text-vycl-dark`}>
-          <AnimatedCounter target={stat} />
-        </p>
-        <div className="mt-3 flex h-8 items-end gap-1">
+        {stat !== undefined && (
+          <p className={`${statCardValue} text-vycl-dark`}>
+            <AnimatedCounter target={stat} />
+          </p>
+        )}
+        <div className={`flex h-8 items-end gap-1 ${stat !== undefined ? "mt-3" : ""}`}>
           {chartHeights.map((h, j) => (
             <motion.span
               key={j}
@@ -218,10 +230,12 @@ function ChartStatCard({
 }
 
 function LimeStatCard({
+  eyebrow,
   stat,
   label,
   reduce,
 }: {
+  eyebrow: string;
   stat: number;
   label: string;
   reduce: boolean | null;
@@ -237,7 +251,7 @@ function LimeStatCard({
         }
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
-      <div className="relative min-h-[1.25rem]" aria-hidden />
+      <p className={`relative ${statCardEyebrow} text-vycl-dark/70`}>{eyebrow}</p>
       <div className="relative flex flex-1 flex-col justify-center">
         <p className={statCardValue}>
           <AnimatedCounter target={stat} />
@@ -252,15 +266,26 @@ function LimeStatCard({
   );
 }
 
-function CtaStatCard({ label, href }: { label: string; href: string }) {
+function CtaStatCard({
+  eyebrow,
+  label,
+  href,
+}: {
+  eyebrow: string;
+  label: string;
+  href: string;
+}) {
   return (
     <Link
       href={href}
       className="relative flex h-full min-h-[inherit] flex-col justify-between outline-none focus-visible:ring-2 focus-visible:ring-vycl-lime focus-visible:ring-offset-2 focus-visible:ring-offset-vycl-dark"
     >
-      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-vycl-lime">
-        <ArrowUpRight className="h-5 w-5 text-vycl-lime transition-colors duration-300 group-hover:text-vycl-dark" />
-      </span>
+      <div>
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-vycl-lime">
+          <ArrowUpRight className="h-5 w-5 text-vycl-lime transition-colors duration-300 group-hover:text-vycl-dark" />
+        </span>
+        <p className={`mt-4 ${statCardEyebrow} text-white/70`}>{eyebrow}</p>
+      </div>
       <p
         className={`relative ${statCardLabel} font-semibold text-white/90 transition-colors duration-300 group-hover:text-white`}
       >
@@ -378,17 +403,25 @@ export function Hero() {
             )}
             {card.type === "chart" && (
               <ChartStatCard
-                stat={card.stat}
                 eyebrow={card.eyebrow}
                 label={card.label}
                 reduce={reduce}
               />
             )}
             {card.type === "lime" && (
-              <LimeStatCard stat={card.stat} label={card.label} reduce={reduce} />
+              <LimeStatCard
+                eyebrow={card.eyebrow}
+                stat={card.stat}
+                label={card.label}
+                reduce={reduce}
+              />
             )}
             {card.type === "cta" && (
-              <CtaStatCard label={card.label} href={card.href} />
+              <CtaStatCard
+                eyebrow={card.eyebrow}
+                label={card.label}
+                href={card.href}
+              />
             )}
           </motion.div>
           );

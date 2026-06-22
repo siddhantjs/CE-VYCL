@@ -20,8 +20,7 @@ export function Services() {
             The Six Pillars of Vehicle Subscription
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70">
-            Ryan&apos;s proprietary framework   proven across 800+ vehicle
-            deployments.
+          VYCL’s framework proven across 1000+ vehicle deployments.
           </p>
         </FadeIn>
 
