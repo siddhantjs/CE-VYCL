@@ -13,15 +13,15 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Zap,
-    text: "EV fleet subscription program and Rivian fleet subscription program   20-unit structure developed in Hawaii",
+    text: "Dedicated Dealer network in Hawaii and California, building rental fleets through subscription.",
   },
   {
     icon: Building2,
-    text: "AVIS Budget wholesale channel subscription   rental car fleet subscription program inventory at fleet scale",
+    text: "Partnering with TURO® to provide key data for strategic fleet composition.",
   },
   {
     icon: Battery,
-    text: "PLUG platform for pre-owned EV fleet subscription and electric vehicle subscription dealer inventory",
+    text: "Connecting Fleet owners with funds to scale through Subscription.",
   },
   {
     icon: ShieldCheck,

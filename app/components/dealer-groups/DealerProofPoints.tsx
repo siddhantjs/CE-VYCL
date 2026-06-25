@@ -17,11 +17,11 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Sparkles,
-    text: "KEYVO underwriting   the vehicle subscription underwriting platform and only subscription-native subscriber approval tool available to dealers",
+    text: "KEYVO, the underwriting engine that manages your inventory, taking the guess work out of the process and maximizing your recurring revenue.",
   },
   {
     icon: Gauge,
-    text: "JRNY platform   configured and optimised as exclusive US licensing partner",
+    text: "Installing the JRNY platform at the dealer level, configured and optimized for the specific needs of each rooftop.",
   },
   {
     icon: ShieldCheck,
@@ -29,7 +29,7 @@ const proofPoints: { icon: LucideIcon; text: string }[] = [
   },
   {
     icon: Megaphone,
-    text: "Car subscription program ROI for dealers   proven recurring revenue with MiaVita digital marketing",
+    text: "Customized Digital Marketing campaigns designed by MiaVita that exposes your business to the consumers that need to see it.",
   },
   {
     icon: Sparkles,

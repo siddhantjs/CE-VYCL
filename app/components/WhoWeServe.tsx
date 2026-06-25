@@ -9,28 +9,28 @@ const audiences = [
     title: "Dealer Groups",
     href: "/dealer-groups",
     description:
-      "Launch and scale a car subscription program for dealers on your existing rooftops   without adding headcount. We handle the playbook, the partners, and the dealer subscription program launch.",
+      "Launch and scale Vehicle Subscription without the burden of increased staffing. You provide the inventory and we provide the playbook, partners and technology.",
   },
   {
     icon: "◆",
     title: "Lenders",
     href: "/lenders",
     description:
-      "Structure auto subscription lending structure, fleet subscription loan facility design, and subscription loan cash flow modeling for fleet-based portfolios   with proper collateral, pro forma subscription fleet lender deliverables, and lender-ready documentation.",
+      "We structure Subscription Lending Facilities that prioritize Risk Mitigation, Secure Deployment and Stable Return.",
   },
   {
     icon: "⬡",
     title: "SaaS Platforms",
     href: "/platforms",
     description:
-      "Automotive SaaS US market entry and subscription software for franchise dealers   powered by Tomorrow&apos;s Journey JRNY and KEYVO subscription underwriting software.",
+      "We provide access to the industry's premier Operating and Underwriting Platforms.",
   },
   {
     icon: "◎",
     title: "OEMs & Fleet Operators",
     href: "/fleet-operators",
     description:
-      "Fleet operator subscription consulting for rental fleet monetization subscription, captive auto finance subscription structures, and mobility subscription fleet operator programs   backed by AVIS/Budget wholesale and PLUG EV sourcing.",
+      "Connecting Institutional entities with new channels through Vehicle Subscription.",
   },
 ];
 

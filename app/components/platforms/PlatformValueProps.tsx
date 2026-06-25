@@ -7,19 +7,19 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Sparkles,
-    text: "JRNY subscription platform US   exclusive automotive SaaS licensing partner US for Tomorrow's Journey",
+    text: "Launching new Subscription businesses in 45 days.",
   },
   {
     icon: MapPin,
-    text: "Automotive SaaS dealer adoption and subscription software for franchise dealers across active US dealer BD pipeline",
+    text: "Delivering the flexibility of an agnostic platform that integrates seamlessly.",
   },
   {
     icon: Zap,
-    text: "Live proof-of-concept rooftop   vehicle subscription platform ROI and car subscription technology dealer integration reference",
+    text: "Live data and historical case studies to guide the model-matched install for every Dealer.",
   },
   {
     icon: LineChart,
-    text: "Automotive SaaS dealer sales consultant support   subscription management software automotive evaluation and go-to-market execution",
+    text: "There is no finish line, we support your subscription model as it grows through platform enhancements and real time training and support.",
   },
 ];
 

@@ -24,7 +24,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Tomorrow's Journey / JRNY",
     relationship: "Exclusive US Licensing Partner",
     description:
-      "VYCL is the automotive SaaS licensing partner US for Tomorrow's Journey and their JRNY subscription platform US   the operating backbone of UK automotive SaaS US expansion and active dealer onboarding subscription software deployments across our network.",
+      "VYCL is the exclusive US licensing partner for Tomorrow's Journey and their JRNY subscription platform, allowing Dealers to launch and scale seamlessly.",
     logoSrc: "/TOMMORROW-JRNY.svg",
     logoClassName: "h-10 w-40",
   },
@@ -32,7 +32,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "Axle",
     relationship: "Insurance Verification Partner",
     description:
-      "Axle insurance verification automotive for VYCL dealer and lender partners   real-time insurance verification API automotive compliance tracking and bulk subscriber onboarding across multi-rooftop operations.",
+      "Powered by Axle, VYCL provides real-time automotive insurance verification for Dealers and Lenders, reducing risk and increasing profits.",
     logoSrc: "/AXLE.svg",
     logoClassName: "h-7 w-24",
   },
@@ -48,7 +48,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "AVIS / Budget",
     relationship: "Wholesale Inventory Partner",
     description:
-      "VYCL has direct access to the AVIS/Budget wholesale channel   AVIS Budget wholesale channel subscription and rental car fleet subscription program inventory at scale for subscription program buildout.",
+      "VYCL provides direct access to the AVIS/Budget wholesale channel allowing fleets of all sizes to scale responsibly and economically.",
     logoSrc: "/AVIS.svg",
     logoClassName: "h-8 w-36",
   },
@@ -56,7 +56,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "MiaVita Solutions",
     relationship: "Digital Marketing Partner",
     description:
-      "VYCL's referral partner for digital marketing   MiaVita brings deep experience in automotive and car subscription marketing strategy, delivering targeted campaigns and subscriber acquisition.",
+      "VYCL's referral partner for digital marketing MiaVita brings deep experience in Automotive and Vehicle Subscription marketing strategy, delivering targeted campaigns across multiple platforms to enhance subscriber acquisition.",
     logoSrc: "/MIAVITA.avif",
     logoClassName: "h-10 w-36",
   },
@@ -86,7 +86,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
   },
   {
     name: "King Windward Nissan",
-    relationship: "Operating Client   Rooftop",
+    relationship: "Operating Client",
     description:
       "King Windward Nissan is a VYCL operating client and participating partner in the Flexride marketplace.",
     logoSrc: "/KING-NISSAN.avif",
@@ -136,7 +136,7 @@ export const ECOSYSTEM_PARTNERS: PartnerCard[] = [
     name: "KEYVO",
     relationship: "The subscription industry's only underwriting platform",
     description:
-      "KEYVO subscription underwriting software and the vehicle subscription underwriting platform purpose-built for vehicle subscription underwriting usable by both dealers and lenders. As co-founder, Ryan brings VYCL clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
+      "KEYVO is the singular Underwriting Platform purpose-built for the Vehicle Subscription economy. Accessible to both dealers and lenders, it is the hub for true consumer adoption of the Subscription Model. As a Co-Founder, VYCL provides its clients direct access to infrastructure that no other consultancy in this space can offer: a live, production-grade underwriting system that de-risks subscriber approval and gives lenders the structured data they need to fund subscription portfolios with confidence.",
     logoSrc: "/Logo_Mark_Black.png",
     logoClassName: "h-10 w-32",
   },

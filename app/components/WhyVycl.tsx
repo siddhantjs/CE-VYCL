@@ -20,13 +20,13 @@ const differentiators: {
     icon: MapPin,
     title: "Proven at scale",
     description:
-      "With active programs in Hawaii and California, we have deployed over 1000 vehicles and via the Six Pillars framework.",
+      "With active programs in Hawaii and California, we have deployed over 1000 vehicles via the Six Pillars framework.",
   },
   {
     icon: Handshake,
     title: "Partner from day one",
     description:
-      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL brings a dealership recurring revenue model and automotive retail consulting expertise that no generalist firm can match.",
+      "Whether you are launching your first subscription program or scaling an existing one across multiple rooftops, VYCL operates with the stewardship and knowledge base that is unmatched in the industry.",
   },
 ];
 
@@ -49,9 +49,8 @@ export function WhyVycl() {
             Built for the vehicle subscription economy
           </h2>
           <p className="mt-4 text-base leading-relaxed text-vycl-text-muted">
-            An automotive revenue consultant and vehicle subscription strategy
-            consultant   forged on real rooftops, not borrowed from generic
-            automotive consulting playbooks.
+            Vehicle subscription strategy forged on real rooftops, not borrowed
+            from generic automotive consulting playbooks.
           </p>
         </FadeIn>
 

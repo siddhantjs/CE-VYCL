@@ -6,11 +6,10 @@ import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const credentials = [
   "Co-founder, KEYVO   the subscription industry's only dealer and lender underwriting platform",
-  "Exclusive Head of Sales North America   Tomorrow's Journey / JRNY",
-  "Co-founder, NYP LLC   operating entity, FlexRide by King",
+  "Exclusive US Licensing Partner   Tomorrow's Journey / JRNY",
   "Structured institutional lending facility   Westlake Financial / CULA",
   "Former VP of Operations   AutoSource Hawaii",
-  "Former Director of Strategic Planning   nation's first DTC vehicle subscription company",
+  "Director of Strategic Planning, Carousel, LLC",
 ];
 
 export function FounderBio() {
@@ -44,27 +43,21 @@ export function FounderBio() {
 
           <div className="mt-6 space-y-5 text-base leading-relaxed text-vycl-text-muted">
             <p>
-              Ryan Yamauchi is a vehicle subscription expert, automotive SaaS
-              dealer sales consultant, and dealer group strategic advisor who has
-              spent over a decade building, operating, and scaling vehicle
-              subscription programs   starting with Hawaii&apos;s boutique
-              dealership market and expanding to national platform development,
-              institutional lending, and multi-rooftop dealer strategy.
-            </p>
-            <p>
-              He served as VP of Operations at AutoSource Hawaii and Director of
-              Strategic Planning at the nation&apos;s first direct-to-consumer
-              vehicle subscription company. Today he is the founder of VYCL, the
-              automotive SaaS licensing partner US for Tomorrow&apos;s Journey,
-              a fractional automotive executive and mobility as a service
-              consultant, automotive startup advisor, and automotive disruption
-              consultant   co-founder of KEYVO, co-founder of NYP LLC (FlexRide
-              by King), and exclusive Head of Sales North America for JRNY.
-            </p>
-            <p>
-              His Six Pillars framework has guided over 800 vehicle deployments
-              and is the operating foundation for active programs in Hawaii with
-              national expansion underway.
+              Ryan Yamauchi is a vehicle subscription expert, Automotive SaaS
+              Developer, and Dealer Group Strategic Advisor who has spent over a
+              decade building, operating, and scaling vehicle subscription
+              programs. From his roots cultivating the country&apos;s first Direct
+              to Consumer Vehicle Subscription business, he developed a
+              specialized skill set and nurtured a vast network of industry
+              professionals that enable him to support entities of all sizes,
+              across multiple channels to enhance their enterprise through
+              Vehicle Subscription. Using his 6 Pillars framework, he bridges
+              the gap between Dealers, Institutional Lenders, Private Equity,
+              Manufacturers, Insurers and Technology, Marketing and Consumers.
+              From Operations to Strategic Planning, Software Development to
+              designing Lending Facilities, Ryan is validated across the entire
+              ecosystem of Vehicle Subscription and has guided over 1,000 vehicle
+              deployments via subscription and counting.
             </p>
           </div>
 

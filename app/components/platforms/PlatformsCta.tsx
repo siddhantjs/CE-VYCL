@@ -15,7 +15,7 @@ export function PlatformsCta() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Looking for a US market entry partner?
+            Subscription Curious?
           </h2>
           <motion.div
             className="mt-8 inline-block"

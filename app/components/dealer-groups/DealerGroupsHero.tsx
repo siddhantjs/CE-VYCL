@@ -10,11 +10,13 @@ export function DealerGroupsHero() {
           Your dealership subscription program   without rebuilding from scratch.
         </h1>
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          Most programs fail not because the model is wrong, but because the
-          implementation is. VYCL is your automotive revenue consultant for
-          dealer group revenue diversification   delivering subscription software
-          for franchise dealers, a vehicle subscription all-in-one program, and
-          franchise dealer subscription program structure before you go live.
+          Most programs fail not because the model doesn&apos;t work, but because
+          the system doesn&apos;t match the model. VYCL provides Dealers of all
+          shapes and sizes with a bespoke strategy backed by the tools required
+          to not only launch but scale. As Dealers strive for revenue
+          diversification, delivering vehicles through subscription is the perfect
+          &quot;Value Add&quot; solution and our all-in-one service is a must
+          before you &quot;go live&quot;.
         </p>
       </FadeIn>
     </section>
