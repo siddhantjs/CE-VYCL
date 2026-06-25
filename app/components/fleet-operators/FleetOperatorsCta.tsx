@@ -15,7 +15,7 @@ export function FleetOperatorsCta() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Ready to put your fleet to work?
+            Ready to grow your fleet?
           </h2>
           <motion.div
             className="mt-8 inline-block"

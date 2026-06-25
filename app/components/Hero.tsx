@@ -347,11 +347,11 @@ export function Hero() {
           economy
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          VYCL is your vehicle subscription expert, automotive business
-          consultant, and automotive subscription platform consultant   bridging
-          subscription economy automotive strategy across inventory, lending,
-          technology, marketing, insurance, and operations so your program
-          launches and scales.
+          VYCL is your vehicle subscription expert, mobility business
+          consultant, and automotive subscription technology authority providing
+          the automotive subscription economy strategic insights across
+          inventory, lending, technology, marketing, insurance, and operations so
+          your program launches and scales.
         </p>
 
         <motion.div

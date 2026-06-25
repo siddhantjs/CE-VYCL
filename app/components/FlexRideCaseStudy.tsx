@@ -148,12 +148,12 @@ export function FlexRideCaseStudy() {
       <div className="mx-auto max-w-6xl">
         <FadeIn>
           <motion.article
-            className="overflow-hidden rounded-3xl border border-vycl-border bg-white shadow-sm"
+            className="w-full overflow-hidden rounded-3xl border border-vycl-border bg-white shadow-sm"
             whileHover={{ y: -2 }}
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           >
-            <div className="grid lg:grid-cols-2">
-              <div className="flex flex-col p-8 sm:p-10 lg:p-12">
+            <div className="grid min-w-0 lg:grid-cols-2">
+              <div className="flex min-w-0 flex-col p-6 sm:p-10 lg:p-12">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0F6E56]/10 text-[#0F6E56]">
                   <LayoutGrid className="h-5 w-5" aria-hidden />
                 </span>
@@ -179,7 +179,7 @@ export function FlexRideCaseStudy() {
                 >
                   <Link
                     href={FLEXRIDE_BY_KING_CASE_STUDY.path}
-                    className="group inline-flex w-fit max-w-full items-center justify-center gap-2 whitespace-nowrap rounded-full bg-vycl-lime px-6 py-3 text-sm font-semibold text-vycl-dark shadow-sm transition-[box-shadow,background-color] hover:bg-vycl-lime-muted hover:shadow-md"
+                    className="group inline-flex w-full max-w-full items-center justify-center gap-2 rounded-full bg-vycl-lime px-6 py-3 text-center text-sm font-semibold text-vycl-dark shadow-sm transition-[box-shadow,background-color] hover:bg-vycl-lime-muted hover:shadow-md sm:w-fit"
                   >
                     <span>Visit case study of FlexRide by King</span>
                     <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -187,7 +187,7 @@ export function FlexRideCaseStudy() {
                 </motion.div>
               </div>
 
-              <div className="relative min-h-[260px] border-t border-vycl-border lg:min-h-full lg:border-t-0 lg:border-l">
+              <div className="relative min-h-[260px] min-w-0 border-t border-vycl-border lg:min-h-full lg:border-t-0 lg:border-l">
                 <Image
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
                   alt="FlexRide by King   vehicle subscription program built by VYCL at King Windward Nissan, Hawaii"
@@ -207,10 +207,10 @@ export function FlexRideCaseStudy() {
               </div>
             </div>
 
-            <Stagger className="mx-auto grid gap-4 border-t border-vycl-border bg-vycl-cream-muted/60 p-6 sm:grid-cols-2 sm:p-8">
+            <Stagger className="mx-auto grid min-w-0 gap-4 border-t border-vycl-border bg-vycl-cream-muted/60 p-6 sm:grid-cols-2 sm:p-8">
               <motion.div
                 variants={staggerItem}
-                className="flex min-h-[280px] flex-col rounded-2xl border border-vycl-border bg-white p-5 shadow-sm sm:min-h-[320px]"
+                className="flex min-h-[280px] min-w-0 flex-col rounded-2xl border border-vycl-border bg-white p-5 shadow-sm sm:min-h-[320px]"
                 whileHover={
                   reduce
                     ? undefined
@@ -246,7 +246,7 @@ export function FlexRideCaseStudy() {
 
               <motion.div
                 variants={staggerItem}
-                className="relative flex min-h-[280px] flex-col overflow-hidden rounded-2xl bg-vycl-dark-card p-5 text-white shadow-sm sm:min-h-[320px]"
+                className="relative flex min-h-[280px] min-w-0 flex-col overflow-hidden rounded-2xl bg-vycl-dark-card p-5 text-white shadow-sm sm:min-h-[320px]"
                 whileHover={
                   reduce
                     ? undefined

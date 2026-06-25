@@ -1,33 +1,45 @@
 "use client";
 
-import { Building2, FileText, LineChart, ShieldCheck, Sparkles, Users } from "lucide-react";
+import {
+  Building2,
+  FileText,
+  Landmark,
+  LineChart,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeIn, Stagger, motion, staggerItem } from "../motion";
 
 const proofPoints: { icon: LucideIcon; text: string }[] = [
   {
     icon: Building2,
-    text: "Closed a subscription lending facility agreement with Westlake Financial   Westlake Financial dealer program   and CULA credit union auto subscription lending for FlexRide by King",
+    text: "Developed a subscription facility based on the format of a traditional product with Westlake Financial/CULA",
+  },
+  {
+    icon: Landmark,
+    text: "Authored revolutionary Line of Credit with Hawaii National Bank specifically designed for Vehicle Subscription.",
   },
   {
     icon: Sparkles,
-    text: "KEYVO subscription underwriting software   vehicle subscription underwriting and automotive fintech subscription portfolio monitoring",
+    text: "Developed KEYVO, the subscription underwriting and portfolio monitoring platform that sits at the hub of true adoption.",
   },
   {
     icon: LineChart,
-    text: "Pro forma subscription fleet lender deliverables   subscription loan cash flow modeling, auto subscription data tape lender files, and auto subscription monthly cash flow projections",
+    text: "Delivering Proforma projections powered by historical data to back cash flow modeling, business growth and strategic decision making.",
   },
   {
     icon: FileText,
-    text: "How to finance a subscription fleet   fleet loan facility for subscription design, indirect auto lending subscription mapping, and lender-ready documentation",
+    text: "Subscription fleet financing models designed to mitigate risk, generate profits and accelerate adoption.",
   },
   {
     icon: Users,
-    text: "Auto lender subscription program partnership and automotive lender subscription strategy for dealers scaling a dealer subscription finance program",
+    text: "Facilitating partnerships for Lenders to promote responsible growth and returns.",
   },
   {
     icon: ShieldCheck,
-    text: "Subscription fleet financing with Axle-powered verification   subscriber-level compliance reducing lender exposure across every rooftop",
+    text: "Powered by Axle   protecting the assets to generate quality returns.",
   },
 ];
 
@@ -44,7 +56,7 @@ export function LenderProofPoints() {
       <div className="mx-auto max-w-4xl">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-vycl-dark sm:text-4xl">
-            Proof points
+            One Step at a Time
           </h2>
         </FadeIn>
 

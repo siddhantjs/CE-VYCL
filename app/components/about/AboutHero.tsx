@@ -13,9 +13,8 @@ export function AboutHero() {
           About VYCL
         </h1>
         <p className="mt-5 text-base leading-relaxed text-vycl-text-muted sm:text-lg">
-          A vehicle subscription expert, automotive business consultant, and
-          automotive technology consultant US   built by someone who has done it,
-          not just advised on it.
+          A Consultancy purpose built for the widespread adoption of Vehicle
+          Subscription.
         </p>
       </FadeIn>
     </section>
