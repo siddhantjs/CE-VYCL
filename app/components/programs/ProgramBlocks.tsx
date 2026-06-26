@@ -6,14 +6,14 @@ import { FadeIn, motion } from "../motion";
 const flexRideDetails = [
   { label: "Platform", value: "Tomorrow's Journey / JRNY" },
   { label: "Insurance verification", value: "Axle" },
-  { label: "Lender", value: "Westlake Financial / CULA" },
+  { label: "Lender", value: "Private Placement" },
   {
     label: "Operating entity",
-    value: "NYP LLC (Niethammer Yamauchi Platform)",
+    value: "Flexride by King",
   },
   {
     label: "Rooftops",
-    value: "King Windward Nissan · Infiniti of Honolulu (King Auto Group)",
+    value: "2",
   },
   {
     label: "Launch",
@@ -53,13 +53,13 @@ export function ProgramBlocks() {
                 </div>
 
                 <h2 className="mt-6 text-2xl font-extrabold tracking-tight text-vycl-dark sm:text-3xl">
-                  FlexRide by King   Hawaii vehicle subscription program
+                  A Franchise Dealer Success Story
                 </h2>
 
                 <p className="mt-4 text-sm leading-relaxed text-vycl-text-muted sm:text-base">
-                  A Nissan dealer subscription program and used car subscription
-                  program operating as FlexRide King Windward Nissan across King
-                  Auto Group rooftops.
+                  Leveraging Subscription to monetize aged inventory and loaner
+                  fleet assets, proof that there is an untapped revenue stream
+                  in the traditional Dealer model.
                 </p>
 
                 <dl className="mt-8 space-y-3 rounded-2xl border border-vycl-border bg-vycl-cream-muted/50 p-5">
@@ -103,18 +103,16 @@ export function ProgramBlocks() {
               <span className="inline-flex items-center rounded-full bg-[#0F6E56] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
                 Coming Soon
               </span>
-              <span className="text-sm font-semibold uppercase tracking-widest text-vycl-text-muted">
-                Central Florida
-              </span>
             </div>
             <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-vycl-dark sm:text-3xl">
-              Central Florida   Coming Soon
+              Central Florida – Northern California – Washington State
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-vycl-text-muted sm:text-base">
-              VYCL is actively developing its next market engagement in Central
-              Florida. Hawaii also hosts a Rivian fleet subscription program  
-              a 20-unit EV fleet subscription program built on the same Six
-              Pillars framework.
+              VYCL is actively developing Subscription Programs in Central
+              Florida, Northern California and Washington State. With fleet sizes
+              as small as 5 units to multi-rooftop Dealer Groups that are
+              preparing to deploy 100&apos;s of vehicles on subscription within
+              months of launch.
             </p>
           </motion.article>
         </FadeIn>
