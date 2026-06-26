@@ -1,3 +1,4 @@
+import axios from "axios";
 import { NextResponse } from "next/server";
 
 type ContactPayload = {
@@ -61,46 +62,34 @@ export async function POST(request: Request) {
   }
 
   try {
-    const upstream = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        content: "New contact form submission",
-        embeds: [
-          {
-            title: "Contact Form",
-            color: 0x0f6e56,
-            fields: [
-              { name: "Name", value: toEmbedValue(name), inline: true },
-              { name: "Email", value: toEmbedValue(email), inline: true },
-              { name: "Company", value: toEmbedValue(company), inline: true },
-              { name: "Audience", value: toEmbedValue(audienceLabel), inline: true },
-              { name: "Message", value: toEmbedValue(message) },
-            ],
-            timestamp: new Date().toISOString(),
-          },
-        ],
-      }),
+    await axios.post(webhookUrl, {
+      content: "New contact form submission",
+      embeds: [
+        {
+          title: "Contact Form",
+          color: 0x0f6e56,
+          fields: [
+            { name: "Name", value: toEmbedValue(name), inline: true },
+            { name: "Email", value: toEmbedValue(email), inline: true },
+            { name: "Company", value: toEmbedValue(company), inline: true },
+            { name: "Audience", value: toEmbedValue(audienceLabel), inline: true },
+            { name: "Message", value: toEmbedValue(message) },
+          ],
+          timestamp: new Date().toISOString(),
+        },
+      ],
     });
-
-    if (!upstream.ok) {
-      if (process.env.NODE_ENV === "development") {
-        const errorBody = await upstream.text();
-        console.error(
-          "Discord webhook failed:",
-          upstream.status,
-          errorBody,
-        );
-      }
-
-      return NextResponse.json(
-        { error: "Unable to deliver message. Please try again." },
-        { status: 502 },
-      );
-    }
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
-      console.error("Discord webhook request failed:", error);
+      if (axios.isAxiosError(error)) {
+        console.error(
+          "Discord webhook failed:",
+          error.response?.status,
+          error.response?.data,
+        );
+      } else {
+        console.error("Discord webhook request failed:", error);
+      }
     }
 
     return NextResponse.json(
